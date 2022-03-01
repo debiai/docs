@@ -1,0 +1,4 @@
+node_modules/
+documentation/.vuepress/.cache
+documentation/.vuepress/.temp
+documentation/.vuepress/dist

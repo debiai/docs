@@ -1,0 +1,12 @@
+{
+  "name": "debiai_documentation",
+  "description": "DebiAI Documentation using VuePress",
+  "version": "1.0.0",
+  "scripts": {
+    "serve": "vuepress dev documentation",
+    "build": "vuepress build documentation"
+  },
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.35"
+  }
+}

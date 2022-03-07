@@ -9,9 +9,9 @@ module.exports = {
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: '/logo.png',
-    repo: 'debiai',
+    repo: 'debiai/docs',
     repoLabel: `GitHub [${version}]`,
-    docsDir: 'content',
+    docsDir: 'documentation',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
     lastUpdated: 'Last Updated',

@@ -1,5 +1,5 @@
 node_modules/
+deployment/
 documentation/.vuepress/.cache
 documentation/.vuepress/.temp
 documentation/.vuepress/dist
-deployment/

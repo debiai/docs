@@ -41,7 +41,6 @@ module.exports = {
       {
         text: "Python module", link: "/pythonModule/",
         children: [
-          "/pythonModule/installation",
           "/pythonModule/quickStart",
           {
             text: "Guided examples", link: "/pythonModule/guidedExamples/",
@@ -58,6 +57,7 @@ module.exports = {
       {
         text: "Data providers", link: "/dataProviders/",
         children: [
+          "/dataProviders/quickStart",
           // "/pythonModule/installation",
           // "/pythonModule/quickStart",
           // {

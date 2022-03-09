@@ -1,5 +1,0 @@
-# Installation
-
-## Pypi
-
-## Hand installation

@@ -2,17 +2,34 @@
 
 Being a data visualisation application, providing the project data to DebiAI is a requiered step.
 
-The data
+## Data format
+The data you want to analyse with DebiAI will need to respect a specific format.
 
-**Limitations :**
+- CSV like format
+
+    If your data can be represented in a CSV like format, adding them to DebiAI will be easy.
+
+- No missing values
+
+    At the moment, DebiAI only supports data with no missing values.
+
 - Samples size
 
-## Python module
-The main way to add provide the project data to the application is to use the DebiAI Python module.
-The module was made to be used directly in your Python workflow, to add the model results directly after a model evaluation per example.
+    It is not recommended to provide more than 2.000.000 samples, as it will take a long time to process.
 
 
-## Project data providers (comming soon)
+## There is currently two ways to insert data into DebiAI:
 
-The data providers will allow your project to expose its data trough a REST API.
-DebiAI will directly ask for the data from your project making the data loading process very quick and customisable, the provided data won't have to be duplicated in the DebiAI application.
+### Python module
+The main way to add provide the project data to the application is through the DebiAI Python module.
+The module was designed to be used directly in your Python workflow, to add model results directly after its evaluation for example.
+
+[Quick start](../../../pythonModule/quickStart)
+
+### Data providers
+A DebiAI data provider is a REST service that will expose your project to DebiAI.
+DebiAI will directly ask for the data from your project making the data loading process very quick and customisable. Unlike the DebiAI Python module, the provided data won't have to be duplicated in the DebiAI application.
+
+Making a data provider is the most efficient way to make your project data accessible to DebiAI, no matter the data base that your project is using.
+
+[Quick start](../../../dataProviders/quickStart)

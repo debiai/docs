@@ -4,7 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-RUN npm run docs:build
+RUN npm run build
 
 # Run phase
 FROM node:lts-alpine as portal

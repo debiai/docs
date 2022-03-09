@@ -1,5 +1,7 @@
 # Getting started
 
-The first step si to install DebiAI: [Installation guide](../gettingStarted/installation/README.md)
+After installing DebiAI: [Installation guide](../gettingStarted/installation/README.md),
 
-After installation, you can start using DebiAI by opening the DebiAI dashboard:
+you will need to create a project and add data to your DebiAI instance: [Inserting data](dataInsertion/README.md).
+
+You can start analysing your data with the DebiAI dashboard : [Analysing data](../../dashboard/introduction.md).

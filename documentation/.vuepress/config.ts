@@ -26,62 +26,69 @@ module.exports = {
       {
         text: "DebiAI",
         children: [
+          { text: "Introduction", link: "/debiai/introduction/" },
           {
-            text: "Introduction",
-            link: "/debiai/introduction/",
-          },
-          {
-            text: "Getting started",
-            link: "/debiai/gettingStarted/",
+            text: "Getting started", link: "/debiai/gettingStarted/",
             children: [
-              {
-                text: "Installation",
-                link: "/debiai/gettingStarted/installation/",
-                // children: [
-                //   "/debiai/gettingStarted/installation/dockerCompose",
-                //   "/debiai/gettingStarted/installation/docker",
-                //   "/debiai/gettingStarted/installation/kubernetes",
-                // ]
-              },
-              {
-                text: "Data insertion",
-                link: "/debiai/gettingStarted/dataInsertion/",
-              },
+              { text: "Installation", link: "/debiai/gettingStarted/installation/" },
+              { text: "Data insertion", link: "/debiai/gettingStarted/dataInsertion/" },
             ]
           }
         ]
       },
-      // Dashboard
-      {
-        text: "Dashboard",
-        children: [
-          "/dashboard/widgets",
-          {
-            text: "Examples",
-            link: "/dashboard/examples/",
-            children: [
-              "/dashboard/examples/mnist",
-              "/dashboard/examples/woodscape"
-            ]
-          },
-        ]
-      },
+
       // Python module
       {
-        text: "Python module",
-        link: "/pythonModule/",
+        text: "Python module", link: "/pythonModule/",
         children: [
           "/pythonModule/installation",
           "/pythonModule/quickStart",
           {
-            text: "Guided examples",
-            link: "/pythonModule/guidedExamples/",
+            text: "Guided examples", link: "/pythonModule/guidedExamples/",
             children: [
               "/pythonModule/guidedExamples/mnist",
               "/pythonModule/guidedExamples/woodscape"
             ]
           },
           "/pythonModule/API",
+        ]
+      },
+
+      // Data providers
+      {
+        text: "Data providers", link: "/dataProviders/",
+        children: [
+          // "/pythonModule/installation",
+          // "/pythonModule/quickStart",
+          // {
+          //   text: "Guided examples", link: "/pythonModule/guidedExamples/",
+          //   children: [
+          //     "/pythonModule/guidedExamples/mnist",
+          //     "/pythonModule/guidedExamples/woodscape"
+          //   ]
+          // },
+          // "/pythonModule/API",
+        ]
+      },
+
+      // Dashboard
+      {
+        text: "Dashboard", children: [
+          "/dashboard/introduction/",
+          {
+            text: "Widgets", link: "/dashboard/widgets/",
+            children: [
+              "/dashboard/examples/mnist",
+              "/dashboard/examples/woodscape"
+            ]
+          },
+          {
+            text: "Examples", link: "/dashboard/examples/",
+            children: [
+              "/dashboard/examples/mnist",
+              "/dashboard/examples/woodscape"
+            ]
+          },
         ]
       },
     ],

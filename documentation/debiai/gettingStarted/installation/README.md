@@ -3,7 +3,7 @@
 DebiAI offers several installation methods:
 - [Installation](#installation)
   - [Official Docker image](#official-docker-image)
-  - [Docker-compose](#docker-compose)
+  - [Docker-compose (recommended)](#docker-compose-recommended)
   - [Docker](#docker)
 
 
@@ -12,7 +12,7 @@ DebiAI offers several installation methods:
 Coming soon
 <!-- TODO -->
 
-## Docker-compose
+## Docker-compose (recommended)
 
 Using our Docker-compose file is the recommended way to deploy DebiAI on your project server or local machine.
 
@@ -32,7 +32,7 @@ docker-compose -f docker-compose-build.yml up -d
 
 DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
 A volume will be created with the `DEBIAI_data` folder.
-You can now provide your project data to DebiAI : [Inserting data into DebiAI](../dataInsertion/README.md)
+You can now provide your project data to DebiAI : [Inserting data into DebiAI](../../../dataInsertion/README.md)
 
 To stop the DebiAI server, you can run the following command:
 ```
@@ -88,7 +88,7 @@ docker run -d \
 ```
 
 DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
-You can now provide your project data to DebiAI : [Inserting data into DebiAI](../dataInsertion/README.md)
+You can now provide your project data to DebiAI : [Inserting data into DebiAI](../../../dataInsertion/README.md)
 
 
 Stop the docker image :

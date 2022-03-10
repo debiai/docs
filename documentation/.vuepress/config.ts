@@ -9,8 +9,9 @@ module.exports = {
   theme: '@vuepress/theme-default',
   themeConfig: {
     logo: '/logo.png',
-    repo: 'debiai/docs',
+    repo: 'debiai/debiai',
     repoLabel: `GitHub [${version}]`,
+    docsRepo: 'debiai/docs',
     docsDir: 'documentation',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
@@ -25,56 +26,61 @@ module.exports = {
       // DebiAI
       {
         text: "DebiAI",
+        link: "/debiai/",
         children: [
-          { text: "Introduction", link: "/debiai/introduction/" },
           {
             text: "Getting started", link: "/debiai/gettingStarted/",
             children: [
               { text: "Installation", link: "/debiai/gettingStarted/installation/" },
-              { text: "Data insertion", link: "/debiai/gettingStarted/dataInsertion/" },
             ]
           }
         ]
       },
 
-      // Python module
+      // Data insertion
       {
-        text: "Python module", link: "/pythonModule/",
-        children: [
-          "/pythonModule/quickStart",
+        text: "Data insertion", link: "/dataInsertion", children: [
+          // Python module
           {
-            text: "Guided examples", link: "/pythonModule/guidedExamples/",
+            text: "Python module", link: "/dataInsertion/pythonModule/",
+            collapsible: true,
             children: [
-              "/pythonModule/guidedExamples/mnist",
-              "/pythonModule/guidedExamples/woodscape"
+              "/dataInsertion/pythonModule/quickStart.md",
+              {
+                text: "Tutorials", link: "/dataInsertion/pythonModule/tutorials/",
+                children: [
+                  "/dataInsertion/pythonModule/tutorials/mnist",
+                  "/dataInsertion/pythonModule/tutorials/woodscape"
+                ]
+              },
+              "/dataInsertion/pythonModule/API",
             ]
           },
-          "/pythonModule/API",
-        ]
-      },
 
-      // Data providers
-      {
-        text: "Data providers", link: "/dataProviders/",
-        children: [
-          "/dataProviders/quickStart",
-          // "/pythonModule/installation",
-          // "/pythonModule/quickStart",
-          // {
-          //   text: "Guided examples", link: "/pythonModule/guidedExamples/",
-          //   children: [
-          //     "/pythonModule/guidedExamples/mnist",
-          //     "/pythonModule/guidedExamples/woodscape"
-          //   ]
-          // },
-          // "/pythonModule/API",
+          // Data providers
+          {
+            text: "Data providers", link: "/dataInsertion/dataProviders/",
+            collapsible: true,
+            children: [
+              "/dataInsertion/dataProviders/quickStart",
+              // "/pythonModule/installation",
+              // "/pythonModule/quickStart",
+              // {
+              //   text: "Guided examples", link: "/pythonModule/guidedExamples/",
+              //   children: [
+              //     "/pythonModule/guidedExamples/mnist",
+              //     "/pythonModule/guidedExamples/woodscape"
+              //   ]
+              // },
+              // "/pythonModule/API",
+            ]
+          },
         ]
       },
 
       // Dashboard
       {
-        text: "Dashboard", children: [
-          "/dashboard/introduction/",
+        text: "Dashboard", link: "/dashboard", children: [
           {
             text: "Widgets", link: "/dashboard/widgets/",
             children: [

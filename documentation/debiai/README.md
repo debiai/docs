@@ -20,7 +20,7 @@ The dashboard is higly customizable and can be used for big or small projects.
 
 DebiAI is a high level data exploration tool for data scientists and machine learning experts. It is designed to be easily integrated in your project workflow.
 
-[Get started](../gettingStarted/README.md)
+[Get started](gettingStarted/README.md)
 
 <!-- TODO : Data insertion-->
 <!-- TODO : Dashboard usage -->

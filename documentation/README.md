@@ -8,7 +8,7 @@ actions:
     link: /debiai/gettingStarted/
     type: primary
   - text: Introduction
-    link: /debiai/introduction/
+    link: /debiai/
     type: secondary
 features:
 - title: 📊 Bias detection

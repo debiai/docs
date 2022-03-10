@@ -1,28 +1,19 @@
 # Quick start
 
-The DebiAI Python module is an interface with DebiAI, you can use it directly in your Python project workflow to provide data to DebiAI.
-
-## Features :
-- Project creation
-- Project data insertion
-- Model metadata and model results insertion
-- Selection made with the dashboard samples recovery
-- tf.dataset creation from the project selections
-
 ## Requierements:
 * A running DebiAI instance (see [Installation](../debiai/gettingStarted/installation/README.md))
 * [Numpy](https://www.numpy.org/install)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
-* Eventualy [Tensorflow](https://www.tensorflow.org/install)
+* Eventually [Tensorflow](https://www.tensorflow.org/install)
 
 ## Installation
 
 ### Pypi
 Comming soon
 
-### By building the package :
+### By building the package
 
-**Requirements :**
+**Requierements :**
 * setuptools
 * wheel
 * pip

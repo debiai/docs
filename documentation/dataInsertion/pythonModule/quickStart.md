@@ -13,7 +13,7 @@ Comming soon
 
 ### By building the package
 
-**Requierements :**
+**Requirements :**
 * setuptools
 * wheel
 * pip
@@ -47,7 +47,7 @@ pip install build_package/*.tar.gz
 ## Basic example
 
 
-### Initialization and project management
+### Initialization and project creation
 
 
 ```python
@@ -73,7 +73,7 @@ If the project already exists, don't create it again but use instead: `debiai_pr
 If you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
 
 
-### IDs and block structure
+### Setting the data structure
 
 Each data to insert must be associated with:
 - An **ID**: considering that the dataset and the results will be inserted in two different steps, in order to match them later an ID is recquired for each data inserted.
@@ -195,5 +195,6 @@ results_df = pd.DataFrame({
 debiai_model_2.add_results_df(results_df)
 ```
 
-Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard.
+Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard, available by default at this url : [http://localhost:3000/](http://localhost:3000/)
 
+#### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).

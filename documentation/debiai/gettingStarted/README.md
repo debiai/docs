@@ -4,6 +4,6 @@
 
 2) Create a project and [add data to your DebiAI instance](../../dataInsertion/README.md).
 
-3) Start [analysing your data with the DebiAI dashboard](../../dashboard/introduction.md).
+3) Start [analysing your data with the DebiAI dashboard](../../dashboard/README.md).
 
 <!-- TODO : video presentation -->

@@ -88,8 +88,6 @@ docker run -d \
 ```
 
 DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
-You can now provide your project data to DebiAI : [Inserting data into DebiAI](../../../dataInsertion/README.md)
-
 
 Stop the docker image :
 ```bash
@@ -105,3 +103,5 @@ docker container rm debiai
 
 # Then build and run the docker image
 ```
+
+#### The next step is to provide data to DebiAI: [Inserting data into DebiAI](../../../dataInsertion/README.md)

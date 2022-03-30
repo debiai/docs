@@ -1,6 +1,6 @@
 # Quick start
 
-## Requierements:
+## Requirements:
 * A running DebiAI instance (see [Installation](../debiai/gettingStarted/installation/README.md))
 * [Numpy](https://www.numpy.org/install)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
@@ -13,7 +13,7 @@ Comming soon
 
 ### By building the package
 
-**Requierements :**
+**Requirements :**
 * setuptools
 * wheel
 * pip
@@ -47,6 +47,9 @@ pip install build_package/*.tar.gz
 ## Basic example
 
 
+### Initialization and project creation
+
+
 ```python
 from debiai import debiai
 import pandas as pd
@@ -60,7 +63,31 @@ my_debiai = debiai.Debiai(DEBIAI_BACKEND_URL)
 
 # Creating a project
 debiai_project = my_debiai.create_project(DEBIAI_PROJECT_NAME)
+```
 
+A project named "Hello DebiAI" is now created. To create an other project, change DEBIAI_PROJECT_NAME.
+If you're not using the default configuration, you can configure a specific adress in DEBIAI_BACKEND_URL.
+
+If the project already exists, don't create it again but use instead: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
+
+If you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
+
+
+### Setting the data structure
+
+Each data to insert must be associated with:
+- An **ID**: considering that the dataset and the results will be inserted in two different steps, in order to match them later an ID is recquired for each data inserted.
+- A **type**: "text", "number" or "boolean".
+- A **label**: "inputs", "groundtruth", "contexts", or "others".
+
+The type and the label are used for authorizing (or suggesting) specific data manipulation or visualizations.
+
+To do so, a **block structure** must be defined, with at least one object containing the following keys:
+- *"name"*: for setting the ID column
+- *"inputs*, "*groundtruth"*, *"contexts"*, or *"others"*: lists with the *"type"* and the *"name"* of the columns of your dataset.
+
+
+```python
 # Creating the project block structure
 block_structure = [
     {
@@ -77,8 +104,15 @@ block_structure = [
 ]
 
 debiai_project.set_blockstructure(block_structure)
+```
 
+Note that the block structure is a list of such objects, for dealing with hierarchical information. More information will be given later.
 
+The structure of the data is now set: the next step is to add them.
+
+### Adding data
+
+```python
 # ======== Adding the project samples ========
 # Adding samples with a dataframe
 samples_df = pd.DataFrame({
@@ -89,11 +123,20 @@ samples_df = pd.DataFrame({
 })
 
 debiai_project.add_samples_pd(samples_df)
+```
 
-# The project samples are ready to be analysed with the dashboard
+The samples are now ready to be analysed with the dashboard.
+
+An important feature of DebiAI is to analyse the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C". To do so, the next step is to add model's results.
+
+### Setting the results structure
+
+The first step is to set, for your results, the equivalent of the *block structure*: each result must have an ID (to map them with the data), and a type. 
+
+To do so, an **expected results** must be defined (the equivalent of *block structure*, but for the results), with a list of object containing the *"name"* of the column, and the *"type"* ("text", "number" or "boolean"). There is no need to set the ID column: the ID column is set by default, with the same name it has in the block structure ("Image ID" in our case).
 
 
-# ===== Adding the project model results =====
+```python
 # Setting the project models expected results
 expected_results = [
     {"name": "Model result",     "type": "number"},
@@ -102,11 +145,24 @@ expected_results = [
 ]
 
 debiai_project.set_expected_results(expected_results)
+```
 
-# Create the models
+Note that in the "results", we can directly add error metrics.
+
+
+### Adding results
+
+Results are the results of a particular model. Each time we add results, those results must be associated with a specific model, which is defined by a name.
+Considering that, the first step is to create a model.
+
+```python
+# Create a first model
 debiai_model_1 = debiai_project.create_model("Model 1")
-debiai_model_2 = debiai_project.create_model("Model 2")
+```
 
+Now that both the structure of the results is set, and a model is created, you can add some results to a specific model.
+
+```python
 # Adding results with a numpy Array
 results_np = np.array(
     [["Image ID", "Model result", "Model confidence", "Model error"],
@@ -116,7 +172,18 @@ results_np = np.array(
 )
 
 debiai_model_1.add_results_np(results_np)
+```
 
+If later on you have a second model, you can create an other model.
+
+```python
+# Create a first model
+debiai_model_2 = debiai_project.create_model("Model 2")
+```
+
+This time we will use a pandas dataframe, instead of numpy, for inserting results.
+
+```python
 # Adding results with a dataframe
 results_df = pd.DataFrame({
     "Image ID": ["image-1", "image-2", "image-3"],
@@ -126,6 +193,8 @@ results_df = pd.DataFrame({
 })
 
 debiai_model_2.add_results_df(results_df)
-
-# The model results are ready to be analysed with the Debiai dashboard
 ```
+
+Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard, available by default at this url : [http://localhost:3000/](http://localhost:3000/)
+
+#### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).

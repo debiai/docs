@@ -1,9 +1,9 @@
 # Getting started
 
-After [installing DebiAI](../gettingStarted/installation/README.md),
+1) [Install DebiAI](../gettingStarted/installation/README.md),
 
-you will need to create a project and [add data to your DebiAI instance](../../dataInsertion/README.md).
+2) Create a project and [add data to your DebiAI instance](../../dataInsertion/README.md).
 
-You can then start [analysing your data with the DebiAI dashboard](../../dashboard/introduction.md).
+3) Start [analysing your data with the DebiAI dashboard](../../dashboard/README.md).
 
 <!-- TODO : video presentation -->

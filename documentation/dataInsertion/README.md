@@ -2,7 +2,7 @@
 
 Being a data visualisation application, providing the project data to DebiAI is a requiered step.
 
-## Requierements
+## Requirements
 
 ### A DebiAI instance
 
@@ -27,7 +27,7 @@ The data you want to analyse with DebiAI will need to respect a specific format.
 
 ## There is currently two ways to insert data into DebiAI:
 
-### [<ins>Python module</ins>](pythonModule/README.md)
+### [<ins>Python module</ins>](pythonModule/README.md) (Recommended approach)
 The main way to add provide the project data to the application is through the DebiAI Python module.
 The module was designed to be used directly in your Python workflow, to add model results directly after its evaluation for example.
 

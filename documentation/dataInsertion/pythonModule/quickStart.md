@@ -25,7 +25,7 @@ You can now use the DebiAI module inside your script with `from debiai import de
 
 ```bash
 # Clone the module repository :
-git clone git@github.com:debiai/py-debiai.git
+git clone https://github.com/debiai/debiai.git
 cd py-debiai
 
 # Execute

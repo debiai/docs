@@ -1,6 +1,7 @@
 # The DebiAI documentation
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![cd](https://github.com/debiai/docs/actions/workflows/docker-push.yml/badge.svg)
 
 The DebiAI documentation is made with [VuePress](https://v2.vuepress.vuejs.org/)
 

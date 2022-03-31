@@ -5,7 +5,7 @@ module.exports = {
   title: "DebiAI",
   description: 'Documentation for DebiAI',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.png' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
   // theme: '@vuepress/theme-default',
   theme: path.resolve(__dirname, './theme'),

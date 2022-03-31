@@ -5,6 +5,7 @@ DebiAI offers several installation methods:
   - [Official Docker image](#official-docker-image)
   - [Docker-compose (recommended)](#docker-compose-recommended)
   - [Docker](#docker)
+      - [The next step is to provide data to DebiAI: Inserting data into DebiAI](#the-next-step-is-to-provide-data-to-debiai-inserting-data-into-debiai)
 
 
 ## Official Docker image
@@ -23,7 +24,7 @@ Using our Docker-compose file is the recommended way to deploy DebiAI on your pr
 Using the `docker-compose-build.yml` file will build and run the DebiAI docker image for you.
 
 ```bash
-git clone git@github.com:debiai/debiai.git
+git clone https://github.com/debiai/debiai.git
 
 cd debiai
 
@@ -71,7 +72,7 @@ If you want to make the inserted data persistant, you can set a volume folder. B
 
 Build the docker image :
 ```bash
-git@github.com:debiai/debiai.git
+git clone https://github.com/debiai/debiai.git
 
 cd debiai
 

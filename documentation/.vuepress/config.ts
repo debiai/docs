@@ -1,4 +1,5 @@
 const { version } = require('../../package')
+const { path } = require('@vuepress/utils')
 
 module.exports = {
   title: "DebiAI",
@@ -6,9 +7,10 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
   ],
-  theme: '@vuepress/theme-default',
+  // theme: '@vuepress/theme-default',
+  theme: path.resolve(__dirname, './theme'),
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo_debiai.png',
     repo: 'debiai/debiai',
     repoLabel: `GitHub [${version}]`,
     docsRepo: 'debiai/docs',

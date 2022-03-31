@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: DebiAI
-heroImage: logo.png
+heroText: " "
+heroImage: logo_stats_debiai.png
 tagline: A Bias detection and contextual evaluation tool for your AI projects
 actions:
   - text: Get Started
@@ -17,5 +17,4 @@ features:
   details: Find which model is better on the contexts that matters the most for your project.
 - title: 🔎 Data selection
   details: With the DebiAi graphical tools and high-level filters, select data for training purpose or for additional exploration.
-footer: Apache 2.0 licenced | IRT SystemX | 2022
 ---

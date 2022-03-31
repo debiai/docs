@@ -19,7 +19,6 @@ module.exports = {
     smoothScroll: true,
     darkMode: false,
     navbar: [
-      { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/debiai/gettingStarted/' },
     ],
     sidebar: [

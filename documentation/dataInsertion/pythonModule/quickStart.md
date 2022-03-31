@@ -8,10 +8,14 @@
 
 ## Installation
 
-### Pypi
-Comming soon
+### From the [debiai pip package](https://pypi.org/project/debiai/)
 
-### By building the package
+```bash
+pip install --upgrade debiai
+```
+You can now use the DebiAI module inside your script with `from debiai import debiai`
+
+### Manual installation
 
 **Requirements :**
 * setuptools
@@ -131,7 +135,7 @@ An important feature of DebiAI is to analyse the results of some models in a con
 
 ### Setting the results structure
 
-The first step is to set, for your results, the equivalent of the *block structure*: each result must have an ID (to map them with the data), and a type. 
+The first step is to set, for your results, the equivalent of the *block structure*: each result must have an ID (to map them with the data), and a type.
 
 To do so, an **expected results** must be defined (the equivalent of *block structure*, but for the results), with a list of object containing the *"name"* of the column, and the *"type"* ("text", "number" or "boolean"). There is no need to set the ID column: the ID column is set by default, with the same name it has in the block structure ("Image ID" in our case).
 

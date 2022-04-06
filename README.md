@@ -1,4 +1,6 @@
 # The DebiAI documentation
+![DebiAI-Light](./documentation/.vuepress/public/logo_debiai_dark.png#gh-dark-mode-only)
+![DebiAI-Dark](./documentation/.vuepress/public/logo_debiai_bright.jpg#gh-light-mode-only)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 ![cd](https://github.com/debiai/docs/actions/workflows/docker-push.yml/badge.svg)

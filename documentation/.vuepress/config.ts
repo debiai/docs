@@ -23,6 +23,8 @@ module.exports = {
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/debiai/gettingStarted/' },
+      { text: 'Feature Requests', link: 'https://github.com/debiai/debiai/issues' },
+      { text: 'Roadmap', link: 'https://github.com/debiai/debiai/milestones' },
     ],
     sidebar: [
       // DebiAI
@@ -100,5 +102,17 @@ module.exports = {
         ]
       },
     ],
+    async additionalPages() {
+      // Note that VuePress doesn't have request library built-in
+      // you need to install it yourself.
+      const rp = require('request-promise')
+      const content = await rp('https://raw.githubusercontent.com/vuejs/vuepress/master/CHANGELOG.md')
+      return [
+        {
+          path: '/changelog/',
+          content
+        }
+      ]
+    }
   },
 }

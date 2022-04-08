@@ -2,20 +2,60 @@
 
 DebiAI offers several installation methods:
 - [Installation](#installation)
-  - [Official Docker image](#official-docker-image)
-  - [Docker-compose (recommended)](#docker-compose-recommended)
-  - [Docker](#docker)
+  - [Official image (recommended)](#official-image-recommended)
       - [The next step is to provide data to DebiAI: Inserting data into DebiAI](#the-next-step-is-to-provide-data-to-debiai-inserting-data-into-debiai)
+  - [Docker-compose](#docker-compose)
+  - [Docker build](#docker-build)
 
 
-## Official Docker image
+## Official image (recommended)
 
-Coming soon
-<!-- TODO -->
+Using our public docker images is the recommended way to deploy DebiAI on your project server or on a local machine.
 
-## Docker-compose (recommended)
+**Requierment:** [Docker](https://docs.docker.com/get-docker/)
 
-Using our Docker-compose file is the recommended way to deploy DebiAI on your project server or local machine.
+```bash:no-line-numbers
+docker run -p 3000:3000 --restart=always debiai/app
+```
+DebiAI will be available at [http://localhost:3000/](http://localhost:3000/)
+
+**Run DebiAI in background:**
+
+If you want to run DebiAI in background, you can use the `-d` option.
+
+```bash:no-line-numbers
+docker run -p 3000:3000 --restart=always debiai/app -d
+```
+**Change the port:**
+
+If you want to set your DebiAI instance at a different port:
+
+```bash:no-line-numbers
+docker run -p 8080:3000 --restart=always debiai/app
+```
+
+DebiAI will be available at [http://localhost:8080/](http://localhost:8080/)
+
+**Set a volume:**
+
+If the docker container is shut down, you will lose your projects data. If you want to make the inserted data persistant, you can create a folder and you can use the `-v` option:
+
+```bash:no-line-numbers
+mkdir debiai_data
+
+docker run -p 3000:3000 \
+  --restart=always \
+  -v $(pwd)/debiai_data:/backend/data debiai/app
+```
+The data will be stored in the `debiai_data` folder.
+
+#### The next step is to provide data to DebiAI: [Inserting data into DebiAI](../../../dataInsertion/README.md)
+
+There is other ways to deploy DebiAI:
+
+## Docker-compose
+
+You can also use our Docker-compose file :
 
 **Requierments :**
 - [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
@@ -32,7 +72,7 @@ docker-compose -f docker-compose-build.yml up -d
 ```
 
 DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
-A volume will be created with the `DEBIAI_data` folder.
+A volume will be created with the `debiai_data` folder.
 You can now provide your project data to DebiAI : [Inserting data into DebiAI](../../../dataInsertion/README.md)
 
 To stop the DebiAI server, you can run the following command:
@@ -56,14 +96,14 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./DEBIAI_data:/app/data
+      - ./debiai_data:/app/data
 ```
 
 _Volume:_
 
-If you want to make the inserted data persistant, you can set a volume folder. By default, a **DEBIAI_data** folder will be created. If you don't want a volume, you can remove it. If you want to change the folder path, create a folder where you want and replace "./DEBIAI_data" by the path of your folder. Make sure that the folder is empty before running DebiAI.
+If you want to change the folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing related to DebiAI in the folder because it might be removed.
 
-## Docker
+## Docker build
 
 **Requierments :**
 - [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
@@ -104,5 +144,3 @@ docker container rm debiai
 
 # Then build and run the docker image
 ```
-
-#### The next step is to provide data to DebiAI: [Inserting data into DebiAI](../../../dataInsertion/README.md)

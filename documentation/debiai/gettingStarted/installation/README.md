@@ -5,6 +5,7 @@ DebiAI offers several installation methods:
   - [Official Docker image](#official-docker-image)
   - [Docker-compose (recommended)](#docker-compose-recommended)
   - [Docker](#docker)
+  - [Development](#development)
       - [The next step is to provide data to DebiAI: Inserting data into DebiAI](#the-next-step-is-to-provide-data-to-debiai-inserting-data-into-debiai)
 
 
@@ -104,5 +105,10 @@ docker container rm debiai
 
 # Then build and run the docker image
 ```
+
+## Development
+
+If you want to run DebiAI in development mode, you can follow our [development setup guide](./development.md).
+
 
 #### The next step is to provide data to DebiAI: [Inserting data into DebiAI](../../../dataInsertion/README.md)

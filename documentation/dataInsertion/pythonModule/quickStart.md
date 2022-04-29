@@ -37,7 +37,8 @@ debiai_project = my_debiai.create_project(DEBIAI_PROJECT_NAME)
 ```
 
 A project named "Hello DebiAI" is now created.
-If your DebiAI instance is not running locally, you can configure a specific adress by changing DEBIAI_BACKEND_URL.
+
+If your DebiAI instance is not running locally, you can configure a specific adress by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
 
 If the project already exists, you can get the project with: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
 

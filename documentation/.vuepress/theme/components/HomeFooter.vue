@@ -3,11 +3,11 @@
     <div id="partners">
       DebiAI is carried out by
       <a class="logo" href="https://www.irt-systemx.fr/en/">
-        <img src="/logo_system-x.jpg" alt="IRT SystemX" />
+        <img src="/Logo_SystemX_800px.jpg" alt="IRT SystemX" />
       </a>
       And is integrated in
       <a class="logo" href="https://www.confiance.ai/en/">
-        <img src="/logo_confianceai.jpg" alt="Confiance AI" />
+        <img src="/H0605_Logo_ConfianceAI_2000px.png" alt="Confiance AI" />
       </a>
     </div>
     <div id="footer">Apache 2.0 licenced | IRT SystemX | 2022</div>
@@ -32,7 +32,7 @@
 }
 #homeFooter #partners .logo img {
   margin: 0 1em;
-  height: 60px;
+  height: 70px;
   padding: 10px 40px 30px 10px;
 }
 

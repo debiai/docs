@@ -19,12 +19,12 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
       <div id="partners">
         <div id="SystemXLogo">
           <a class="logo" href="https://www.irt-systemx.fr/en/">
-            <img src="/logo_system-x.jpg" alt="IRT SystemX" />
+            <img src="/Logo_SystemX_800px.jpg" alt="IRT SystemX" />
           </a>
         </div>
         <div id="ConfAILogo">
           <a class="logo" href="https://www.confiance.ai/en/">
-            <img src="/logo_confianceai.jpg" alt="IRT SystemX" />
+            <img src="/H0605_Logo_ConfianceAI_2000px.png" alt="IRT SystemX" />
           </a>
         </div>
       </div>
@@ -117,12 +117,11 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
   width: 100%;
   bottom: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 10px;
 }
 .sidebar #partners .logo img {
-  height: 50px;
+  height: 70px;
 }
 
 .page #footer {

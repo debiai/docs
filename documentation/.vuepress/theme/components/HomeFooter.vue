@@ -21,24 +21,27 @@
 #homeFooter {
   font-size: 0.7em;
 }
-#partners {
+#homeFooter #partners {
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid var(--c-border);
   border-bottom: 1px solid var(--c-border);
+  padding-top: 10px;
+  margin-top: 10px;
 }
-#partners .logo img {
+#homeFooter #partners .logo img {
   margin: 0 1em;
   height: 60px;
   padding: 10px 40px 30px 10px;
 }
 
-#footer {
+#homeFooter #footer {
   padding: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-top: 1px solid var(--c-border);
+  color: var(--c-text-lightest);
 }
 </style>

@@ -6,6 +6,9 @@ module.exports = {
   description: 'Documentation for DebiAI',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // Import Fonts
+    ['link', { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" }],
+    // Import Icons
     ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" }],
   ],
   // theme: '@vuepress/theme-default',
@@ -24,6 +27,8 @@ module.exports = {
     navbar: [
       { text: 'Home', link: '/' },
       { text: 'Getting started', link: '/debiai/gettingStarted/' },
+      { text: 'Feature Requests', link: 'https://github.com/debiai/debiai/issues' },
+      { text: 'Roadmap', link: 'https://github.com/debiai/debiai/milestones' },
     ],
     sidebar: [
       // DebiAI
@@ -66,16 +71,6 @@ module.exports = {
             collapsible: true,
             children: [
               "/dataInsertion/dataProviders/quickStart",
-              // "/pythonModule/installation",
-              // "/pythonModule/quickStart",
-              // {
-              //   text: "Guided examples", link: "/pythonModule/guidedExamples/",
-              //   children: [
-              //     "/pythonModule/guidedExamples/mnist",
-              //     "/pythonModule/guidedExamples/woodscape"
-              //   ]
-              // },
-              // "/pythonModule/API",
             ]
           },
         ]
@@ -100,6 +95,6 @@ module.exports = {
           },
         ]
       },
-    ],
+    ]
   },
 }

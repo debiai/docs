@@ -105,7 +105,7 @@ docker-compose -f docker-compose-build.yml up -d
 ```
 
 DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
-A volume will be created with the `DEBIAI_data` folder.
+A volume will be created with the `debiai_data` folder.
 You can now provide your project data to DebiAI : [Inserting data into DebiAI](../../../dataInsertion/README.md)
 
 To stop the DebiAI server, you can run the following command:
@@ -134,7 +134,7 @@ services:
 
 _Volume:_
 
-If you want to make the inserted data persistant, you can set a volume folder. By default, a **DEBIAI_data** folder will be created. If you don't want a volume, you can remove it. If you want to change the folder path, create a folder where you want and replace "./DEBIAI_data" by the path of your folder. Make sure that the folder is empty before running DebiAI.
+If you want to change the folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing related to DebiAI in the folder because it might be removed.
 
 ### Docker build
 **Requierments :**

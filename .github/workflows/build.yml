@@ -1,0 +1,21 @@
+# Test on each pr that the doc can build
+
+name: Build
+
+on:
+  pull_request:
+      branches:
+      - main
+
+jobs:
+  build:
+    name: Test that de doc build
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 14
+    - run: npm install
+    - name: Build the docs
+      run: npm run build

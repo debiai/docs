@@ -1,52 +1,19 @@
 # Quick start
 
-## Requirements:
-* A running DebiAI instance (see [Installation](../debiai/gettingStarted/installation/README.md))
+## Requirements
+* A running DebiAI instance (see [DebiAI installation](../../debiai/gettingStarted/installation/README.md))
 * [Numpy](https://www.numpy.org/install)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
 * Eventually [Tensorflow](https://www.tensorflow.org/install)
 
 ## Installation
 
-### From the [debiai pip package](https://pypi.org/project/debiai/)
-
 ```bash
 pip install --upgrade debiai
 ```
 You can now use the DebiAI module inside your script with `from debiai import debiai`
 
-### Manual installation
-
-**Requirements :**
-* setuptools
-* wheel
-* pip
-
-
-```bash
-# Clone the module repository :
-git clone https://github.com/debiai/debiai.git
-cd py-debiai
-
-# Execute
-./build_package.sh
-
-# Install
-pip install build_package/*.tar.gz
-```
-You can now use the DebiAI module inside your script with `from debiai import debiai`
-
-**Update:**
-
-```bash
-cd py-debiai
-
-git pull
-
-./build_package.sh
-
-pip install build_package/*.tar.gz
-```
+You can also check our [Manual installation guide](./installation/manual.html)
 
 ## Basic example
 
@@ -69,26 +36,29 @@ my_debiai = debiai.Debiai(DEBIAI_BACKEND_URL)
 debiai_project = my_debiai.create_project(DEBIAI_PROJECT_NAME)
 ```
 
-A project named "Hello DebiAI" is now created. To create an other project, change DEBIAI_PROJECT_NAME.
-If you're not using the default configuration, you can configure a specific adress in DEBIAI_BACKEND_URL.
+A project named "Hello DebiAI" is now created.
 
-If the project already exists, don't create it again but use instead: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
+![img](./helloDebiai/HelloDebiAI_1.png)
 
-If you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
+If your DebiAI instance is not running locally, you can configure a specific adress by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
+
+If the project already exists, you can get the project with: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
+
+And if you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
 
 
 ### Setting the data structure
 
-Each data to insert must be associated with:
-- An **ID**: considering that the dataset and the results will be inserted in two different steps, in order to match them later an ID is recquired for each data inserted.
-- A **type**: "text", "number" or "boolean".
-- A **label**: "inputs", "groundtruth", "contexts", or "others".
+Each data that you want to insert must be associated with:
+- An **ID**: considering that the dataset and the results are inserted in two different steps, an ID is recquired for each inserted data in order to match them later.
+- A **type**: `text`, `number` or `boolean`.
+- A **label**: `inputs`, `groundTruth`, `contexts`, or `others`.
 
 The type and the label are used for authorizing (or suggesting) specific data manipulation or visualizations.
 
 To do so, a **block structure** must be defined, with at least one object containing the following keys:
-- *"name"*: for setting the ID column
-- *"inputs*, "*groundtruth"*, *"contexts"*, or *"others"*: lists with the *"type"* and the *"name"* of the columns of your dataset.
+- `name`: for setting the ID column
+- `inputs`, `groundTruth`, `contexts`, or `others`: optional lists with the `type` and the `name` of the columns of your dataset.
 
 
 ```python
@@ -108,11 +78,12 @@ block_structure = [
 ]
 
 debiai_project.set_blockstructure(block_structure)
+# A project data structure can be set only once per projects.
 ```
 
 Note that the block structure is a list of such objects, for dealing with hierarchical information. More information will be given later.
 
-The structure of the data is now set: the next step is to add them.
+The structure of the data is now set, the next step is to add them.
 
 ### Adding data
 
@@ -129,9 +100,28 @@ samples_df = pd.DataFrame({
 debiai_project.add_samples_pd(samples_df)
 ```
 
+The added data need to follow the previously defined block structure, if the __*My groundtruth 1*__ field is missing from the dataframe, DebiAI will throw an error. DebiAI will ignore the dataframe additional fields that haven't been defined in the block structure.
+
+Let's add more samples from a np array:
+
+```python
+# ======== Adding the project samples ========
+# Adding samples with a np array
+samples_np = np.array([
+    ["Image ID", "My context 1", "My context 2", "My groundtruth 1"],
+    ["image-4", "B", 0.1, 7],
+    ["image-5", "B", 0.08, 19],
+    ["image-6", "C", 0.398, 7]
+])
+
+debiai_project.add_samples(samples_np)
+```
 The samples are now ready to be analysed with the dashboard.
 
-An important feature of DebiAI is to analyse the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C". To do so, the next step is to add model's results.
+![img](./helloDebiai/HelloDebiAI_2.png)
+
+An important feature of DebiAI is to analyse the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C" so let's add model results.
+
 
 ### Setting the results structure
 
@@ -153,11 +143,11 @@ debiai_project.set_expected_results(expected_results)
 
 Note that in the "results", we can directly add error metrics.
 
+A project results structure can be set only once.
 
 ### Adding results
 
-Results are the results of a particular model. Each time we add results, those results must be associated with a specific model, which is defined by a name.
-Considering that, the first step is to create a model.
+Results must be associated to a specific model, so the first step is to create one:
 
 ```python
 # Create a first model
@@ -166,26 +156,7 @@ debiai_model_1 = debiai_project.create_model("Model 1")
 
 Now that both the structure of the results is set, and a model is created, you can add some results to a specific model.
 
-```python
-# Adding results with a numpy Array
-results_np = np.array(
-    [["Image ID", "Model result", "Model confidence", "Model error"],
-     ["image-1", 3,  0.98, "yes"],
-     ["image-2", 7,  0.97, "no"],
-     ["image-3", 10, 0.8, "yes"]]
-)
-
-debiai_model_1.add_results_np(results_np)
-```
-
-If later on you have a second model, you can create an other model.
-
-```python
-# Create a first model
-debiai_model_2 = debiai_project.create_model("Model 2")
-```
-
-This time we will use a pandas dataframe, instead of numpy, for inserting results.
+Here we are adding results for the first model with a dataframe:
 
 ```python
 # Adding results with a dataframe
@@ -196,9 +167,41 @@ results_df = pd.DataFrame({
     "Model error": ["yes", "no", "no"],
 })
 
-debiai_model_2.add_results_df(results_df)
+debiai_model_1.add_results_df(results_df)
 ```
 
-Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard, available by default at this url : [http://localhost:3000/](http://localhost:3000/)
+If later on you have a second model, you can create an other model.
+
+```python
+# Create a second model
+debiai_model_2 = debiai_project.create_model("Model 2")
+```
+
+This time we will use a numpy array, instead of a dataframe, for inserting results:
+
+```python
+# Adding results with a numpy Array
+results_np = np.array(
+    [["Image ID", "Model result", "Model confidence", "Model error"],
+     ["image-1", 3,  0.98, "yes"],
+     ["image-2", 7,  0.97, "no"],
+     ["image-3", 10, 0.8, "yes"]]
+)
+
+debiai_model_2.add_results_np(results_np)
+```
+
+Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard.
+
+![img](./helloDebiai/HelloDebiAI_3.png)
+![img](./helloDebiai/HelloDebiAI_4.png)
+
+## Limitations
+- Nan or empty values are not supported at the moment.
+- `/`, `.`, `:`, `?`, `*`, `\`, and `|`, are not supported in the project name and in the data/blocks ids.
+
+> :warning: **If the data don't upload or don't load**: check that there is only string, number or boolean values (no Nan, objects or array values) in the data that you are uploading, and that there is no special character in the project name and the data ids.
+
+Note that the DebiAI Python module is in Alpha version, and is not yet stable, feel free to report any issue or suggestion.
 
 #### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).

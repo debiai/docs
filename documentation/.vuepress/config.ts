@@ -6,6 +6,7 @@ module.exports = {
   description: 'Documentation for DebiAI',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" }],
   ],
   // theme: '@vuepress/theme-default',
   theme: path.resolve(__dirname, './theme'),

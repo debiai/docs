@@ -1,8 +1,8 @@
 ---
 home: true
-heroText: " "
-heroImage: logo_stats_debiai.png
-tagline: A Bias detection and contextual evaluation tool for your AI projects
+heroText: "DebiAI"
+heroImage: shark.png
+tagline: A bias detection and contextual evaluation tool for your AI projects
 actions:
   - text: Get Started
     link: /debiai/gettingStarted/

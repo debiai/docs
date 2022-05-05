@@ -196,4 +196,12 @@ Now, both the data and the 2 models are ready to be analysed with the Debiai das
 ![img](./helloDebiai/HelloDebiAI_3.png)
 ![img](./helloDebiai/HelloDebiAI_4.png)
 
+## Limitations
+- Nan or empty values are not supported at the moment.
+- `/`, `.`, `:`, `?`, `*`, `\`, and `|`, are not supported in the project name and in the data/blocks ids.
+
+> :warning: **If the data don't upload or don't load**: check that there is only string, number or boolean values (no Nan, objects or array values) in the data that you are uploading, and that there is no special character in the project name and the data ids.
+
+Note that the DebiAI Python module is in Alpha version, and is not yet stable, feel free to report any issue or suggestion.
+
 #### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).

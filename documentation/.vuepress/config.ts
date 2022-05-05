@@ -71,16 +71,6 @@ module.exports = {
             collapsible: true,
             children: [
               "/dataInsertion/dataProviders/quickStart",
-              // "/pythonModule/installation",
-              // "/pythonModule/quickStart",
-              // {
-              //   text: "Guided examples", link: "/pythonModule/guidedExamples/",
-              //   children: [
-              //     "/pythonModule/guidedExamples/mnist",
-              //     "/pythonModule/guidedExamples/woodscape"
-              //   ]
-              // },
-              // "/pythonModule/API",
             ]
           },
         ]
@@ -105,18 +95,6 @@ module.exports = {
           },
         ]
       },
-    ],
-    async additionalPages() {
-      // Note that VuePress doesn't have request library built-in
-      // you need to install it yourself.
-      const rp = require('request-promise')
-      const content = await rp('https://raw.githubusercontent.com/vuejs/vuepress/master/CHANGELOG.md')
-      return [
-        {
-          path: '/changelog/',
-          content
-        }
-      ]
-    }
+    ]
   },
 }

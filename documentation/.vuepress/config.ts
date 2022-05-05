@@ -6,6 +6,9 @@ module.exports = {
   description: 'Documentation for DebiAI',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
+    // Import Fonts
+    ['link', { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" }],
+    // Import Icons
     ['link', { rel: "stylesheet", href: "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/brands.min.css" }],
   ],
   // theme: '@vuepress/theme-default',

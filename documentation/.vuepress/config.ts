@@ -82,18 +82,21 @@ module.exports = {
           {
             text: "Widgets", link: "/dashboard/widgets/",
             children: [
-              "/dashboard/examples/mnist",
-              "/dashboard/examples/woodscape"
-            ]
-          },
-          {
-            text: "Examples", link: "/dashboard/examples/",
-            children: [
-              "/dashboard/examples/mnist",
-              "/dashboard/examples/woodscape"
+              "/dashboard/widgets/parallel_coordinates/",
+              "/dashboard/widgets/point_plot/",
+              "/dashboard/widgets/data_distribution/",
             ]
           },
         ]
+      },
+
+      // Examples
+      {
+        text: "Examples", link: "/examples/",
+        // children: [
+        //   "/examples/mnist",
+        //   "/examples/woodscape"
+        // ]
       },
     ]
   },

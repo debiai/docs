@@ -82,7 +82,9 @@ module.exports = {
           {
             text: "Widgets", link: "/dashboard/widgets/",
             children: [
-              "/dashboard/widgets/parallel_coordinates",
+              "/dashboard/widgets/parallel_coordinates/",
+              "/dashboard/widgets/point_plot/",
+              "/dashboard/widgets/data_distribution/",
             ]
           },
         ]

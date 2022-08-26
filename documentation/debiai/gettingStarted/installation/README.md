@@ -3,14 +3,17 @@
 DebiAI offers several installation methods:
 - [Installation](#installation)
   - [Official Docker image (recommended)](#official-docker-image-recommended)
+    - [Docker run](#docker-run)
     - [Docker-compose](#docker-compose)
   - [Build image from source](#build-image-from-source)
-    - [Docker-compose-build](#docker-compose-build)
     - [Docker build](#docker-build)
+    - [Docker-compose-build](#docker-compose-build)
   - [Development](#development)
 
 
 ## Official Docker image (recommended)
+
+### Docker run
 
 **Requierments :**
 - [Docker](https://docs.docker.com/get-docker/)
@@ -41,6 +44,8 @@ mkdir /tmp/debiai
 docker run -p 3000:3000 -v /tmp/debiai:/backend/data/ debiai/app
 ```
 
+You can also provide additional environment variables to tell DebiAI if you have some data-providers (see [Data providers](../../../dataInsertion/dataProviders/README.md) for more information).
+
 ### Docker-compose
 
 Here is a Docker-compose file that will help you deploy DebiAI without having to remember the docker run command.
@@ -59,6 +64,7 @@ services:
     volumes:
       - ./debiai_data:/backend/data
 ```
+
 
 
 ```bash
@@ -82,9 +88,48 @@ docker-compose up -d
 docker-compose down
 ```
 
+You can also provide additional environment variables to tell DebiAI if you have some data-providers (see [Data providers](../../../dataInsertion/dataProviders/README.md) for more information).
+
 ## Build image from source
 
-We also provide wayr to build the image instead of pulling it. This is useful if you want to deploy DebiAI with local changes.
+We also provide way to build the image instead of pulling it. This is useful if you want to deploy DebiAI with local changes.
+
+### Docker build
+**Requierments :**
+- [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
+- [Docker](https://docs.docker.com/get-docker/)
+
+
+Build the docker image :
+```bash
+git clone https://github.com/debiai/debiai.git
+
+cd debiai
+
+docker build -t debiai .
+```
+
+Run the docker image :
+```bash
+docker run -d -p 3000:3000 --restart=always debiai
+```
+
+DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
+
+Stop the docker image :
+```bash
+docker stop debiai
+```
+
+Update the docker image :
+```bash
+git pull
+
+docker stop debiai
+docker container rm debiai
+
+# Then build and run the docker image
+```
 
 ### Docker-compose-build
 
@@ -136,42 +181,6 @@ _Volume:_
 
 If you want to change the folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing related to DebiAI in the folder because it might be removed.
 
-### Docker build
-**Requierments :**
-- [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
-- [Docker](https://docs.docker.com/get-docker/)
-
-
-Build the docker image :
-```bash
-git clone https://github.com/debiai/debiai.git
-
-cd debiai
-
-docker build -t debiai .
-```
-
-Run the docker image :
-```bash
-docker run -d -p 3000:3000 --restart=always debiai
-```
-
-DebiAI will be available by default at this url : [http://localhost:3000/](http://localhost:3000/)
-
-Stop the docker image :
-```bash
-docker stop debiai
-```
-
-Update the docker image :
-```bash
-git pull
-
-docker stop debiai
-docker container rm debiai
-
-# Then build and run the docker image
-```
 
 ## Development
 

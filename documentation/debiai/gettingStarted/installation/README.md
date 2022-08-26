@@ -53,7 +53,7 @@ Here is a Docker-compose file that will help you deploy DebiAI without having to
 **Requierments :**
 - [Docker compose](https://github.com/docker/compose)
 
-The Docker-compose :
+The DebiAI Docker-compose file :
 ```yaml
 version: "3.8"
 services:
@@ -65,13 +65,13 @@ services:
       - ./debiai_data:/backend/data
 ```
 
-
+How to start DebiAI with Docker-compose :
 
 ```bash
 mkdir debiai
 cd debiai
 
-# Create and fill the docker-compose file
+# Create and copy/pase the docker-compose file
 nano docker-compose.yml
 
 # Start DebiAI
@@ -80,7 +80,6 @@ docker-compose up
 Debiai will be available on [http://localhost:3000/](http://localhost:3000/)
 
 ```bash
-
 # Start DebiAI in background
 docker-compose up -d
 
@@ -177,9 +176,7 @@ services:
       - ./DEBIAI_data:/backend/data
 ```
 
-_Volume:_
-
-If you want to change the folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing related to DebiAI in the folder because it might be removed.
+If you want to change the volume folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing not related to DebiAI in the folder because it might be removed.
 
 
 ## Development

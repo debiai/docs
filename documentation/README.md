@@ -12,7 +12,7 @@ actions:
     type: secondary
 features:
 - title: 📊 Bias detection
-  details: DebiAI offers a large and expending set of graphical tools making the detection of bias on the data of your AI projects.
+  details: DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.
 - title: 💪 Model results comparison
   details: Find which model is better on the contexts that matters the most for your project.
 - title: 🔎 Data selection

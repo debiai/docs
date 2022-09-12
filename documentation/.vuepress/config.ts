@@ -25,21 +25,20 @@ module.exports = {
     smoothScroll: true,
     darkMode: false,
     navbar: [
-      { text: 'Home', link: '/' },
-      { text: 'Getting started', link: '/debiai/gettingStarted/' },
+      // { text: 'Home', link: '/' },
+      // { text: 'Getting started', link: '/debiai/gettingStarted/' },
       { text: 'Feature Requests', link: 'https://github.com/debiai/debiai/issues' },
-      { text: 'Roadmap', link: 'https://github.com/debiai/debiai/milestones' },
     ],
     sidebar: [
       // DebiAI
       {
-        text: "DebiAI",
-        link: "/debiai/",
+        text: "Introduction",
+        link: "/introduction/",
         children: [
           {
-            text: "Getting started", link: "/debiai/gettingStarted/",
+            text: "Getting started", link: "/introduction/gettingStarted/",
             children: [
-              { text: "Installation", link: "/debiai/gettingStarted/installation/" },
+              { text: "Installation", link: "/introduction/gettingStarted/installation/" },
             ]
           }
         ]

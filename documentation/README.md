@@ -3,13 +3,15 @@ home: true
 heroText: "DebiAI"
 heroImage: shark.png
 tagline: A bias detection and contextual evaluation tool for your AI projects
+
 actions:
   - text: Get Started
-    link: /debiai/gettingStarted/
+    link: /introduction/gettingStarted/
     type: primary
   - text: Introduction
-    link: /debiai/
+    link: /introduction/
     type: secondary
+
 features:
 - title: 📊 Bias detection
   details: DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.

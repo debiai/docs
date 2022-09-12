@@ -47,6 +47,12 @@ services:
 
 You can see some examples in our DebiAI [`docker-compose-build.yml`](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.
 
+::: warning
+localhost may not be accessible from the docker container, you may need to use the public IP address of your data-provider or use the `--network host` option to reach the host network.
+More information on the [docker documentation](https://docs.docker.com/network/host/).
+:::
+
+
 ### Configuration file
 
 You can also edit the [`debiai/backend/config/config.ini`](https://github.com/debiai/debiai/blob/main/backend/config/config.ini) file :
@@ -61,8 +67,10 @@ You will then need to restart DebiAI if you are in development mode or to build 
 
 The environment variables take precedence over the configuration file.
 
+If the data-provider is accessible and is conform with the API, DebiAI will display the projects in the dashboard like any other projects. There is however certain limitations to a Data-provider's project :
+
 ## Limitations
 
-If the data-provider is accessible and is conform with the API, DebiAI display the projects in the dashboard like any other projects. There is however certain limitations to a Data-provider's project :
+- The interface between data-providers and DebiAI is not yet stable, so the API is likely to change in the future.
 
 - You won't be able to save samples selection (see [#42] https://github.com/debiai/debiai/issues/42), tags or widget configuration.

@@ -20,3 +20,17 @@ features:
 - title: 🔎 Data selection
   details: With the DebiAi graphical tools and high-level filters, select data for training purpose or for additional exploration.
 ---
+
+<!-- style -->
+<style>
+  .theme-container.no-sidebar {
+    /* background: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0.95),rgba(255,255,255,0)),url(homepage-small.png); */
+    background: linear-gradient(90deg, rgba(255,255,255,0.50) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 70%, rgba(255,255,255,0.50) 100%),url(homepage-small.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    transform: translateZ(0);
+  }
+</style>

@@ -29,6 +29,8 @@
   border-bottom: 1px solid var(--c-border);
   padding-top: 10px;
   margin-top: 10px;
+  color: var(--c-text-lightest);
+
 }
 #homeFooter #partners .logo img {
   margin: 0 1em;

@@ -6,7 +6,7 @@ Being a data visualisation application, providing the project data to DebiAI is 
 
 ### A DebiAI instance
 
-You will need to have a running DebiAI instance to insert you project data to. (see [Installation](../debiai/gettingStarted/installation/README.md))
+You will need to have a running DebiAI instance to insert you project data to. (see [Installation](../introduction/gettingStarted/installation/README.md))
 
 ### Data
 

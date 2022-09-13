@@ -1,7 +1,7 @@
 # Quick start
 
 ## Requirements
-* A running DebiAI instance (see [DebiAI installation](../../debiai/gettingStarted/installation/README.md))
+* A running DebiAI instance (see [DebiAI installation](../../introduction/gettingStarted/installation/README.md))
 * [Numpy](https://www.numpy.org/install)
 * [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
 * Eventually [Tensorflow](https://www.tensorflow.org/install)

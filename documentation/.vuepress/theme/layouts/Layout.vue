@@ -18,14 +18,18 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
     <template #page-bottom>
       <div id="footer">
         <div id="partners">
-          DebiAI is carried out by
-          <a class="logo" href="https://www.irt-systemx.fr/en/">
-            <img src="/Logo_SystemX_800px.jpg" alt="IRT SystemX" />
-          </a>
-          And is integrated in
-          <a class="logo" href="https://www.confiance.ai/en/">
-            <img src="/H0605_Logo_ConfianceAI_2000px.png" alt="Confiance AI" />
-          </a>
+          <span>
+            DebiAI is carried out by
+            <a class="logo" href="https://www.irt-systemx.fr/en/">
+              <img src="/Logo_SystemX_800px.jpg" alt="IRT SystemX" />
+            </a>
+          </span>
+          <span>
+            And is integrated in
+            <a class="logo" href="https://www.confiance.ai/en/">
+              <img src="/H0605_Logo_ConfianceAI_2000px.png" alt="Confiance AI" />
+            </a>
+          </span>
         </div>
         <div id="top">
           <div>
@@ -87,6 +91,9 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
             </li>
           </div>
         </div>
+        <div id="legal">
+          <a href="https://www.irt-systemx.fr/en/legal-notice/">Legal notice</a>
+        </div>
       </div>
     </template>
   </ParentLayout>
@@ -99,19 +106,25 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
   color: var(--c-text-lightest);
   margin: 140px 100px 0 100px;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .page #footer #partners {
   padding: 15px 0 15px 0;
-  width: 90%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   margin-bottom: 15px;
+  gap: 100px;
+}
 
+.page #footer #partners span {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .page #footer #partners .logo img {
@@ -127,5 +140,15 @@ import ParentLayout from "@vuepress/theme-default/lib/client/layouts/Layout.vue"
   list-style: none;
   display: flex;
   gap: 10px;
+}
+
+.page #footer #legal {
+  display: flex;
+  margin-top: 30px;
+  padding-top: 10px;
+  border-top: solid 1px var(--c-border);
+  gap: 20px;
+  width: 100%;
+  justify-content:center;
 }
 </style>

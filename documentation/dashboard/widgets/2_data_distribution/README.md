@@ -1,6 +1,6 @@
 # Data distribution
 
-[`Bias detection`](../README.md#bias-detection)
+[[`Bias detection`](../README.md#bias-detection)]
 
 <img src="./main.png" width="100%"/>
 

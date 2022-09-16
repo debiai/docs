@@ -1,5 +1,15 @@
 const { version } = require('../../package')
 const { path } = require('@vuepress/utils')
+const fs = require('fs')
+
+const listAllFolders = (dir) => {
+  return fs.readdirSync(path.resolve(__dirname, dir)).filter((file) => !file.endsWith('.md'))
+    .map((file) => {
+      return `/dashboard/widgets/${file}/`
+    }).sort( (a, b) => {
+      return a.localeCompare(b)
+    })
+}
 
 module.exports = {
   title: "DebiAI",
@@ -30,7 +40,7 @@ module.exports = {
       { text: 'Feature Requests', link: 'https://github.com/debiai/debiai/issues' },
     ],
     sidebar: [
-      // DebiAI
+      // Introduction
       {
         text: "Introduction",
         link: "/introduction/",
@@ -80,23 +90,21 @@ module.exports = {
         text: "Dashboard", link: "/dashboard", children: [
           {
             text: "Widgets", link: "/dashboard/widgets/",
-            children: [
-              "/dashboard/widgets/parallel_coordinates/",
-              "/dashboard/widgets/point_plot/",
-              "/dashboard/widgets/data_distribution/",
-            ]
+            collapsible: true,
+            children: listAllFolders('../../documentation/dashboard/widgets')
           },
         ]
       },
 
       // Examples
-      {
-        text: "Examples", link: "/examples/",
-        // children: [
-        //   "/examples/mnist",
-        //   "/examples/woodscape"
-        // ]
-      },
+      // {
+      //   text: "Examples", link: "/examples/",
+      //   // children: [
+      //   //   "/examples/mnist",
+      //   //   "/examples/woodscape"
+      //   // ]
+      // },
     ]
   },
 }
+

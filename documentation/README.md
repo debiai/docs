@@ -24,7 +24,6 @@ features:
 <!-- style -->
 <style>
   .theme-container.no-sidebar {
-    /* background: radial-gradient(rgba(255,255,255,1),rgba(255,255,255,1),rgba(255,255,255,0.95),rgba(255,255,255,0)),url(homepage-small.png); */
     background: linear-gradient(90deg, rgba(255,255,255,0.50) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 70%, rgba(255,255,255,0.50) 100%),url(../homepage.svg);
     background-size: cover;
     background-position: center;

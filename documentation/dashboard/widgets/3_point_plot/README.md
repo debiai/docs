@@ -2,10 +2,12 @@
 # Point plot
 
 [[`Data overview`](../README.md#data-overview)]
+[[`Sample analysis`](../README.md#sample-analysis)]
 [[`Bias detection`](../README.md#bias-detection)]
-[[`Outlier detection`](../README.md#anomaly-detection)]
+[[`Outlier detection`](../README.md#outlier-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Data selection`](../README.md#data-selection)]
+[[`Data annotation`](../README.md#data-annotation)]
 
 ![](./main.png)
 

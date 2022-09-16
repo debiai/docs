@@ -2,7 +2,7 @@
 
 [[`Data overview`](../README.md#data-overview)]
 [[`Bias detection`](../README.md#bias-detection)]
-[[`Outlier detection`](../README.md#anomaly-detection)]
+[[`Outlier detection`](../README.md#outlier-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 
 The 3D point plot widget shows the distribution of the data points in a 3D space. The widget can be used to detect anomalies in the data points.

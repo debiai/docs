@@ -1,9 +1,7 @@
 # Confusion matrix
 
-<!-- [[`Bias detection`](../README.md#bias-detection)]
-[[`Anomaly detection`](../README.md#anomaly-detection)]
-[[`Data selection`](../README.md#data-selection)] -->
 [[`Model evaluation`](../README.md#model-evaluation)]
+[[`Classification`](../README.md#classification)]
 
 The confusion matrix widget is useful for classification problems. It shows the number of true positives, true negatives, false positives, and false negatives.
 

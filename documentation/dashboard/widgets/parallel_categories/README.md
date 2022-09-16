@@ -1,7 +1,7 @@
 # Parallel Categories
 
 [[`Data overview`](../README.md#data-overview)]
-[[`Outlier detection`](../README.md#anomaly-detection)]
+[[`Outlier detection`](../README.md#outlier-detection)]
 [[`Bias detection`](../README.md#bias-detection)]
 [[`Data selection`](../README.md#data-selection)]
 

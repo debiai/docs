@@ -1,9 +1,8 @@
 # Interval plot
 
 [[`Sample visualisation`](../README.md#data-overview)]
-[[`Outlier detection`](../README.md#anomaly-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
-[`Time series`]
+[[`Time series`](../README.md#time-series)]
 
 The interval plot can shows trust intervals for time series data.
 

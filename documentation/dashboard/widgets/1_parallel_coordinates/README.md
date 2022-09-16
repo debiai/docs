@@ -1,8 +1,9 @@
 # Parallel coordinates
 
-[`Data overview`](../README.md#data-overview),
-[`Anomaly detection`](../README.md#anomaly-detection),
-[`Data selection`](../README.md#data-selection)
+[[`Data overview`](../README.md#data-overview)]
+[[`Outlier detection`](../README.md#anomaly-detection)]
+[[`Bias detection`](../README.md#bias-detection)]
+[[`Data selection`](../README.md#data-selection)]
 
 <img src="./main.png" width="100%"/>
 

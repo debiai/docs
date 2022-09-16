@@ -1,7 +1,6 @@
 # Interval plot
 
 [[`Sample visualisation`](../README.md#data-overview)]
-[[`Outlier detection`](../README.md#outlier-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Time series`](../README.md#time-series)]
 

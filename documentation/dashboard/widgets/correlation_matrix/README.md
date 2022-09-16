@@ -1,7 +1,10 @@
 # Correlation matrix
 
-<!-- [[`Bias detection`](../README.md#bias-detection)] -->
-[[`Anomaly detection`](../README.md#anomaly-detection)]
+[[`Data overview`](../README.md#data-overview)]
+[[`Bias detection`](../README.md#bias-detection)]
+[[`Model evaluation`](../README.md#model-evaluation)]
+
+<!-- [[`Anomaly detection`](../README.md#anomaly-detection)] -->
 <!-- [[`Data selection`](../README.md#data-selection)]
 [[`Model evaluation`](../README.md#model-evaluation)] -->
 

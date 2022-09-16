@@ -1,7 +1,9 @@
 
 # Point plot
 
-[[`Anomaly detection`](../README.md#anomaly-detection)]
+[[`Data overview`](../README.md#data-overview)]
+[[`Bias detection`](../README.md#bias-detection)]
+[[`Outlier detection`](../README.md#anomaly-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Data selection`](../README.md#data-selection)]
 

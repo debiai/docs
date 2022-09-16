@@ -8,17 +8,17 @@ DebiAI provide a set of widgets that can be used to display data in the dashboar
 
 ## Bias detection
 
-[The data distribution](./data_distribution//) will help you detect classes of samples that needs to be more represented in your dataset to avoid biased results.
+[The data distribution](./data_distribution/) will help you detect classes of samples that needs to be more represented in your dataset to avoid biased results.
 
-## Anomaly detection
+## Outlier detection
 
 [The parrallel coordinates](./parallel_coordinates/). If data is missing, is inconsistent, or is not in a proper format, the widget will help you quickly find the problem.
 
-[The point plot](./point_plot/) widget can also show witch samples have an abnormal behaviour, per example with annotation positions.
+[The point plot](./point_plot/) widget can also show the samples that have an abnormal behaviour, for example with spatial repartition.
 
 ## Model evaluation
 
-[The point plot](./point_plot/) widget can clearly display the models performance according to a project context of your choice.
+[The point plot](./point_plot/) widget can clearly display the models performances according to a project context of your choice.
 
 ## Data selection
 

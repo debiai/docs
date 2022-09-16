@@ -4,10 +4,6 @@
 [[`Bias detection`](../README.md#bias-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 
-<!-- [[`Anomaly detection`](../README.md#anomaly-detection)] -->
-<!-- [[`Data selection`](../README.md#data-selection)]
-[[`Model evaluation`](../README.md#model-evaluation)] -->
-
 The correlation matrix widget shows the correlation between the features of the data set. The correlation is calculated using the Pearson correlation coefficient. 
 
 The widget also shows the p-value of the correlation. The p-value is the probability that the correlation is not significant. 

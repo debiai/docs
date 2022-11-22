@@ -63,13 +63,13 @@ module.exports = {
             collapsible: true,
             children: [
               "/dataInsertion/pythonModule/quickStart.md",
-              {
-                text: "Tutorials", link: "/dataInsertion/pythonModule/tutorials/",
-                children: [
-                  "/dataInsertion/pythonModule/tutorials/mnist",
-                  "/dataInsertion/pythonModule/tutorials/woodscape"
-                ]
-              },
+              // {
+              //   text: "Tutorials", link: "/dataInsertion/pythonModule/tutorials/",
+              //   children: [
+              //     "/dataInsertion/pythonModule/tutorials/mnist",
+              //     "/dataInsertion/pythonModule/tutorials/woodscape"
+              //   ]
+              // },
               "/dataInsertion/pythonModule/API",
             ]
           },

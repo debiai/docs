@@ -87,7 +87,7 @@ module.exports = {
 
       // Dashboard
       {
-        text: "Dashboard", link: "/dashboard", children: [
+        text: "Dashboard", link: "/dashboard/", children: [
           {
             text: "Widgets", link: "/dashboard/widgets/",
             collapsible: true,
@@ -96,14 +96,13 @@ module.exports = {
         ]
       },
 
-      // Examples
-      // {
-      //   text: "Examples", link: "/examples/",
-      //   // children: [
-      //   //   "/examples/mnist",
-      //   //   "/examples/woodscape"
-      //   // ]
-      // },
+      // Use cases
+      {
+        text: "Use cases", link: "/useCases/",
+        children: [
+          "/useCases/woodscape"
+        ]
+      },
     ]
   },
 }

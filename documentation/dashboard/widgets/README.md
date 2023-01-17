@@ -12,6 +12,7 @@ Find, according to your needs, the widgets that suits your needs according to yo
   - [Model evaluation](#model-evaluation)
   - [Data selection](#data-selection)
   - [Data annotation](#data-annotation)
+  - [Data export](#data-export)
 
 Moreover, some widget are specific to some task or data type:
 
@@ -81,14 +82,21 @@ Select samples that are interesting for you, and on which perform further analys
 
 - [The parallel coordinates](./1_parallel_coordinates/) widget, because it shows numerous columns, makes it very effective for selecting data in any combinatorics of features.
 - [The parallel categories](./parallel_categories/) can help for selections based on categories.
-- [The point plot](./3_point_plot/) widget can select data according to their 2D position with a bounding box.
 
 ### Data annotation
 
-Annotate graphically your data:
+Select graphically your data:
+
+- [The point plot](./3_point_plot/) widget can select data with a 2D bounding box.
+- [The range slider plot](./range_slider/) widget can select data with 1D bounding box.
+
+### Data export
+
+Widget that can export their data with an export method ([learn more](../README.md#exporting-data)):
 
 - [The point plot](./3_point_plot/) widget can export a 2D bounding box.
-- [The range slider plot](./range_slider/) can export a 1D bounding box.
+- [The range slider plot](./range_slider/) widget can export a 1D bounding box.
+
 
 ## Specific usage
 

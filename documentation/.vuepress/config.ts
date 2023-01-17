@@ -93,6 +93,10 @@ module.exports = {
             collapsible: true,
             children: listAllFolders('../../documentation/dashboard/widgets')
           },
+          {
+            text: "Data export", link: "/dashboard/dataExport/",
+            collapsible: true,
+          },
         ]
       },
 

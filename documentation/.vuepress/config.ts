@@ -97,6 +97,10 @@ module.exports = {
             text: "Data export", link: "/dashboard/dataExport/",
             collapsible: true,
           },
+          {
+            text: "Widget configurations", link: "/dashboard/widgetConfigSave/",
+            collapsible: true,
+          },
         ]
       },
 

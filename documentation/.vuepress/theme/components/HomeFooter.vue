@@ -10,7 +10,7 @@
         <img src="/H0605_Logo_ConfianceAI_2000px.png" alt="Confiance AI" />
       </a>
     </div>
-    <div id="footer">Apache 2.0 licenced | IRT SystemX | 2022</div>
+    <div id="footer">Apache 2.0 licenced | IRT SystemX | 2023</div>
   </div>
 </template>
 

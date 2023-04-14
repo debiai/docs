@@ -1,25 +1,25 @@
 # Quick start
 
 ## Requirements
-* A running DebiAI instance (see [DebiAI installation](../../introduction/gettingStarted/installation/README.md))
-* [Numpy](https://www.numpy.org/install)
-* [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
-* Eventually [Tensorflow](https://www.tensorflow.org/install)
+
+- A running DebiAI instance (see [DebiAI installation](../../introduction/gettingStarted/installation/README.md))
+- [Numpy](https://www.numpy.org/install)
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
+- Eventually [Tensorflow](https://www.tensorflow.org/install)
 
 ## Installation
 
 ```bash
 pip install --upgrade debiai
 ```
+
 You can now use the DebiAI module inside your script with `from debiai import debiai`
 
 You can also check our [Manual installation guide](./installation/manual.html)
 
 ## Basic example
 
-
 ### Initialization and project creation
-
 
 ```python
 from debiai import debiai
@@ -46,10 +46,10 @@ If the project already exists, you can get the project with: `debiai_project = m
 
 And if you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
 
-
 ### Setting the data structure
 
 Each data that you want to insert must be associated with:
+
 - An **ID**: considering that the dataset and the results are inserted in two different steps, an ID is recquired for each inserted data in order to match them later.
 - A **type**: `text`, `number` or `boolean`.
 - A **label**: `inputs`, `groundTruth`, `contexts`, or `others`.
@@ -57,9 +57,9 @@ Each data that you want to insert must be associated with:
 The type and the label are used for authorizing (or suggesting) specific data manipulation or visualizations.
 
 To do so, a **block structure** must be defined, with at least one object containing the following keys:
+
 - `name`: for setting the ID column
 - `inputs`, `groundTruth`, `contexts`, or `others`: optional lists with the `type` and the `name` of the columns of your dataset.
-
 
 ```python
 # Creating the project block structure
@@ -100,7 +100,7 @@ samples_df = pd.DataFrame({
 debiai_project.add_samples_pd(samples_df)
 ```
 
-The added data need to follow the previously defined block structure, if the __*My groundtruth 1*__ field is missing from the dataframe, DebiAI will throw an error. DebiAI will ignore the dataframe additional fields that haven't been defined in the block structure.
+The added data need to follow the previously defined block structure, if the **_My groundtruth 1_** field is missing from the dataframe, DebiAI will throw an error. DebiAI will ignore the dataframe additional fields that haven't been defined in the block structure.
 
 Let's add more samples from a np array:
 
@@ -116,19 +116,18 @@ samples_np = np.array([
 
 debiai_project.add_samples(samples_np)
 ```
+
 The samples are now ready to be analysed with the dashboard.
 
 ![img](./helloDebiai/HelloDebiAI_2.png)
 
 An important feature of DebiAI is to analyse the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C" so let's add model results.
 
-
 ### Setting the results structure
 
-The first step is to set, for your results, the equivalent of the *block structure*: each result must have an ID (to map them with the data), and a type.
+The first step is to set, for your results, the equivalent of the _block structure_: each result must have an ID (to map them with the data), and a type.
 
-To do so, an **expected results** must be defined (the equivalent of *block structure*, but for the results), with a list of object containing the *"name"* of the column, and the *"type"* ("text", "number" or "boolean"). There is no need to set the ID column: the ID column is set by default, with the same name it has in the block structure ("Image ID" in our case).
-
+To do so, an **expected results** must be defined (the equivalent of _block structure_, but for the results), with a list of object containing the _"name"_ of the column, and the _"type"_ ("text", "number" or "boolean"). There is no need to set the ID column: the ID column is set by default, with the same name it has in the block structure ("Image ID" in our case).
 
 ```python
 # Setting the project models expected results
@@ -197,6 +196,7 @@ Now, both the data and the 2 models are ready to be analysed with the Debiai das
 ![img](./helloDebiai/HelloDebiAI_4.png)
 
 ## Limitations
+
 - Nan or empty values are not supported at the moment.
 - `/`, `.`, `:`, `?`, `*`, `\`, and `|`, are not supported in the project name and in the data/blocks ids.
 
@@ -205,3 +205,14 @@ Now, both the data and the 2 models are ready to be analysed with the Debiai das
 Note that the DebiAI Python module is in Alpha version, and is not yet stable, feel free to report any issue or suggestion.
 
 #### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).
+
+## Disabling the DebiAI module Data Provider
+
+If you are using a [WEB Pata Provider](../dataProviders/) and you want to make make DebiAI read only, you may want to disable the DebiAI python module Data Provider.
+
+If you want to disable the DebiAI module, you can do it by adding the environment variable `DEBIAI_PYTHON_MODULE_DATA_PROVIDER_ENABLED` to `False` when starting DebiAI, or edit the `config.ini` file:
+
+```ini
+[PYTHON_MODULE_DATA_PROVIDER]
+enabled = False
+```

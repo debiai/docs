@@ -12,6 +12,8 @@ To start an analysis, you first need to select a project from the project list. 
 
 Once you have selected a project and a selection or a model, you can start an analysis by clicking on the "Start analysis" button. This will open the analysis dashboard where you can place widgets and explore your data and model results. Each available widget description is available in the [widget documentation](./widgets/README.md).
 
-## Exporting data
+### Dashboard features:
 
-During an analysis, you can export your data to other tools for annotation or further analysis purposes. To learn more about how to export data, refer to the [data export documentation](./dataExport/README.md).
+- [Saving a layout](./layouts/). You can save your current layout to be able to load it later. This allows you to save a layout that you like and return to it later.
+
+- [Exporting data](./dataExport/). You can export your data to other tools for annotation or further analysis purposes.

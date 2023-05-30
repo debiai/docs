@@ -101,6 +101,10 @@ module.exports = {
             text: "Widget configurations", link: "/dashboard/widgetConfigSave/",
             collapsible: true,
           },
+          {
+            text: "Layouts", link: "/dashboard/layouts/",
+            collapsible: true,
+          },
         ]
       },
 

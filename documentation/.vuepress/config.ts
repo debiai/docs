@@ -94,15 +94,20 @@ module.exports = {
             children: listAllFolders('../../documentation/dashboard/widgets')
           },
           {
-            text: "Data export", link: "/dashboard/dataExport/",
-            collapsible: true,
-          },
-          {
             text: "Widget configurations", link: "/dashboard/widgetConfigSave/",
             collapsible: true,
           },
           {
-            text: "Layouts", link: "/dashboard/layouts/",
+            text: "Saving layouts", link: "/dashboard/layouts/",
+            collapsible: true,
+          },
+          {
+            text: "Custom algorithms", link: "/dashboard/algoProviders/",
+            collapsible: true,
+          },
+
+          {
+            text: "Data export", link: "/dashboard/dataExport/",
             collapsible: true,
           },
         ]

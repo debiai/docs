@@ -1,7 +1,18 @@
 # Layouts
 
-A layout is a collection of widgets that are arranged in a specific way with a specific configuration.
+A layout is a collection of widgets that are arranged in a specific way with a specific configuration as well as the selected colored column.
+
 With DebiAI, you can save and load analysis layouts from the dashboard. This allows you to save a layout that you can return to later.
+
+::: tip
+You can clear the current layout by clicking on the `Clear Layout` button and restore the default layout by clicking on the `Restore Default Layout` button:
+
+<p align="center">
+<img src="./otherLayoutControls.png" width="50%" alt="Clear layout button">
+</p>
+
+This default layout is the one that is loaded when you open a new project. It is fixed and cannot be modified at the moment.
+:::
 
 ## Saving a layout
 
@@ -27,38 +38,29 @@ Once you have entered a name, click `Save the layout` to save the layout. You ca
 <img src="./layoutViewPannel.png" width="80%" alt="Layout menu">
 </p>
 
+
+
 Selecting a layout will change the current layout to the selected one, it will also change the widgets configuration to the one saved in the layout.
 
-You should only have to click on the draw button to display the same data as when you saved the layout.
-
+To avoid heavy loading time, widgets will not be displayed by default when loading a layout, you will have to click on the draw button to display the data.
 ::: tip
-The selected color is also saved in the layout.
-:::
-::: tip
-Layouts are saved idenpendently of the project, so you can use the same layout for different projects.
-:::
-::: tip
-You can clear the current layout by clicking on the `Clear Layout` button and restore the default layout by clicking on the `Restore Default Layout` button:
-
-<p align="center">
-<img src="./otherLayoutControls.png" width="50%" alt="Clear layout button">
-</p>
+Layouts are saved indenpendently of the project, so you can use the same layout for different projects.
 :::
 
 ::: warning
 Some columns may not be available when loading a layout if they are not present in the current project. This can be the case for columns that were added:
 
-- virtualy
-- that are the result of a tag
-- that are the result of an algorithm
-- that are the result of a model and you are not analyzing model results.
+- virtually,
+- as a tag,
+- as an algorithm output,
+- by loading model results.
 
-A warning message will be displayed if this is the case.
+A warning message will be displayed if this is the case and a default column will be used instead.
 :::
 ::: warning
 The results after re-drawing the plots may not be the same as when you saved the layout. There are several reasons for this:
 
-- The plot may have been generated when some filters were applied
-- The data or model results may have changed since the layout was saved
-- You are using a different project
+- you are using a different project, selection or model,
+- the data or model results may have changed since the layout was saved,
+- the plot may have been generated when some filters were applied.
   :::

@@ -22,6 +22,6 @@ Besides the widgets, the dashboard has several features that allow you to intera
 
 - [Saving a layout](./layouts/). You can save your current dashboard layout to be able to load it later.
 
-- [Custom algorithms](./customAlgorithms/). You can create your own algorithms and use them with the data in the dashboard.
+- [Custom algorithms](./algoProviders/). You can create your own algorithms, use them with the data in the dashboard to generate new analyzable columns.
 
 - [Exporting data](./dataExport/). You can export your data to other tools for annotation or further analysis purposes.

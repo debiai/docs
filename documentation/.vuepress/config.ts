@@ -104,6 +104,11 @@ module.exports = {
           {
             text: "Custom algorithms", link: "/dashboard/algoProviders/",
             collapsible: true,
+            children: [
+              "/dashboard/algoProviders/algoProviders.md",
+              "/dashboard/algoProviders/implementInBackend.md",
+              "/dashboard/algoProviders/integratedAlgorithms.md",
+            ]
           },
 
           {

@@ -59,19 +59,19 @@ Restarting DebiAI will erase the data providers you have added from the dashboar
 
 ### Environment variables
 
-If you are deploying DebiAI, you can set the environment variables `DEBIAI_DATA_PROVIDER_<my-data-provider-name>=<data-provider-url>` to tell DebiAI where to find your data-provider.
+If you are deploying DebiAI, you can set the environment variables `DEBIAI_WEB_DATA_PROVIDER_<my-data-provider-name>=<data-provider-url>` to tell DebiAI where to find your data-provider.
 
 ```bash
 # Creation of the environment variables
-export DEBIAI_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai
-export DEBIAI_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
+export DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai
+export DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
 ```
 
 ```bash
-# Exemple of use with docker run
+# Example of use with docker run
 docker run -p 3000:3000 \
-    -e DEBIAI_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai \
-    -e DEBIAI_DATA_PROVIDER_My-data-provider2=http://localhost:3010/ \
+    -e DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai \
+    -e DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/ \
     debiai/app
 ```
 
@@ -84,9 +84,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      # Data providers (DEBIAI_DATA_PROVIDER_<name>=<url>)
-      - DEBIAI_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai\
-      - DEBIAI_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
+      # Data providers (DEBIAI_WEB_DATA_PROVIDER_<name>=<url>)
+      - DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai\
+      - DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
 ```
 
 You can see some examples in our DebiAI [`docker-compose-build.yml`](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.

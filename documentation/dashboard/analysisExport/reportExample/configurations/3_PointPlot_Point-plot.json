@@ -1,0 +1,10 @@
+{
+  "columnX": "RPM",
+  "columnY": "SPEED",
+  "dividePerColor": true,
+  "absolue": false,
+  "autoPointOpacity": true,
+  "avegareAsBar": false,
+  "bins": 30,
+  "displayNull": true
+}

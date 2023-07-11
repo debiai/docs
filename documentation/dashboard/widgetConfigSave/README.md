@@ -35,7 +35,7 @@ Note that a widget configuration saved by other projects will be available in th
 ::: warning
 It may append that a widget configuration is not compatible with the current project for example if the widget configuration was saved with a different project or when some models where selected. 
 
-In this case, loading the widget configuration will warn you of wich columns are not compatible with the current project and will not load them.
+In this case, loading the widget configuration will warn you of which columns are not compatible with the current project and will not load them.
 :::
 
 ::: tip

@@ -10,7 +10,7 @@ You can use it directly in your Python project workflow for providing data to De
     - Project data insertion
     - Model metadata and model results insertion
 - Advanced:
-    - Selection made with the dashboard samples recovery (see "Dashboard" for more informations about selections)
+    - Selection made with the dashboard samples recovery (see "Dashboard" for more information about selections)
     - tf.dataset creation from the project selections *(beta)*
 
 [Quick start](./quickStart.md)

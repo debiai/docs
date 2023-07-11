@@ -1,6 +1,6 @@
 # Inserting data into DebiAI
 
-Being a data visualisation application, providing the project data to DebiAI is a requiered step.
+Being a data visualization application, providing the project data to DebiAI is a required step.
 
 ## Requirements
 
@@ -10,7 +10,7 @@ You will need to have a running DebiAI instance to insert you project data to. (
 
 ### Data
 
-The data you want to analyse with DebiAI will need to respect a specific format.
+The data you want to analyze with DebiAI will need to respect a specific format.
 
 - **CSV like format**
 
@@ -35,7 +35,7 @@ The module was designed to be used directly in your Python workflow, to add mode
 
 ### [<ins>Data providers</ins>](dataProviders/README.md)
 A DebiAI data provider is a REST service that will expose your project to DebiAI.
-DebiAI will directly ask for the data from your project making the data loading process very quick and customisable. Unlike the DebiAI Python module, the provided data won't have to be duplicated in the DebiAI application.
+DebiAI will directly ask for the data from your project making the data loading process very quick and customizable. Unlike the DebiAI Python module, the provided data won't have to be duplicated in the DebiAI application.
 
 Making a data provider is the most efficient way to make your project data accessible to DebiAI, no matter the data base that your project is using.
 

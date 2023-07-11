@@ -29,7 +29,7 @@ import numpy as np
 DEBIAI_BACKEND_URL = "http://localhost:3000/"
 DEBIAI_PROJECT_NAME = "Hello DebiAI"
 
-# Initialisation
+# Initialization
 my_debiai = debiai.Debiai(DEBIAI_BACKEND_URL)
 
 # Creating a project
@@ -40,7 +40,7 @@ A project named "Hello DebiAI" is now created.
 
 ![img](./helloDebiai/HelloDebiAI_1.png)
 
-If your DebiAI instance is not running locally, you can configure a specific adress by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
+If your DebiAI instance is not running locally, you select a specific instance by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
 
 If the project already exists, you can get the project with: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
 
@@ -50,7 +50,7 @@ And if you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PRO
 
 Each data that you want to insert must be associated with:
 
-- An **ID**: considering that the dataset and the results are inserted in two different steps, an ID is recquired for each inserted data in order to match them later.
+- An **ID**: considering that the dataset and the results are inserted in two different steps, an ID is required for each inserted data in order to match them later.
 - A **type**: `text`, `number` or `boolean`.
 - A **label**: `inputs`, `groundTruth`, `contexts`, or `others`.
 
@@ -85,6 +85,10 @@ Note that the block structure is a list of such objects, for dealing with hierar
 
 The structure of the data is now set, the next step is to add them.
 
+::: tip
+You can add a `group` key to the block structure columns object, for grouping them in the dashboard.
+:::
+
 ### Adding data
 
 ```python
@@ -117,11 +121,11 @@ samples_np = np.array([
 debiai_project.add_samples(samples_np)
 ```
 
-The samples are now ready to be analysed with the dashboard.
+The samples are now ready to be analyzed with the dashboard.
 
 ![img](./helloDebiai/HelloDebiAI_2.png)
 
-An important feature of DebiAI is to analyse the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C" so let's add model results.
+An important feature of DebiAI is to analyze the results of some models in a contextual way: for instance, the results when "My context 1" is "A", "B" or "C" so let's add model results.
 
 ### Setting the results structure
 
@@ -143,6 +147,10 @@ debiai_project.set_expected_results(expected_results)
 Note that in the "results", we can directly add error metrics.
 
 A project results structure can be set only once.
+
+::: tip
+You can once again add a `group` key to the expected results structure columns, for grouping them in the dashboard.
+:::
 
 ### Adding results
 
@@ -190,7 +198,7 @@ results_np = np.array(
 debiai_model_2.add_results_np(results_np)
 ```
 
-Now, both the data and the 2 models are ready to be analysed with the Debiai dashboard.
+Now, both the data and the 2 models are ready to be analyzed with the Debiai dashboard.
 
 ![img](./helloDebiai/HelloDebiAI_3.png)
 ![img](./helloDebiai/HelloDebiAI_4.png)
@@ -204,7 +212,7 @@ Now, both the data and the 2 models are ready to be analysed with the Debiai das
 
 Note that the DebiAI Python module is in Alpha version, and is not yet stable, feel free to report any issue or suggestion.
 
-#### The next step is to [analyse your data with the DebiAI dashboard](../../dashboard/README.md).
+#### The next step is to [analyze your data with the DebiAI dashboard](../../dashboard/README.md).
 
 ## Disabling the DebiAI module Data Provider
 

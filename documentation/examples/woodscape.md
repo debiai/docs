@@ -6,6 +6,6 @@
 
 ## Data analysis
 
-## Model results comparaison
+## Model results comparisons
 
 ## data selection

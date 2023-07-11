@@ -2,9 +2,9 @@
   "columnX": "RPM",
   "columnY": "SPEED",
   "dividePerColor": true,
-  "absolue": false,
+  "absolute": false,
   "autoPointOpacity": true,
-  "avegareAsBar": false,
+  "averageAsBar": false,
   "bins": 30,
   "displayNull": true
 }

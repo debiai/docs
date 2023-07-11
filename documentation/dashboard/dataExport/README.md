@@ -1,6 +1,6 @@
 # Exporting data
 
-DebiAI allows you to export data from the analysis page. Those exports can be used to update a database, to analyse samples in another application, to train a model, etc.
+DebiAI allows you to export data from the analysis page. Those exports can be used to update a database, to analyze samples in another application, to train a model, etc.
 
 There are two ways to export data during an analysis:
 

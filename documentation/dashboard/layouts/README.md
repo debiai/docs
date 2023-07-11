@@ -29,13 +29,13 @@ To do this, click the `Save Layout` button in the menu :
 This will open a dialog box where you can enter a name for the layout and a description:
 
 <p align="center">
-<img src="./newLayoutPannel.png" width="80%" alt="New layout menu">
+<img src="./newLayoutPanel.png" width="80%" alt="New layout menu">
 </p>
 
 Once you have entered a name, click `Save the layout` to save the layout. You can now find it below the `Save Layout` button:
 
 <p align="center">
-<img src="./layoutViewPannel.png" width="80%" alt="Layout menu">
+<img src="./layoutViewPanel.png" width="80%" alt="Layout menu">
 </p>
 
 
@@ -44,7 +44,7 @@ Selecting a layout will change the current layout to the selected one, it will a
 
 To avoid heavy loading time, widgets will not be displayed by default when loading a layout, you will have to click on the draw button to display the data.
 ::: tip
-Layouts are saved indenpendently of the project, so you can use the same layout for different projects.
+Layouts are saved independently of the project, so you can use the same layout for different projects.
 :::
 
 ::: warning

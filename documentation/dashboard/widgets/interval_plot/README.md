@@ -1,6 +1,6 @@
 # Interval plot
 
-[[`Sample visualisation`](../README.md#data-overview)]
+[[`Sample visualization`](../README.md#data-overview)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Time series`](../README.md#time-series)]
 

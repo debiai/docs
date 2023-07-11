@@ -61,11 +61,11 @@ block_structure = [
 ```
 
 This block structure will work just fine, however, if some images from different patches have the same ID, they will replace each other.
-Also, there will be a lot of redundency in the image patch properties :
+Also, there will be a lot of redundancy in the image patch properties :
 
-![The data array with redundency](./dataArrayRedundency.png)
+![The data array with redundancy](./dataArrayRedundancy.png)
 
-But with with a block structure like this one, we can remove the redundency:
+But with with a block structure like this one, we can remove the redundancy:
 
 ```Python
 block_structure = [
@@ -86,9 +86,9 @@ block_structure = [
 ]
 ```
 
-This block structure will also help DebiAI reduce redundencies when storing the data:
+This block structure will also help DebiAI reduce redundancies when storing the data:
 
-![The data array with less redundency](./dataArrayWithoutRedundency.png)
+![The data array with less redundancy](./dataArrayWithoutRedundency.png)
 
 This block structure will also make the ID of each images a double ID and we will need to precise the patch of each image patch when adding model results for example. So this solves the case were some images from different pages have the same ID.
 

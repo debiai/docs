@@ -2,7 +2,7 @@
 
 Making a data provider is the most efficient way to make your project data accessible to DebiAI.
 
-A data provider is a service that you create that can respond to the data requests of DebiAI. This service can be made in **any language**, can use **any kind of databases** and can be hosted on **any platform** as long at the DebiAI data-provider's API is respected. So unlike the [Debiai Python module](../pythonModule/README.md), your project data won't be duplicated in DebiAI and **DebiAI will always analyse the latest data**.
+A data provider is a service that you create that can respond to the data requests of DebiAI. This service can be made in **any language**, can use **any kind of databases** and can be hosted on **any platform** as long at the DebiAI data-provider's API is respected. So unlike the [Debiai Python module](../pythonModule/README.md), your project data won't be duplicated in DebiAI and **DebiAI will always analyze the latest data**.
 
 ### How does it work?
 
@@ -19,7 +19,7 @@ DebiAI will also be able to send the data selections made by the user.
 ### Pros and cons
 
 - **Pros**:
-  - DebiAI will always analyse the latest data
+  - DebiAI will always analyze the latest data
   - Your data will not be duplicated in DebiAI
   - You can use any languages and databases
   - You can host your data provider on any platform

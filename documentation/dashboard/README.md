@@ -15,7 +15,7 @@ If you have not yet created any projects, selections or models, refer to the [Py
 
 ## Starting an analysis
 
-After selecting a project you can click on "Analyse" to load the project data and reach the analysis dashboard. If you have any selections or any model results in your project, you can select one or more before starting an analysis, this will only load the data that is in the selection or the model results.
+After selecting a project you can click on "Analyze" to load the project data and reach the analysis dashboard. If you have any selections or any model results in your project, you can select one or more before starting an analysis, this will only load the data that is in the selection or the model results.
 
 ![Project page](./project_page.png)
 

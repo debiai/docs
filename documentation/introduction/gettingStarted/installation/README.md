@@ -15,10 +15,10 @@ DebiAI offers several installation methods:
 
 ### Docker run
 
-**Requierments :**
+**Requirements :**
 - [Docker](https://docs.docker.com/get-docker/)
 
-Using our public docker image is the recommended way to deploy DebiAI on your project server or localy.
+Using our public docker image is the recommended way to deploy DebiAI on your project server or locally.
 
 ```bash
 docker run -p 3000:3000 debiai/app
@@ -50,7 +50,7 @@ You can also provide additional environment variables to tell DebiAI if you have
 
 Here is a Docker-compose file that will help you deploy DebiAI without having to remember the docker run command.
 
-**Requierments :**
+**Requirements :**
 - [Docker compose](https://github.com/docker/compose)
 
 The DebiAI Docker-compose file :
@@ -94,7 +94,7 @@ You can also provide additional environment variables to tell DebiAI if you have
 We also provide way to build the image instead of pulling it. This is useful if you want to deploy DebiAI with local changes.
 
 ### Docker build
-**Requierments :**
+**Requirements :**
 - [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 - [Docker](https://docs.docker.com/get-docker/)
 
@@ -134,7 +134,7 @@ docker container rm debiai
 
 Using our [Docker-compose-build](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.
 
-**Requierments :**
+**Requirements :**
 - [Git](https://git-scm.com/book/fr/v2/D%C3%A9marrage-rapide-Installation-de-Git)
 - [Docker compose](https://github.com/docker/compose)
 

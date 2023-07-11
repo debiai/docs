@@ -2,9 +2,9 @@
 
 ## Project creation
 
-## Ading samples
+## Adding samples
 
-## Ading model results
+## Adding model results
 
 ### Creating a model
 

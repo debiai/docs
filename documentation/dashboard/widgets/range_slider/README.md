@@ -35,8 +35,8 @@ The export format is the following:
   // Generic data
   "origin": "DebiAI",
   "projectId": <Project Id>,
-  "dataProviderId": <Data-protider Id>,
-  "selectionIds": [<Analysis selectin Ids>],
+  "dataProviderId": <Data-provider Id>,
+  "selectionIds": [<Analysis selection Ids>],
 
   // Widget data
   "type": "1Drange",

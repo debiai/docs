@@ -1,4 +1,4 @@
-# Satistics
+# Statistics
 
 [[`Data overview`](../README.md#data-overview)]
 [[`Bias detection`](../README.md#bias-detection)]
@@ -8,6 +8,6 @@ Display the average, standard deviation, and minimum and maximum values of the s
 
 ![](./main.png)
 
-By selecting a color, you can display the satistics for each colored column unique value.
+By selecting a color, you can display the statistics for each colored column unique value.
 
 You can, for example, use this widget to display the average error for each models or for each value of a specific context.

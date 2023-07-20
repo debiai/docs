@@ -10,7 +10,3 @@ The 3D point plot widget shows the distribution of the data points in a 3D space
 The widget can also be used to compare the models error according to two different features.
 
 ![](./main.png)
-<!-- 
-**How to use the widget**
-
-<img src="./0.png" width="80%"/> -->

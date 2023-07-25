@@ -27,13 +27,13 @@ The data you want to analyze with DebiAI will need to respect a specific format.
 
 ## There is currently two ways to insert data into DebiAI:
 
-### [<ins>Python module</ins>](pythonModule/README.md)
+### [<ins>Python module</ins>](pythonModule/README.md#python-module)
 The main way to add provide the project data to the application is through the DebiAI Python module.
 The module was designed to be used directly in your Python workflow, to add model results directly after its evaluation for example.
 
 
 
-### [<ins>Data providers</ins>](dataProviders/README.md)
+### [<ins>Data providers</ins>](dataProviders/README.md#data-providers)
 A DebiAI data provider is a REST service that will expose your project to DebiAI.
 DebiAI will directly ask for the data from your project making the data loading process very quick and customizable. Unlike the DebiAI Python module, the provided data won't have to be duplicated in the DebiAI application.
 

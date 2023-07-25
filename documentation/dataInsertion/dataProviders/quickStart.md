@@ -6,9 +6,8 @@ To help you with the creation of data-providers, we have created some quick star
 
 - Node.js : [https://github.com/debiai/data-provider-nodejs-template](https://github.com/debiai/data-provider-nodejs-template)
 
-::: warning Missing a template ?
 If you think that we should add a template for another language, [please let us know](https://github.com/debiai/data-provider-nodejs-template/issues/new).
-:::
+
 ::: tip Starting from scratch
 You can create your own data-provider as long as the [API](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/debiai/data-provider-nodejs-template/main/data-provider-API.yaml) is respected.
 :::
@@ -106,4 +105,5 @@ You will then need to restart DebiAI if you are in development mode or to build 
 
 The environment variables take precedence over the configuration file.
 
-If the data-provider is accessible and is conform with the API, DebiAI will display the projects in the dashboard like any other projects. There is however certain limitations to a Data-provider's project :
+If the data-provider is accessible and is conform with the API, DebiAI will display the projects in the dashboard like any other projects.
+

@@ -59,7 +59,7 @@ The controls allow you to, from left to right:
   <li><div class="square purple">∇</div>To start filtering the data graphically with the widget.</li>
   <li><div class="square blue">💾</div>To save or load the <a href="./widgetConfigSave/">widget configuration</a>.</li>
   <li><div class="square green">📋</div>To create a copy of the widget with the same configuration.</li>
-  <li><div class="square yellow">⛭</div>To open the settings panel of the widget.</li>
+  <li><div class="square yellow">☰</div>To open the settings panel of the widget.</li>
   <li><div class="square red">x</div>To remove the widget from the dashboard.</li>
 </ul>
 

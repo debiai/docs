@@ -1,12 +1,23 @@
 {
   "name": "debiai_documentation",
   "description": "DebiAI Documentation using VuePress",
-  "version": "0.23.0",
+  "version": "0.24.1",
+  "authors": {
+    "name": "Tom",
+    "email": "tom.mansion@irt-systemx.fr"
+  },
+  "repository": "https://github.com/debiai/docs",
   "scripts": {
     "serve": "vuepress dev documentation",
     "build": "vuepress build documentation"
   },
+  "license": "Apache-2.0",
   "devDependencies": {
-    "vuepress": "^2.0.0-beta.35"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-matomo": "^1.0.2",
+    "vuepress-plugin-zooming": "^1.1.8"
+  },
+  "dependencies": {
+    "directory-tree": "^3.5.1"
   }
 }

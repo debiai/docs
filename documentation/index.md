@@ -82,14 +82,14 @@ We also provide a full [dashboard documentation](../dashboard/README.md) to help
 
 DebiAI is designed to be used for any kind projects and data, it is particularly useful for projects that involve many contextual data.
 
-DebiAI provide two main ways to import your data, to learn more about them, check out the [data insertion](../dataInsertion/README.md) section.
+DebiAI provide two main ways to import your data, to learn more about them, check out the [data insertion](dataInsertion/README.md#inserting-data-into-debiai) documentation.
 
 <br>
 <br>
 
 ## Installation
 
-DebiAI is available as a Docker image. To install it, you can follow the [installation guide](gettingStarted/installation/README.md).
+DebiAI is available as a Docker image. To install it, you can follow the [installation guide](introduction/gettingStarted/installation/README.md#installation).
 
 <br>
 <br>
@@ -98,7 +98,7 @@ DebiAI is available as a Docker image. To install it, you can follow the [instal
 
 As part of the [Confiance.ai](https://www.confiance.ai/) program, we (the [IRT SystemX](https://www.irt-systemx.fr/)) are using and developing DebiAI for a wide range of use cases.
 
-One of them is the [Valeo - WoodScape](../useCases/woodscape/) dataset.
+One of them is the [Valeo - WoodScape](useCases/woodscape/README.md#valeo-woodscape) project, where we are using DebiAI to help us analyze the data and the results of the project.
 
 <br>
 <br>
@@ -107,7 +107,7 @@ One of them is the [Valeo - WoodScape](../useCases/woodscape/) dataset.
 
 DebiAI is a high level data exploration tool for data scientists and machine learning experts. It is designed to be easily integrated in your project workflow.
 
-[Get started](gettingStarted/README.md)
+[Get started](introduction/gettingStarted/README.md#getting-started)
 
 <br>
 <br>

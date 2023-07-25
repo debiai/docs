@@ -1,7 +1,7 @@
 {
   "name": "debiai_documentation",
   "description": "DebiAI Documentation using VuePress",
-  "version": "0.24.2",
+  "version": "0.24.3",
   "authors": {
     "name": "Tom",
     "email": "tom.mansion@irt-systemx.fr"

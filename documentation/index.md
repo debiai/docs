@@ -58,9 +58,17 @@ We also provide a full [dashboard documentation](../dashboard/README.md) to help
   img[alt$="dashboard"] {
     float: right;
   width: 650px;
-  padding: 50px;
-  padding-top: 0px;
+  padding: 0 20px 50px 20px;
+
 }
+  /* Style for phones: */
+  @media only screen and (max-width: 600px) {
+    img[alt$="dashboard"] {
+      float: none;
+      width: 100%;
+      padding: 0 0 50px 0;
+    }
+  }
 </style>
 
 <br>

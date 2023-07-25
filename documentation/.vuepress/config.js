@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         text: "Contact",
-        link: "/meta/contact.md",
+        link: "/meta/contact.md#contact",
       },
     ],
 

@@ -19,7 +19,9 @@
 
         <!-- Actions buttons -->
         <div class="action">
-          <a href="/introduction/gettingStarted/" class="action-button"> Get Started </a>
+          <a href="/introduction/gettingStarted/" class="action-button">
+            Get Started
+          </a>
           <a href="/useCases/" class="action-button secondary">
             Use cases and applications
           </a>
@@ -163,11 +165,11 @@ export default {
     align-items flex-start
     align-content stretch
     justify-content space-between
+    gap 50px
 
     .feature
       max-width 30%
       min-width 300px
-      text-align: center
       h3
         white-space: nowrap
       p
@@ -203,5 +205,4 @@ export default {
         img
           min-width 100%
           max-width 100%
-
 </style>

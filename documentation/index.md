@@ -13,19 +13,35 @@ tagline: Find bias, select data, evaluate models
 <!-- Features -->
 <div class="features">
   <div class="feature">
-    <h3>📊 Bias detection</h3>
+    <h3>
+      <img src = "bar_plot.svg"/>
+      Bias detection
+    </h3>
     <p>DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.</p>
   </div>
   <div class="feature">
-    <h3>💪 Model results comparison</h3>
+    <h3>
+      <img src = "trophy.svg"/>
+      Model results comparison
+    </h3>
     <!-- Badges Ref : https://v1.vuepress.vuejs.org/guide/using-vue.html#built-in-components -->
     <p>Find which model is better on the contexts that matters the most for your project.</p>
   </div>
   <div class="feature">
-    <h3>🔎 Data selection</h3>
+    <h3>
+      <img src = "loop.svg"/>
+      Data selection
+    </h3>
     <p>With the DebiAi graphical tools and high-level filters, select data for training purpose or for additional exploration.</p>
   </div>
 </div>
+
+<style>
+  .features img {
+    width: 30px;
+    padding-right: 5px;
+  }
+</style>
 
 <!-- Project description -->
 
@@ -57,10 +73,10 @@ We also provide a full [dashboard documentation](../dashboard/README.md) to help
 <style>
   img[alt$="dashboard"] {
     float: right;
-  width: 650px;
-  padding: 0 20px 50px 20px;
+    width: 650px;
+    padding: 0 20px 50px 20px;
+  }
 
-}
   /* Style for phones: */
   @media only screen and (max-width: 600px) {
     img[alt$="dashboard"] {

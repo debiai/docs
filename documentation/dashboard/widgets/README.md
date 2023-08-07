@@ -74,6 +74,7 @@ Find out if your models are performing well and on which features:
 - [The range slider plot](./range_slider/) can help you to identify models that performs the best on a time series.
 - [The confusion matrix](./confusion_matrix/) widget is a well known tool useful for classification problems.
 - [The correlation matrix](./correlation_matrix/) can display the correlation between the features and the model performances.
+- [The night stars plot](./night_stars_plot/) widget can help you to compare the performances of multiple models according to two different contexts or metrics.
 - [The statistics](./statistics/) widget can show the error average of multiple contexts.
 
 ### Data selection

@@ -1,0 +1,17 @@
+name: spell_check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install cspell
+        run: npm install -g cspell
+      - name: Run spell check
+        run: cspell --no-summary --no-progress --no-color .

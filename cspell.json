@@ -20,7 +20,8 @@
     "blockstructure",
     "vuepress",
     "websrv",
-    "woodscape"
+    "woodscape",
+    "matomo"
   ],
   "flagWords": []
 }

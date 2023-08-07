@@ -117,6 +117,7 @@ module.exports = {
               "/dashboard/widgets/interval_plot/",
               "/dashboard/widgets/parallel_categories/",
               "/dashboard/widgets/range_slider/",
+              "/dashboard/widgets/night_stars_plot/",
               "/dashboard/widgets/sample_array/",
               "/dashboard/widgets/statistics/",
             ],

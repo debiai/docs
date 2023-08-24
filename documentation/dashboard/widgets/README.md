@@ -30,6 +30,7 @@ Get a large overview of you data:
 - [The point plot](./3_point_plot/) widget can be used to inspect the relation between two features.
 - [The 3D point plot](./3D_point_plot/) widget can be used to inspect the relation between three features in a 3D space.
 - [The data distribution](./2_data_distribution/) plot will help you to get an overview of the distribution of each features.
+- [The 2D density plot](./density_plot/) widget will help you to get an overview of the distribution of your data in a 2D space.
 - [The correlation matrix](./correlation_matrix/) allows you to get the correlation between the features of your data set.
 - [The statistics](./statistics/) widget can display basic data statistics.
 

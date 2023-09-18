@@ -30,6 +30,7 @@ This will open a dialog box where you can enter a name for the layout and a desc
 
 <p align="center">
 <img src="./newLayoutPanel.png" width="80%" alt="New layout menu">
+<img src="./newLayoutPanel2.png" width="80%" alt="New layout menu 2">
 </p>
 
 Once you have entered a name, click `Save the layout` to save the layout. You can now find it below the `Save Layout` button:
@@ -37,8 +38,6 @@ Once you have entered a name, click `Save the layout` to save the layout. You ca
 <p align="center">
 <img src="./layoutViewPanel.png" width="80%" alt="Layout menu">
 </p>
-
-
 
 Selecting a layout will change the current layout to the selected one, it will also change the widgets configuration to the one saved in the layout.
 

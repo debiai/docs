@@ -4,7 +4,7 @@ From the DebiAI analysis dashboard and with the analyzed data, you can use some 
 
 ## How to use one algorithm
 
-Go to the [Algo providers page](https://app.debiai.tech/dashboard/algoProviders):
+Go to the Algo-providers page from the menu:
 
 ![menu](./menu.png)
 

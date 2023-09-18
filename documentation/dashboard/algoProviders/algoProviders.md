@@ -27,7 +27,7 @@ You need help creating your algo provider? [Create an issue](https://github.com/
 
 Once you have created and deployed your algo provider, you can add it to DebiAI.
 
-To do so, go to the [Algo providers page](https://app.debiai.tech/dashboard/algoProviders):
+To do so, go to the Algo-providers page from the menu:
 
 ![menu](./menu.png)
 

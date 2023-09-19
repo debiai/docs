@@ -6,7 +6,9 @@ From the DebiAI analysis dashboard and with the analyzed data, you can use some 
 
 Go to the Algo-providers page from the menu:
 
-![menu](./menu.png)
+<p align="center">
+<img src="./menu.png" width="50%" alt="Clear layout button" style="border: 1px solid #d3d3d3; border-radius: 5px;">
+</p>
 
 You will see the list of available algorithms:
 
@@ -16,9 +18,11 @@ Click on the algorithm you want to use. You will see the description of the algo
 
 ![add](./algo_providers_menu_4.png)
 
-Fill the inputs and click on the "Run" button. The algorithm will be run and the results will be available in the "Experiments" tab:
+Fill the inputs and click on the "Run" button:
 
 ![add](./algo_providers_menu_5.png)
+
+The algorithm will be run and the results will be available in the "Experiments" tab:
 
 In the "Experiments" tab, you can see the results of the algorithm and you can add them to the analysis dashboard data as a new column:
 

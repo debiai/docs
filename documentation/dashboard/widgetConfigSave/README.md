@@ -2,7 +2,7 @@
 
 ## Saving a widget configuration
 
-You can save the configuration of a widget in order to reuse it later, most of our widgets support this feature. To find out if a widget supports this feature, you can check if the `Widget configuration` button is present on the widget menu bar:
+You can save the configuration of a widget in order to reuse it later, most of our widgets support this feature. To find out if a widget supports this feature, you can check if the `Save / load settings` button is present on the widget menu:
 
 <img style="display:block; background:#d3d3d3; padding:5px 0 0 5px" src="./configuration_support_button.png" alt="Widget configurations button" title="Widget configurations button" />
 
@@ -20,11 +20,11 @@ The widget configurations that you have saved are available in the `Widget confi
 
 This will replace the widget actual configuration with the one that you have selected. 
 
-You can also select a widget configuration from the widget catalog. To do so, you need to select a widget with saved configurations and click on the configuration that you want to load:
+You can also select a widget configuration from the widget catalog. To do so, click on the `widget settings` button on the widget, then select the configuration that you want to load:
 
 ![widget catalog configurations](./widget_catalog_configurations.png)
 
-The `gear` icon indicates how many configurations are available for the widget.
+The `disk` icon indicates how many configurations are available for the widget.
 
 Note that a widget configuration saved by other projects will be available in the widget configuration list, they will be listed as `Other configurations`:
 
@@ -47,7 +47,7 @@ If the selected color does matter, you can write a comment in the description of
 ::: tip
 To read the complete configuration of a widget, you can hover the configuration `(i)`icon. This will display the complete saved configuration:
 <p align="center">
-    <img src="./widget_configurations_tooltip.png" alt="widget configuration tooltip" title="widget configuration tooltip" style="border-radius:20px" />
+    <img src="./widget_configurations_tooltip.png" alt="widget configuration tooltip" title="widget configuration tooltip" style="border-radius:5px" />
 </p>
 :::
 

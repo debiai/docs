@@ -9,9 +9,9 @@
 
 ![](./main.png)
 
-## How to select samples with a 1D range
+### How to select samples with a 1D range
 
-To start filtering samples with the point plot, click on the purple Filter button.
+To start filtering samples with the point plot, click on the `Start filtering` button.
 <img src="./exportButton.png" width="80%"/>
 
 Then click on two different points on the plot.
@@ -19,7 +19,7 @@ Then click on two different points on the plot.
 
 This will create a 1D selection range and update the filters and the selected samples.
 
-## How to export the bounding range
+### How to export the bounding range
 
 This widget allows you to export the 1D bounding box.
 

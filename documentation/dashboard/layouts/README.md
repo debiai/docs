@@ -8,10 +8,10 @@ With DebiAI, you can save and load analysis layouts from the dashboard. This all
 You can clear the current layout by clicking on the `Clear Layout` button and restore the default layout by clicking on the `Restore Default Layout` button:
 
 <p align="center">
-<img src="./otherLayoutControls.png" width="50%" alt="Clear layout button">
+<img src="./otherLayoutControls.png" width="50%" alt="Clear layout button" style="border: 1px solid #d3d3d3; border-radius: 5px;">
 </p>
 
-This default layout is the one that is loaded when you open a new project. It is fixed and cannot be modified at the moment.
+This default layout is the one that is loaded when you open a new project.
 :::
 
 ## Saving a layout
@@ -20,20 +20,25 @@ Let's say you have opened a project analysis and made a layout that you like and
 
 ![A nice layout](./analysisPage.png)
 
-To do this, click the `Save Layout` button in the menu :
+To do this, click the `Save or load layout` button in the menu :
 
 <p align="center">
 <img src="./exportMenuPosition.png" width="40%" alt="Save layout button">
 </p>
 
-This will open a dialog box where you can enter a name for the layout and a description:
+Then click on the `Save the current layout` button:
 
 <p align="center">
 <img src="./newLayoutPanel.png" width="80%" alt="New layout menu">
+</p>
+
+This will open a dialog box where you can enter a name for the layout and a description:
+
+<p align="center">
 <img src="./newLayoutPanel2.png" width="80%" alt="New layout menu 2">
 </p>
 
-Once you have entered a name, click `Save the layout` to save the layout. You can now find it below the `Save Layout` button:
+Once you have entered a name, click `Save the layout` to save the layout. You can now find it in the `Saved layouts` section:
 
 <p align="center">
 <img src="./layoutViewPanel.png" width="80%" alt="Layout menu">

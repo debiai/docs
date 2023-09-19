@@ -5,9 +5,10 @@
 - A running DebiAI instance (see [DebiAI installation](../../introduction/gettingStarted/installation/README.md))
 - [Numpy](https://www.numpy.org/install)
 - [Pandas](https://pandas.pydata.org/pandas-docs/stable/install.html)
-- Eventually [Tensorflow](https://www.tensorflow.org/install)
 
 ## Installation
+
+Our Python module is available on [PyPI](https://pypi.org/project/debiai/), you can install it with:
 
 ```bash
 pip install --upgrade debiai
@@ -42,9 +43,19 @@ A project named "Hello DebiAI" is now created.
 
 If your DebiAI instance is not running locally, you select a specific instance by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
 
-If the project already exists, you can get the project with: `debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME)`
+If the project already exists, you can get the project with:
 
-And if you want to delete the project: `my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)`
+```python
+debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME) # Returns None if the project doesn't exist
+```
+
+And if you want to delete the project: 
+
+```python
+my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)
+```
+
+
 
 ### Setting the data structure
 

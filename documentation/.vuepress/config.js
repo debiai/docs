@@ -110,8 +110,8 @@ module.exports = {
             children: [
               "/dashboard/widgets/1_parallel_coordinates/",
               "/dashboard/widgets/2_data_distribution/",
-              "/dashboard/widgets/3D_point_plot/",
               "/dashboard/widgets/3_point_plot/",
+              "/dashboard/widgets/3D_point_plot/",
               "/dashboard/widgets/confusion_matrix/",
               "/dashboard/widgets/correlation_matrix/",
               "/dashboard/widgets/interval_plot/",

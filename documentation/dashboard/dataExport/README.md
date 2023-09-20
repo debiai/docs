@@ -121,8 +121,11 @@ Our export methods are very modular, if you need a new type of export method, [y
 
 You can export the ID of the samples that are currently selected in the analysis page. To do so, you need to click on the `Export` button on the menu bar:
 
-![Export button](./exportButton.png)
+<p align="center">
+<img src="./exportButton.png" width="50%" alt="Clear layout button" style="border: 1px solid #d3d3d3; border-radius: 5px;">
 <span style="display:block; color:grey; text-align:center; width:100%; font-size:0.9em">Export button</span>
+</p>
+
 
 You will be asked to select an export method and to name your selection:
 

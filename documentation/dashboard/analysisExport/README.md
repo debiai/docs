@@ -13,10 +13,10 @@ Let's say you have built a dashboard with several widgets and you want to genera
 
 ![Analysis dashboard](./analysis.png)
 
-You can generate a full report by clicking on the "Generate report" button from the menu in the top right corner of the dashboard:
+You can generate a full report by clicking on the "Generate report" button from the side menu:
 
 <p align="center">
-    <img src="./export_button.png" alt="Export button" width="600" title="Export button" style="border:3px solid #d3d3d3; border-radius:20px" />
+    <img src="./export_button.png" alt="Export button" width="60%" title="Export button" style="border:2px solid #d3d3d3; border-radius:20px" />
 </p>
 
 This will generate a report with all the widgets in the dashboard and download it as a ZIP file, containing the following files:

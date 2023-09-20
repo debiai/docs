@@ -15,7 +15,7 @@
         />
       </a>
     </div>
-    
+
     <!-- Website structure -->
     <div id="structure">
       <ul
@@ -51,6 +51,8 @@
       >
         Personal data and cookies
       </a>
+      -
+      <a href="/meta/opt-out"> Opt out tracking </a>
       All rights reserved © 2020 IRT SystemX
     </div>
   </div>

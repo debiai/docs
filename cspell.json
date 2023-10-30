@@ -23,5 +23,8 @@
     "woodscape",
     "matomo"
   ],
+  "ignorePaths":[
+    "legal.md"
+  ],
   "flagWords": []
 }

@@ -41,18 +41,9 @@
 
     <!-- Legal -->
     <div id="legal">
-      <a href="https://www.irt-systemx.fr/en/legal-notice/" target="_blank">
-        Legal notice
-      </a>
+      <a href="/meta/legal"> Legal notice </a>
       -
-      <a
-        href="https://www.irt-systemx.fr/en/personal-data-and-cookies/"
-        target="_blank"
-      >
-        Personal data and cookies
-      </a>
-      -
-      <a href="/meta/opt-out"> Opt out tracking </a>
+      <a href="/meta/legal#privacy-policy"> Personal data and cookies </a>
       All rights reserved © 2020 IRT SystemX
     </div>
   </div>

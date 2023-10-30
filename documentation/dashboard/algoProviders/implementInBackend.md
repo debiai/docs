@@ -20,7 +20,7 @@ First, you will need to start DebiAI in development mode. Learn how to do that [
 
 ### Create the algorithm
 
-To create an algorithm, you can start by copying on of the existing algorithms in the [integrated algorithms](integratedAlgorithms.md). You can find the code of the integrated algorithms [here](https://github.com/debiai/debiai/tree/main/backend/modules/algoProviders/integratedAlgoProvider/algorithms).
+To create an algorithm, you can start by copying on of the existing algorithms in the [integrated algorithms](integratedAlgorithms.md). You can find the code of the integrated algorithms [on GitHub](https://github.com/debiai/debiai/tree/main/backend/modules/algoProviders/integratedAlgoProvider/algorithms).
 
 You can then modify the code to fit your needs, DebiAI will automatically read the code that are in the files in `backend/modules/algoProviders/integratedAlgoProvider/algorithms/*.py`
 

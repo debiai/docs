@@ -8,4 +8,6 @@ If you are interested in a specific algorithm, [let us know](https://github.com/
 
 ## List of integrated algorithms
 
+- **Classification Metric**, Calculates the classification error according to the ground truth and the predictions. Useful to evaluate the performance of a classification model. It basically calculates the number of misclassified samples. Finally, the algorithms returns a list of booleans that indicates True if the sample is misclassified and False otherwise.
+
 - **Regression Metric**, Calculates the regression error according to the ground truth, the predictions and a ceil value. Useful to evaluate the performance of a regression model. It basically calculates the absolute difference between the ground truth and the predictions. Finally, the algorithms returns a list of booleans that indicates True if the error is above the ceil value.

@@ -1,17 +1,22 @@
-# Valeo WoodScape - 2D Objects Detection case study
+# DebiAI - WoodScape Use Case
+
 
 <br> 
 <br>
 
-The WoodScape dataset is a public dataset containing more than *100K
+
+The [WoodScape dataset](https://woodscape.valeo.com/woodscape/) is a public dataset containing more than *100K
 images* of urban scenes captured using fish-eye cameras for automotive driving tasks. The images are provided by 4 different cameras with different angles of view (front, rear, middle right and middle left) with 360° coverage and have annotations for a diverse set of computer vision tasks.
 <br>
-In this case study, we used approximately *72K images* and focused on the 2D bounding boxes detection task with five classes: *vehicle, person, bicycle, traffic light and traffic sign.*
+In this case study, we used *8234 images* (divided en three sets: train, validation and test) and focused on the 2D bounding boxes detection task with five classes: *vehicle, person, bicycle, traffic light and traffic sign.*
+
 <br>
-<br>
-This tutorial will be divided into two distinct steps: <br>
-1. Exploring the dataset before the training process. <br>
-2. Analysing the models results.
+
+This tutorial will be divided into two distinct steps:
+
+1. Exploring the dataset before the training process. [See here](#dataset-exploration)
+2. Analysing the models results. [See here](#results-analysis)
+
 <br>
 <br>
 
@@ -21,28 +26,46 @@ In this part of the tutorial, we will focus on the exploration of the WoodScape 
 
 
 ### Parallel Coordinate 
-First, We use the parallel coordinate to get an overview of our dataset: <br>
-- Get a summary of the dataset columns overall distribution, this will help us get a grasp of the dataset distribution and spot outliers.
-- Select some columns to explore their data by selecting values and trying to spot outliers and biases. 
+In the parallel coordinate widget we select the columns of the dataset we want to explore.
+First, We use the parallel coordinate to get an overview of our dataset and introduce DebiAI most useful features: <br>
+1. Get a summary of the dataset columns overall distribution, this will help us get a grasp of the dataset distribution and spot outliers.
+2. Select some columns to explore their data by selecting values and trying to spot outliers and biases. 
 
-An interesting feature of DebiAI is the **“color button”**, which will discriminate the data according to the values of a given column, in our case, we choose the *“camera_id”* column which has 4 different values: *MVR, MVL, FV and RV*.
+The [Figure 1](#figure-01---the-parallel-coordinates-of-the-woodscape-dataset-before-filtering) displays the parallel coordinates of all the columns of the WoodScape dataset. We can observe that our graph is coloured / filtered by the values of the column "camera_id"; we can achieve that by using the **“color button”** and position the selection on the column "camera_id" then redraw the graph using the **"redraw button"** that appears on the top of the widget. 
 
-The [Figure 1](#figure-01---the-parallel-coordinates-of-the-woodscape-dataset-before-filtering) displays the parallel coordinate of the WoodScape dataset filtered by the color of the *"camera_id"* values; while the [Figure 2](#figure-02---the-parallel-coordinates-of-the-woodscape-dataset-after-filtering-to-get-the-train-set-and-the-traffic-sign-class-data) shows some filters applied on the same parallel coordinate to select data. 
+The [Figure 2](#figure-02---the-parallel-coordinates-of-the-woodscape-dataset-after-filtering-to-get-the-train-set-and-the-traffic-sign-class-data) shows some filters applied on the same parallel coordinate to select data. 
+<br>
+To select data on a parallel coordinates, DebiAI offer two distinct ways:
+1. Using the **"filters button"** on the top right of the page by adding the columns and the values of our selection. 
+2. Draw a vertical line on the values on parallel coordinate as demonstrated in the [Figure 2](#figure-02---the-parallel-coordinates-of-the-woodscape-dataset-after-filtering-to-get-the-train-set-and-the-traffic-sign-class-data).
+
+We can clear the filters by cliquing on the **"clear filters button"** that appears on the top of the widget.
 
 ##### Figure 01 - The Parallel coordinates of the WoodScape dataset before filtering. 
 ![Parallel Coordinates 01](./images/01_Parallel_Coordinates.png)
 ##### Figure 02 - The Parallel coordinates of the WoodScape dataset after filtering to get the train set and the traffic sign class data.
 ![Parallel Coordinates 02](./images/02_Parallel_Coordinates.png)
 
+From the two figures above we can easily spot that our dataset is relatively balanced in terms of the camera distribution and that we may have some outliers in term of the bounding box areas.
 
 To further investigates the dataset, we explore the distribution of each one of the train, validation and test sets using the **“Data Distribution”** widget.
 
 
 ### Data Distribution 
-The [Figure 3](#figure-03---woodscape-dataset-split-from-left-to-train-train-validation-and-test-by-objects-class-distribution-grouped-by-camera-id) displays the distribution of each of the three sets by the class name grouped by the camera id. A first observation is the spectacular imbalance in the distribution of the five objects classes which is inherently related to the nature and the context of the task; in an urban road scene and in day time, it is normal to have more vehicles compared to traffic lights and traffic signs on the road. But it is important to perceive that we keep the same tendency / bias all over the three sets which is important for the accurate interpretation of the model’s outputs. The proportion of objects is more like homogenous across the four cameras in the three sets. 
+The [Figure 3](#figure-03---woodscape-dataset-split-from-left-to-train-train-validation-and-test-by-objects-class-distribution-grouped-by-camera-id) displays the distribution of each of the three sets by the class name grouped by the camera id. 
+
+To create the below figure, we used the **"Data Distribution"** widget, selected the class name for the x-axis while having the "color" discriminator on the "camera_id". 
+<br>
+To obtain the distribution of the train set, we used the **"filter button"**: we selected the column "split" then redrew the graphic using the prompted **"redraw button"** on the top of the widget.
+<br>
+DebiAI allows us to duplicate widgets along with their parameters. We made use of this feature to have two additional widgets in order to display the validation and test sets distributions following the same steps to filter their data.
+<br>
+We can check the filters applied for each widget by clicking on the **"filters applied button"**.
 
 ##### Figure 03 - WoodScape dataset split (from left to train: train, validation and test) by objects class distribution grouped by Camera ID
 ![Data Distribution 03](./images/03_Data_Distribution.png)
+
+A first observation from the [Figure 3](#figure-03---woodscape-dataset-split-from-left-to-train-train-validation-and-test-by-objects-class-distribution-grouped-by-camera-id) is the spectacular imbalance in the distribution of the five objects classes which is inherently related to the nature and the context of the task; in an urban road scene and in day time, it is normal to have more vehicles compared to traffic lights and traffic signs on the road. But it is important to perceive that we keep the same tendency / bias all over the three sets which is important for the accurate interpretation of the model’s outputs. The proportion of objects is more like homogenous across the four cameras in the three sets. 
 
 <br>
 
@@ -50,11 +73,11 @@ The [Figure 3](#figure-03---woodscape-dataset-split-from-left-to-train-train-val
 We used two versions of YOLO-based
 architectures, specifically YOLOv5 and YOLOv8. A YOLOv5 and a YOLOv8 models trained on WoodScape's train set and a YOLOv8 model trained on the COCO2017 dataset.
 
-We assess the performances of our models on the WoodScape's test set for each of the three models.
+We assess the performances of our models on the WoodScape's test set for each of the three models by using the column "model" as color discriminator for the rest of the analysis.
 
 
 ### Night Stars Plot
-We use the **night stars plot widget** to display the relationship between the precision and the recall of each model to help us navigate the trade-off between the quality and the quantity of detections: are we favouring / prioritizing the safety or the availability of our detection system.
+We use the **Night Stars Plot** widget to display the relationship between the precision and the recall of each model to help us navigate the trade-off between the quality and the quantity of detections: are we favouring / prioritizing the safety or the availability of our detection system.
 
 The [Figure 4](#figure-05-the-relationship-between-the-precision-and-recall-for-each-model-using-the-night-stars-plot-widget) shows that the two models trained on the WoodScape's train set have better performances with one having better precision and the other showcasing better recall.
 
@@ -64,7 +87,7 @@ The [Figure 4](#figure-05-the-relationship-between-the-precision-and-recall-for-
 To further investigate the performances of our models giving the context of the task, we use other widgets to help us go deeper into the analysis.
 
 
-### Point Plot 
+#### Point Plot 
 The [Figure 5](#figure-05-the-f1-score-of-each-model-by-the-camera-id-grouped-by-model) displays the f1-score of each model by the camera id; we observe that the Yolov5 have better score on the data from front and the rear cameras (FV & RV) comparing to the two other models while the Yolov8 have the best performances when used on data coming from middle view cameras (MVR & MVL); this can suggest us to use two distinct models depending on the position of the cameras. 
 
 ##### Figure 05: The f1-score of each model by the camera id grouped by model

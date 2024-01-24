@@ -1,7 +1,5 @@
 # DebiAI tutorial via the WoodScape use case
 
-
-<br> 
 <br>
 
 The aim of this tutorial is to showcase the capabilities of DebiAI and its plus value in a Machine Learning project via an industrial use case which is a 2D objects detection task using the WoodScape dataset.
@@ -26,7 +24,7 @@ This tutorial will be divided into two distinct sections, each one ties to a spe
 In this part of the tutorial, we will focus on the exploration of the WoodScape dataset's objects distribution and all the observations we can draw from it to help us design and execute our learning process accurately.
 
 
-### Parallel Coordinate <font size="1">[Documentation](https://debiai.irt-systemx.fr/dashboard/widgets/1_parallel_coordinates/) </font>
+### Parallel Coordinate <font size="1">[(Documentation)](https://debiai.irt-systemx.fr/dashboard/widgets/1_parallel_coordinates/) </font>
 In the parallel coordinate widget we select the columns of the dataset we want to explore.
 First, We use the parallel coordinate to get an overview of our dataset and introduce DebiAI's most useful features: <br>
 1. Get a summary of the dataset columns overall distribution, this will help us get a grasp of the dataset distribution and spot outliers.
@@ -52,7 +50,7 @@ From the two figures above we can easily spot that our dataset is relatively bal
 To further investigates the dataset, we explore the distribution of each one of the train, validation and test sets using the **“Data Distribution”** widget.
 
 
-### Data Distribution <font size="1"> [Documentation](https://debiai.irt-systemx.fr/dashboard/widgets/1_parallel_coordinates/) </font>
+### Data Distribution <font size="1"> [(Documentation)](https://debiai.irt-systemx.fr/dashboard/widgets/1_parallel_coordinates/) </font>
 The [Figure 3](#figure-03---woodscape-dataset-split-from-left-to-train-train-validation-and-test-by-objects-class-distribution-grouped-by-camera-id) displays the distribution of each of the three sets by the class name grouped by the camera id. 
 
 To create the below figure, we used the **"Data Distribution"** widget, selected the class name for the x-axis while having the "color" filter on the "camera_id". 
@@ -76,7 +74,7 @@ We used two versions of [YOLO](https://arxiv.org/abs/1506.02640)-based architect
 We assess the performances of our models on the WoodScape's test set for each of the three models by using the column "model" as color filter for the rest of the analysis.
 
 
-### Night Stars Plot <font size="1"> [Documentation](https://debiai.irt-systemx.fr/dashboard/widgets/night_stars_plot/) </font>
+### Night Stars Plot <font size="1"> [(Documentation)](https://debiai.irt-systemx.fr/dashboard/widgets/night_stars_plot/) </font>
 We use the **Night Stars Plot** widget to display the relationship between the precision and the recall of each model to help us navigate the trade-off between the quality and the quantity of detections: are we favouring / prioritizing the safety or the availability of our detection system.
 
 The [Figure 4](#figure-05-the-relationship-between-the-precision-and-recall-for-each-model-using-the-night-stars-plot-widget) shows that the two models trained on the WoodScape's train set have better performances with one having better precision and the other showcasing better recall.
@@ -87,7 +85,7 @@ The [Figure 4](#figure-05-the-relationship-between-the-precision-and-recall-for-
 To further investigate the performances of our models giving the context of the task, we use other widgets to help us go deeper into the analysis.
 
 
-#### Point Plot <font size="1"> [Documentation](https://debiai.irt-systemx.fr/dashboard/widgets/3_point_plot/)</font>
+#### Point Plot <font size="1"> [(Documentation)](https://debiai.irt-systemx.fr/dashboard/widgets/3_point_plot/)</font>
 The [Figure 5](#figure-05-the-f1-score-of-each-model-by-the-camera-id-grouped-by-model) displays the f1-score of each model by the "camera id"; we observe that the Yolov5 have better score on the data from the front and rear cameras (FV & RV) comparing to the two other models while the Yolov8 have the best performances when used on data coming from middle view cameras (MVR & MVL); this can be an indicator to use two distinct models depending on the position of the cameras. 
 
 ##### Figure 05: The f1-score of each model by the camera id grouped by model

@@ -72,7 +72,7 @@ How to start DebiAI with Docker-compose :
 mkdir debiai
 cd debiai
 
-# Create and copy/pase the docker-compose file
+# Create and copy/paste the docker-compose file
 nano docker-compose.yml
 
 # Start DebiAI

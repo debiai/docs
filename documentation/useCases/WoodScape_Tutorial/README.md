@@ -2,11 +2,11 @@
 
 <br>
 
-The aim of this tutorial is to showcase the capabilities of DebiAI and its plus value in a Machine Learning project via an industrial use case which is a 2D objects detection task using the WoodScape dataset.
+The aim of this tutorial is to showcase the capabilities of DebiAI and its plus value in a Machine Learning project via an industrial use case which is a 2D object detection task using the WoodScape dataset.
 
 The [WoodScape](https://woodscape.valeo.com/woodscape/) dataset is a public dataset containing more than _100K images_ of urban scenes captured using fish-eye cameras for automotive driving tasks. The images are provided by 4 different cameras with different angles of view (front, rear, middle right and middle left) with 360° coverage and have annotations for a diverse set of computer vision tasks.
 <br>
-In this case study, we used _8.234 images_ (divided into three sets: train, validation and test) and we focused on the 2D bounding boxes detection task with five classes: _vehicle, person, bicycle, traffic light and traffic sign._
+In this case study, we used a subset of the dataset divided into three sets -train, validation and test-, and we focused on the 2D bounding boxes detection task with five classes: _vehicle, person, bicycle, traffic light and traffic sign._
 
 <br>
 

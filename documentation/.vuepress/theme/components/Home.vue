@@ -22,10 +22,21 @@
           <a href="/introduction/gettingStarted/" class="action-button">
             Get Started
           </a>
-          <a href="/useCases/" class="action-button secondary">
-            Use cases and applications
-          </a>
+          <a
+            href="https://demo.debiai.fr/"
+            class="action-button secondary"
+            target="_blank"
+          >
+            Try the Demo</a
+          >
         </div>
+
+        <!-- <span style="color: white; padding-top: 10px">
+          Preview the application with our
+          <a href="" style="color: white; text-decoration: underline"
+            >public demo</a
+          >.
+        </span> -->
       </div>
 
       <div id="image">

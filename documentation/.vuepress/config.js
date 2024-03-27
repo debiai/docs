@@ -27,19 +27,12 @@ module.exports = {
 
     nav: [
       {
+        text: "Demo",
+        link: "https://demo.debiai.fr/",
+      },
+      {
         text: "Get Started",
         link: "/introduction/gettingStarted/",
-      },
-      // {
-      //   text: "Guides",
-      //   items: [
-      //     { text: "Feature A", link: "/guides/featureA/" },
-      //     { text: "Feature B", link: "/guides/featureB/" },
-      //   ],
-      // },
-      {
-        text: "Applications",
-        items: [{ text: "Woodscape", link: "/useCases/woodscape/" }],
       },
       {
         text: "Contact",
@@ -74,17 +67,7 @@ module.exports = {
             title: "Python module",
             path: "/dataInsertion/pythonModule/",
             collapsable: true,
-            children: [
-              "/dataInsertion/pythonModule/quickStart.md",
-              // {
-              //   title: "Tutorials", path: "/dataInsertion/pythonModule/tutorials/",
-              //   children: [
-              //     "/dataInsertion/pythonModule/tutorials/mnist",
-              //     "/dataInsertion/pythonModule/tutorials/woodscape"
-              //   ]
-              // },
-              // "/dataInsertion/pythonModule/API",
-            ],
+            children: ["/dataInsertion/pythonModule/quickStart.md"],
           },
 
           // Data providers
@@ -156,12 +139,11 @@ module.exports = {
         ],
       },
 
-      // Applications
+      // Tutorials
       {
-        title: "Applications",
-        path: "/useCases/",
+        title: "Tutorials",
         collapsable: false,
-        children: ["/useCases/woodscape/"],
+        children: ["/tutorials/woodscapeTutorial/"],
       },
     ],
   },

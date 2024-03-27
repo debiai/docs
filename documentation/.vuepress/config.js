@@ -27,12 +27,12 @@ module.exports = {
 
     nav: [
       {
-        text: "Demo",
-        link: "https://demo.debiai.fr/",
-      },
-      {
         text: "Get Started",
         link: "/introduction/gettingStarted/",
+      },
+      {
+        text: "Demo",
+        link: "https://demo.debiai.fr/",
       },
       {
         text: "Contact",

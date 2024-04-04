@@ -1,7 +1,7 @@
 # Range slider plot
 
 [[`Sample analysis`](../README.md#sample-analysis)]
-[[`Outlier detection`](../README.md#outlier-detection)]
+[[`Outlier detection`](../README.md#outliers-detection)]
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Time series`](../README.md#time-series)]
 [[`Data export`](../README.md#data-export)]

@@ -83,8 +83,6 @@ DebiAI provides data scientists with features to:
    ]"
 />
 
-![dashboard](./ans.png)
-
 ## Dashboard
 
 DebiAI has a Graphical User Interface with a complete data visualization toolkit offering many statistical analysis tools:
@@ -93,29 +91,21 @@ The dashboard is customizable and can be used for both large and small projects.
 
 We also provide a full [dashboard documentation](../dashboard/README.md) to help you get the most out of it.
 
+![dashboard](./ans.png)
+
 <style>
   img[alt$="dashboard"] {
-    float: right;
-    width: 650px;
-    padding: 0 20px 50px 20px;
+    width: 900px
+    /* padding: 0 20px 50px 20px; */
   }
 
   /* Style for phones: */
   @media only screen and (max-width: 600px) {
     img[alt$="dashboard"] {
-      float: none;
       width: 100%;
-      padding: 0 0 50px 0;
     }
   }
 </style>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
 ## Data
 

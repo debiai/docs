@@ -11,37 +11,28 @@ tagline: Find bias, select data, evaluate models
 ---
 
 <!-- Features -->
-<div class="features">
-  <div class="feature" onclick="window.location.href = '#bias-detection'">
-    <h3>
-      <img src = "bar_plot.svg"/>
-      Bias detection
-    </h3>
-    <p>DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.</p>
-  </div>
-  <div class="feature">
-    <h3>
-      <img src = "trophy.svg"/>
-      Model results comparison
-    </h3>
-    <!-- Badges Ref : https://v1.vuepress.vuejs.org/guide/using-vue.html#built-in-components -->
-    <p>Find which model is better on the contexts that matters the most for your project.</p>
-  </div>
-  <div class="feature">
-    <h3>
-      <img src = "loop.svg"/>
-      Data selection
-    </h3>
-    <p>With the DebiAi graphical tools and high-level filters, select data for training purpose or for additional exploration.</p>
-  </div>
-</div>
 
-<style>
-  .features img {
-    width: 30px;
-    padding-right: 5px;
-  }
-</style>
+<FeaturesOverview :features="[
+  {
+    title: 'Bias detection',
+      description: 'DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.',
+      imageLink: 'features/bar_plot.svg',
+      elementIdDestination: 'Bias detection'
+    },
+    {
+      title: 'Model results comparison',
+      description: 'Find which model is better on the contexts that matters the most for your project.',
+      imageLink: 'features/trophy.svg',
+      elementIdDestination: 'Contextual model comparison'
+    },
+    {
+      title: 'Data selection',
+      description: 'With the DebiAi graphical tools and high-level filters, select data for training purpose or for additional exploration.',
+      imageLink: 'features/loop.svg',
+      elementIdDestination: 'Data selection'
+    },
+  ]"
+/>
 
 <!-- Project description -->
 
@@ -91,7 +82,6 @@ DebiAI provides data scientists with features to:
     },
    ]"
 />
-
 
 ![dashboard](./ans.png)
 

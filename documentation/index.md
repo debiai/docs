@@ -13,8 +13,8 @@ tagline: Find bias, select data, evaluate models
 <!-- Features -->
 
 <FeaturesOverview :features="[
-  {
-    title: 'Bias detection',
+    {
+      title: 'Bias detection',
       description: 'DebiAI offers a large and expending set of graphical tools making the detection of bias in the data of your projects easier.',
       imageLink: 'features/bar_plot.svg',
       elementIdDestination: 'Bias detection'

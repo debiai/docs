@@ -35,28 +35,51 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="stylus" scoped>
 .features {
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: 60px;
+  gap: 20px;
+  /* Full width */
+  position: relative;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+
+  .feature {
+    padding: 10px 30px;
+    flex: 0 0 23%;
+
+    &.clickable {
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.1s;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+
+    img {
+      width: 30px;
+      padding-right: 5px;
+    }
+  }
 }
 
-.feature {
-  padding: 10px 30px;
-}
-.feature.clickable {
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.1s;
-}
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    width: auto;
+    gap: 10px;
 
-.feature.clickable:hover {
-  background-color: #f0f0f0;
-}
-
-.features img {
-  width: 30px;
-  padding-right: 5px;
+    .feature {
+      width: 80%;
+      flex: none;
+    }
+  }
 }
 </style>

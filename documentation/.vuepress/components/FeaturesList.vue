@@ -7,7 +7,11 @@
       :class="{ odd: index % 2 === 0, even: index % 2 !== 0 }"
     >
       <div class="feature-image">
-        <img :src="feature.imageLink" alt="" />
+        <img
+          :src="feature.imageLink"
+          alt=""
+          :class="feature.shadow ? 'shadow' : 'no-shadow'"
+        />
       </div>
       <div class="feature-text">
         <h2 :id="feature.title">{{ feature.title }}</h2>
@@ -66,6 +70,10 @@ export default {
         max-width: none !important;
         width: 100%;
         border-radius: 5px;
+
+        &.shadow {
+          box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+        }
       }
     }
   }

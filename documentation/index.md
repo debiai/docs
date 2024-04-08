@@ -80,32 +80,16 @@ DebiAI provides data scientists with features to:
       linkTitle: 'Data selection widgets documentation →',
       linkDestination: './dashboard/widgets/#data-selection'
     },
+    {
+      title: 'Efficient data visualization',
+      description: 'Generating the same visualization every time the project data changes or when new models are trained is a time-consuming task. DebiAI provides features to help you quickly create and share statistical visualizations. By saving your dashboard layout, you can easily generate the same visualization every time you need it.',
+      imageLink: 'features/ans.png',
+      linkTitle: 'More about the DebiAI dashboard features →',
+      linkDestination: './dashboard/#dashboard',
+      shadow: true
+    },
    ]"
 />
-
-## Dashboard
-
-DebiAI has a Graphical User Interface with a complete data visualization toolkit offering many statistical analysis tools:
-
-The dashboard is customizable and can be used for both large and small projects. Learn more about the [widgets and how to use them](../dashboard/widgets/).
-
-We also provide a full [dashboard documentation](../dashboard/README.md) to help you get the most out of it.
-
-![dashboard](./ans.png)
-
-<style>
-  img[alt$="dashboard"] {
-    width: 900px
-    /* padding: 0 20px 50px 20px; */
-  }
-
-  /* Style for phones: */
-  @media only screen and (max-width: 600px) {
-    img[alt$="dashboard"] {
-      width: 100%;
-    }
-  }
-</style>
 
 ## Data
 

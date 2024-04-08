@@ -66,7 +66,6 @@ export default {
         max-width: none !important;
         width: 100%;
         border-radius: 5px;
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       }
     }
   }

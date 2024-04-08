@@ -55,28 +55,28 @@ DebiAI provides data scientists with features to:
     {
       title: 'Bias detection',
       description: 'Bias in data can lead to unfair or inaccurate predictions, it is important to detect and mitigate bias in your data before training any model.\n\n With DebiAI, you can easily detect bias in your data. Our analysis page provides a wide range of tools to help you identify bias in your data.',
-      imageLink: 'features/ans.png',
+      imageLink: 'features/Bias.png',
       linkTitle: 'Bias detection widgets documentation →',
       linkDestination: './dashboard/widgets/#bias-detection'
     },
     {
       title: 'Outliers detection',
       description: 'Outliers can have a significant impact on the results of your model. Searching for outliers in your data is an important and time-consuming task.\n\n DebiAI provides a set of tools to help you identify outliers in your data. Our analysis page provides a wide range of tools to help you identify outliers in your data.',
-      imageLink: 'features/ans.png',
+      imageLink: 'features/Outliers.png',
       linkTitle: 'Outliers detection widgets documentation →',
       linkDestination: './dashboard/widgets/#outliers-detection'
     },
     {
       title: 'Contextual model comparison',
       description: 'Selecting the best model for your project can be a difficult task and is often based on the global performance of the model. Being able to compare the performance of your models according to the contexts that matter the most for your project is a key feature of DebiAI.',
-      imageLink: 'features/ans.png',
+      imageLink: 'features/Models.png',
       linkTitle: 'Model evaluation widgets documentation →',
       linkDestination: './dashboard/widgets/#model-evaluation'
     },
     {
       title: 'Data selection',
       description: 'Selecting specific data for your project can be challenging with the existing tools. DebiAI widgets are designed to help you select data graphically to do in depth analysis, for training purposes, for cleaning, sharing or any other purpose.',
-      imageLink: 'features/ans.png',
+      imageLink: 'features/Selections.png',
       linkTitle: 'Data selection widgets documentation →',
       linkDestination: './dashboard/widgets/#data-selection'
     },
@@ -128,6 +128,13 @@ DebiAI is available as a Docker image. To install it, you can follow the [instal
 As part of the [Confiance.ai](https://www.confiance.ai/) program, we (the [IRT SystemX](https://www.irt-systemx.fr/)) are using and developing DebiAI for a wide range of use cases.
 
 One of them is the [Valeo - WoodScape](tutorials/woodscapeTutorial/README.md#woodscape-tutorial) project, where we are using DebiAI to help us analyze the data and the results of the project.
+
+<br>
+<br>
+
+## Scientific publications
+
+- ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930).
 
 <br>
 <br>

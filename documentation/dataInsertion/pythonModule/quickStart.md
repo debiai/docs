@@ -186,11 +186,11 @@ results_df = pd.DataFrame({
 debiai_model_1.add_results_df(results_df)
 ```
 
-If later on you have a second model, you can create an other model.
+If later on you have a second model, you can create an other model, along with his metadata if wanted.
 
 ```python
 # Create a second model
-debiai_model_2 = debiai_project.create_model("Model 2", {
+debiai_model_2 = debiai_project.create_model("Model 2", metadata = s{
     "name": "m2",
     "test": [{"sample": "data"}, 2, "example", {}],
     "test2": [],
@@ -212,7 +212,7 @@ results_np = np.array(
 debiai_model_2.add_results_np(results_np)
 ```
 
-Now, both the data, metadata and the 2 models are ready to be analyzed with the Debiai dashboard.
+Now, both the data and the 2 models are ready to be analyzed with the Debiai dashboard.
 
 ![img](./helloDebiai/HelloDebiAI_5.png)
 ![img](./helloDebiai/HelloDebiAI_4.png)

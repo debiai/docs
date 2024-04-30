@@ -190,11 +190,10 @@ If later on you have a second model, you can create an other model, along with h
 
 ```python
 # Create a second model
-debiai_model_2 = debiai_project.create_model("Model 2", metadata = s{
-    "name": "m2",
-    "test": [{"sample": "data"}, 2, "example", {}],
-    "test2": [],
-    "test3": {},
+debiai_model_2 = debiai_project.create_model("Model 2", metadata = {
+    "metadata 1": [{"sample": "data"}, 2, "example", {}],
+    "metadata 2": [],
+    "metadata 3": {},
 })
 ```
 

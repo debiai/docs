@@ -49,13 +49,11 @@ If the project already exists, you can get the project with:
 debiai_project = my_debiai.get_project(DEBIAI_PROJECT_NAME) # Returns None if the project doesn't exist
 ```
 
-And if you want to delete the project: 
+And if you want to delete the project:
 
 ```python
 my_debiai.delete_project_byId(DEBIAI_PROJECT_NAME)
 ```
-
-
 
 ### Setting the data structure
 
@@ -192,7 +190,12 @@ If later on you have a second model, you can create an other model.
 
 ```python
 # Create a second model
-debiai_model_2 = debiai_project.create_model("Model 2")
+debiai_model_2 = debiai_project.create_model("Model 2", {
+    "name": "m2",
+    "test": [{"sample": "data"}, 2, "example", {}],
+    "test2": [],
+    "test3": {},
+})
 ```
 
 This time we will use a numpy array, instead of a dataframe, for inserting results:
@@ -209,9 +212,9 @@ results_np = np.array(
 debiai_model_2.add_results_np(results_np)
 ```
 
-Now, both the data and the 2 models are ready to be analyzed with the Debiai dashboard.
+Now, both the data, metadata and the 2 models are ready to be analyzed with the Debiai dashboard.
 
-![img](./helloDebiai/HelloDebiAI_3.png)
+![img](./helloDebiai/HelloDebiAI_5.png)
 ![img](./helloDebiai/HelloDebiAI_4.png)
 
 ## Limitations

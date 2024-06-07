@@ -153,12 +153,11 @@ module.exports = {
         ],
       },
 
-      // Applications
+      // Tutorials
       {
-        title: "Applications",
-        path: "/useCases/",
+        title: "Tutorials",
         collapsable: false,
-        children: ["/useCases/woodscape/"],
+        children: ["/tutorials/woodscapeTutorial/"],
       },
     ],
   },

@@ -111,7 +111,7 @@ DebiAI is available as a Docker image. To install it, you can follow the [instal
 
 As part of the [Confiance.ai](https://www.confiance.ai/) program, we (the [IRT SystemX](https://www.irt-systemx.fr/)) are using and developing DebiAI for a wide range of use cases.
 
-One of them is the [Valeo - WoodScape](useCases/woodscape/README.md#valeo-woodscape) project, where we are using DebiAI to help us analyze the data and the results of the project.
+One of them is the [Valeo - WoodScape](tutorials/woodscapeTutorial/README.md#woodscape-tutorial) project, where we are using DebiAI to help us analyze the data and the results of the project.
 
 <br>
 <br>

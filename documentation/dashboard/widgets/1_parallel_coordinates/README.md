@@ -1,7 +1,7 @@
 # Parallel coordinates
 
 [[`Data overview`](../README.md#data-overview)]
-[[`Outlier detection`](../README.md#outlier-detection)]
+[[`Outlier detection`](../README.md#outliers-detection)]
 [[`Bias detection`](../README.md#bias-detection)]
 [[`Data selection`](../README.md#data-selection)]
 

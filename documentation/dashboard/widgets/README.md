@@ -8,7 +8,7 @@ Find, according to your needs, the widgets that suits your needs according to yo
   - [Data overview](#data-overview)
   - [Sample analysis](#sample-analysis)
   - [Bias detection](#bias-detection)
-  - [Outlier detection](#outlier-detection)
+  - [Outlier detection](#outliers-detection)
   - [Model evaluation](#model-evaluation)
   - [Data selection](#data-selection)
   - [Data annotation](#data-annotation)
@@ -56,7 +56,7 @@ Find if your dataset is balanced:
 - [The statistics](./statistics/) widget can show abnormal statistics.
   
 
-### Outlier detection
+### Outliers detection
 
 Find if some samples are outliers:
 

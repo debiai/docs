@@ -3,7 +3,7 @@
 [[`Data overview`](../README.md#data-overview)]
 [[`Sample analysis`](../README.md#sample-analysis)]
 [[`Bias detection`](../README.md#bias-detection)]
-[[`Outlier detection`](../README.md#outlier-detection)] \
+[[`Outlier detection`](../README.md#outliers-detection)] \
 [[`Model evaluation`](../README.md#model-evaluation)]
 [[`Data selection`](../README.md#data-selection)]
 [[`Data annotation`](../README.md#data-annotation)]

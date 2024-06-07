@@ -118,7 +118,8 @@ One of them is the [Valeo - WoodScape](tutorials/woodscapeTutorial/README.md#woo
 
 ## Scientific publications
 
-- ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930).
+- ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930). 
+  - [Best paper award](https://www.iaria.org/conferences2024/AwardsICAS24.html)! 🏆
 
 <br>
 <br>

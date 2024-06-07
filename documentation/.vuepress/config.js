@@ -30,16 +30,13 @@ module.exports = {
         text: "Get Started",
         link: "/introduction/gettingStarted/",
       },
-      // {
-      //   text: "Guides",
-      //   items: [
-      //     { text: "Feature A", link: "/guides/featureA/" },
-      //     { text: "Feature B", link: "/guides/featureB/" },
-      //   ],
-      // },
       {
-        text: "Applications",
-        items: [{ text: "Woodscape", link: "/useCases/woodscape/" }],
+        text: "Demo",
+        link: "https://demo.debiai.fr/",
+      },
+      {
+        text: "Tutorials",
+        items: [{ text: "Woodscape", link: "/tutorials/woodscapeTutorial/" }],
       },
       {
         text: "Contact",

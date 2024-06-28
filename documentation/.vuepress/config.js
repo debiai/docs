@@ -150,6 +150,11 @@ module.exports = {
             path: "/dashboard/analysisExport/",
             collapsable: true,
           },
+          {
+            title: "Unfolding columns",
+            path: "/dashboard/unfolding/",
+            collapsable: true,
+          },
         ],
       },
 

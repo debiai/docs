@@ -16,13 +16,24 @@ The data you want to analyze with DebiAI will need to respect a specific format.
 
     If your data can be represented in an array like format, adding them to DebiAI will be easy.
 
+- **Data types**
+
+    DebiAI supports the following data types:
+    - `num`: numerical values
+    - `str`: string values
+    - `bool`: boolean values
+    - `array`: array of values (see [unfolding columns](../dashboard/unfolding/))
+    - `dict`: dictionary of values (see [unfolding columns](../dashboard/unfolding/))
+
+    Dates will be automatically detected as `str` values and displayed as dates in the dashboard.
+
 - **No missing values**
 
-    At the moment, DebiAI only supports data with no missing values.
+    At the moment, DebiAI only supports data with no missing values (None values). We have plans to support missing values in the future.
 
 - **Samples size**
 
-    It is not recommended to provide more than 2.000.000 samples, as it will take a long time to process.
+    It is not recommended to provide more than 2.000.000 samples, as it will take a long time to process. We are working on improving this limit.
 
 
 ## There is currently two ways to insert data into DebiAI:

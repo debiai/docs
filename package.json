@@ -12,12 +12,9 @@
     "build": "vuepress build documentation"
   },
   "devDependencies": {
-    "vuepress": "^1.9.9",
+    "vuepress": "^1.9.10",
     "vuepress-plugin-matomo": "^1.0.2",
     "vuepress-plugin-zooming": "^1.1.8"
-  },
-  "engines": {
-    "node": "16.0.0"
   },
   "license": "Apache-2.0"
 }

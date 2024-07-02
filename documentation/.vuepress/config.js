@@ -169,7 +169,17 @@ module.exports = {
 
   // Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
   plugins: [
-    ["vuepress-plugin-zooming"],
+    [
+      "vuepress-plugin-zooming",
+      {
+        selector: ":not(a) > img",
+        delay: 1000,
+        options: {
+          bgColor: "#ffffff",
+          zIndex: 10000,
+        },
+      },
+    ],
     ["matomo", { trackerUrl: "https://matomo.irtsysx.fr/", siteId: "5" }],
   ],
 };

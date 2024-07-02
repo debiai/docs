@@ -1,9 +1,25 @@
 # Getting started
 
-1) [Install DebiAI](../gettingStarted/installation/README.md),
-
-2) Create a project and [add data to your DebiAI instance](../../dataInsertion/README.md).
-
-3) Start [analyzing your data with the DebiAI dashboard](../../dashboard/README.md).
+<LinkableChoices :choices="[
+    {
+        title: '1. Install DebiAI',
+        description: 'Install DebiAI on your machine',
+        imageLink: '/getStarted/download.svg',
+        linkDestination: './installation'
+    },
+    {
+        title: '2. Create a project',
+        description: 'Create a project and add data to your DebiAI instance',
+        imageLink: '/getStarted/data.svg',
+        linkDestination: '/dataInsertion'
+    },
+    {
+        title: '3. Analyze',
+        description: 'Learn more about the project',
+        imageLink: '/getStarted/analyze.svg',
+        linkDestination: '/dashboard'
+    }
+  ]"
+/>
 
 <!-- TODO : video presentation -->

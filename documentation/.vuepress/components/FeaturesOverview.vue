@@ -1,6 +1,6 @@
 <template>
   <div class="features">
-    <div
+    <a
       v-for="feature in features"
       :key="feature.title"
       :class="'feature ' + (feature.elementIdDestination ? 'clickable' : '')"
@@ -11,7 +11,7 @@
         {{ feature.title }}
       </h3>
       <p>{{ feature.description }}</p>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -50,6 +50,8 @@ export default {
   .feature {
     padding: 10px 30px;
     flex: 0 0 23%;
+    text-decoration: none;
+    color: $textColor;
 
     &.clickable {
       cursor: pointer;
@@ -58,6 +60,7 @@ export default {
 
       &:hover {
         background-color: #f0f0f0;
+        text-decoration: none;
       }
     }
 

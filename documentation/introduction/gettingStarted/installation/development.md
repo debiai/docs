@@ -41,3 +41,9 @@ The backend expect the frontend to be at the url [http://localhost:8080/](http:/
 If something went wrong, please let us know by posting an issue on [Github](https://github.com/debiai/debiai/issues/new)
 
 If you want to contribute to the project, you can follow our [contributing guide](https://github.com/debiai/debiai/blob/main/CONTRIBUTING.md).
+
+## Other development guides
+
+- [How to create widgets](https://github.com/debiai/DebiAI/blob/main/frontend/doc/new-widgets/Adding-new-widgets.md)
+- [How to create data-providers](/dataInsertion/dataProviders/quickStart)
+- [How to create algo-providers](/dashboard/algoProviders/algoProviders)

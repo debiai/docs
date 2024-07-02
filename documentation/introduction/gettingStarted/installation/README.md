@@ -2,15 +2,31 @@
 
 DebiAI offers several installation methods:
 
-- [Official Docker image (recommended)](./README.md#official-docker-image-recommended)
-  - [Docker run](./README.md#docker-run)
-  - [Docker-compose](./README.md#docker-compose)
-- [Build image from source](./README.md#build-image-from-source)
-  - [Docker build](./README.md#docker-build)
-  - [Docker-compose-build](./README.md#docker-compose-build)
-- [Development](./README.md#development)
+<LinkableChoices :choices="[
+    {
+        title: 'Docker',
+        description: 'Install the project with Docker or Docker Compose',
+        imageLink: '../../../install/docker.svg',
+        elementIdDestination: 'official-docker-image',
+        tag: 'Recommended'
+    },
+    {
+        title: 'Build from source',
+        description: 'Build the project from source',
+        imageLink: '../../../install/build.svg',
+        elementIdDestination: 'build-image-from-source'
+    },
+    {
+        title: 'Development',
+        description: 'DebiAI development setup guide',
+        imageLink: '../../../install/source.svg',
+        linkDestination: './development',
+    }
+    // Add more installation methods here
+  ]"
+/>
 
-## Official Docker image (recommended)
+## Official Docker image
 
 ### Docker run
 
@@ -188,9 +204,5 @@ services:
 ```
 
 If you want to change the volume folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing not related to DebiAI in the folder because it might be removed.
-
-## Development
-
-If you want to run DebiAI in development mode, you can follow our [development setup guide](./development.md#running-debiai-in-development-mode).
 
 **The next step is to provide data to DebiAI: [Inserting data into DebiAI](../../../dataInsertion/README.md#inserting-data-into-debiai)**

@@ -2,6 +2,7 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "blockstructure",
     "confiance",
     "confianceai",
     "dataframe",
@@ -11,20 +12,17 @@
     "groundtruth",
     "htpasswd",
     "irtsysx",
+    "matomo",
     "mnist",
     "numpy",
     "rgba",
     "setuptools",
     "systemx",
     "valeo",
-    "blockstructure",
     "vuepress",
     "websrv",
-    "woodscape",
-    "matomo"
+    "woodscape"
   ],
-  "ignorePaths":[
-    "legal.md"
-  ],
+  "ignorePaths": ["legal.md"],
   "flagWords": []
 }

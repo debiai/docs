@@ -7,7 +7,7 @@ DebiAI has a Graphical User Interface that allows you to navigate through your p
 Before starting an analysis, you need to select a project from the project list.
 
 <p align="center">
-    <img src="./project_list.png" width="100%" style="border:solid 2px #d3d3d3" />
+    <img src="./project_list.png" width="100%" style="border:solid 2px #d3d3d3"/>
     <em>Home page, project list</em>
 </p>
 

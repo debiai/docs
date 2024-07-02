@@ -3,7 +3,7 @@
 <LinkableChoices :choices="[
     {
         title: '1. Install DebiAI',
-        description: 'Install DebiAI on your machine',
+        description: 'Install DebiAI on your computer or server',
         imageLink: '/getStarted/download.svg',
         linkDestination: './installation'
     },
@@ -15,7 +15,7 @@
     },
     {
         title: '3. Analyze',
-        description: 'Learn more about the project',
+        description: 'Analysis dashboard documentation',
         imageLink: '/getStarted/analyze.svg',
         linkDestination: '/dashboard'
     }

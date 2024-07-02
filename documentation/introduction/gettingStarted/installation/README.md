@@ -13,13 +13,13 @@ DebiAI offers several installation methods:
     {
         title: 'Build from source',
         description: 'Build the project from source',
-        imageLink: '../../../install/build.svg',
+        imageLink: '../../../install/source.svg',
         elementIdDestination: 'build-image-from-source'
     },
     {
         title: 'Development',
         description: 'DebiAI development setup guide',
-        imageLink: '../../../install/source.svg',
+        imageLink: '../../../install/build.svg',
         linkDestination: './development',
     }
     // Add more installation methods here

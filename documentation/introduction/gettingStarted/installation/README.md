@@ -54,7 +54,7 @@ The following command will launch the debiai web application:
 debiai-gui start
 ```
 
-Debiai will open at this address [http://localhost:3000/](http://localhost:3000/)
+Debiai will be available on [http://localhost:3000/](http://localhost:3000/)
 
 ## Official Docker image
 

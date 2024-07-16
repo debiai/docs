@@ -4,11 +4,17 @@ DebiAI offers several installation methods:
 
 <LinkableChoices :choices="[
     {
+        title: 'Pip',
+        description: 'Install Debiai-gui python package with pip',
+        imageLink: '../../../install/python.svg',
+        elementIdDestination: 'debiai-gui-python-package',
+        tag: 'Recommended'
+    },
+    {
         title: 'Docker',
         description: 'Install the project with Docker or Docker Compose',
         imageLink: '../../../install/docker.svg',
         elementIdDestination: 'official-docker-image',
-        tag: 'Recommended'
     },
     {
         title: 'Build from source',
@@ -21,10 +27,34 @@ DebiAI offers several installation methods:
         description: 'DebiAI development setup guide',
         imageLink: '../../../install/build.svg',
         linkDestination: './development',
-    }
+    },
     // Add more installation methods here
   ]"
 />
+
+## Debiai-gui python package
+
+### Installation
+
+**Requirements :**
+
+- [Python](https://www.python.org/downloads/)
+
+Install the python package with pip:
+
+```bash
+pip install debiai-gui
+```
+
+### Start the application
+
+The following command will launch the debiai web application:
+
+```bash
+debiai-gui start
+```
+
+Debiai will be available on [http://localhost:3000/](http://localhost:3000/)
 
 ## Official Docker image
 

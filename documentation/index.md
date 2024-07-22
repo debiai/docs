@@ -116,14 +116,6 @@ One of them is the [Valeo - WoodScape](tutorials/woodscapeTutorial/README.md#woo
 <br>
 <br>
 
-## Scientific publications
-
-- ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930). 
-  - [Best paper award](https://www.iaria.org/conferences2024/AwardsICAS24.html)! 🏆
-
-<br>
-<br>
-
 ## Who is DebiAI for?
 
 DebiAI is a high level data exploration tool for data scientists and machine learning experts. It is designed to be easily integrated in your project workflow.
@@ -132,3 +124,28 @@ DebiAI is a high level data exploration tool for data scientists and machine lea
 
 <br>
 <br>
+
+## Scientific publications
+
+- ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930).
+  - [Best paper award](https://www.iaria.org/conferences2024/AwardsICAS24.html)! 🏆
+
+<br>
+<br>
+
+## Citation
+
+If you use DebiAI in your research, please cite the following paper:
+
+<!-- cSpell:disable -->
+
+```
+@inproceedings{mansion2024debiai,
+  title={DebiAI: Open-Source Toolkit for Data Analysis, Visualisation and Evaluation in Machine Learning},
+  author={Mansion, Tom and Braud, Rapha{\"e}l and Amrani, Ahmed and Chaouche, Sabrina and Adjed, Faouzi and Cantat, Lo{\"\i}c},
+  booktitle={ICAS 2024},
+  year={2024}
+}
+```
+
+<!-- cSpell:enable -->

@@ -22,11 +22,9 @@
     "valeo",
     "vuepress",
     "websrv",
-    "woodscape"
+    "woodscape",
+    "ICAS"
   ],
-  "ignorePaths": [
-    "legal.md",
-    "*.svg"
-  ],
+  "ignorePaths": ["legal.md", "*.svg"],
   "flagWords": []
 }

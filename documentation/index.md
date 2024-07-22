@@ -137,6 +137,8 @@ DebiAI is a high level data exploration tool for data scientists and machine lea
 
 If you use DebiAI in your research, please cite the following paper:
 
+<!-- cSpell:disable -->
+
 ```
 @inproceedings{mansion2024debiai,
   title={DebiAI: Open-Source Toolkit for Data Analysis, Visualisation and Evaluation in Machine Learning},
@@ -145,3 +147,5 @@ If you use DebiAI in your research, please cite the following paper:
   year={2024}
 }
 ```
+
+<!-- cSpell:enable -->

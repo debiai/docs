@@ -31,7 +31,7 @@ And finally, in a new terminal, run the debiai server.
 ```bash
 cd debiai/debiaiServer
 pip install -r requirements.txt
-cd debiai
+cd ..
 python3 run_debiai_server_dev.py
 ```
 

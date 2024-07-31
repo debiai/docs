@@ -26,12 +26,12 @@ npm run serve
 
 ### Backend
 
-And finally, in a new terminal, run the backend server.
+And finally, in a new terminal, run the debiai server.
 
 ```bash
-cd debiai/backend
-pip install -r requirements.txt
-python3 websrv.py
+cd debiai/debiaiServer
+pip install -r debiaiServer/requirements.txt
+python3 run_debiai_server_dev.py
 ```
 
 DebiAI will be available at the backend url : [http://localhost:3000/](http://localhost:3000/)

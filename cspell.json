@@ -8,6 +8,7 @@
     "dataframe",
     "Debi",
     "DebiAI",
+    "debiaivenv",
     "Drange",
     "groundtruth",
     "htpasswd",
@@ -20,11 +21,14 @@
     "setuptools",
     "systemx",
     "valeo",
+    "venv",
     "vuepress",
     "websrv",
-    "woodscape",
-    "ICAS"
+    "woodscape"
   ],
-  "ignorePaths": ["legal.md", "*.svg"],
+  "ignorePaths": [
+    "legal.md",
+    "*.svg"
+  ],
   "flagWords": []
 }

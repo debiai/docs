@@ -40,28 +40,28 @@ DebiAI offers several installation methods:
 
 - [Python](https://www.python.org/downloads/)
 
-Create a virtual python environment:
+Optional : create a virtual python environment:
 
 ```
-python -m venv name_of_virtual-environment
+python -m venv debiaivenv
 ```
 
-Activate the virtual python environment created, on Unix and MacOS:
+Activate the virtual python environment created, on Unix and macOS:
 
 ```bash
-source name_of_virtual-environment/bin/activate
+source debiaivenv/bin/activate
 ```
 
-Activate the virtual python environment created, on Windows powershell:
+Activate the virtual python environment created, on Windows PowerShell:
 
 ```
-name_of_virtual-environment\Scripts\Activate
+debiaivenv\Scripts\Activate
 ```
 
 Activate the virtual python environment created, on Windows terminal:
 
 ```
-name_of_virtual-environment\Scripts\activate
+debiaivenv\Scripts\activate
 ```
 
 

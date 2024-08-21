@@ -168,7 +168,7 @@ DebiAI is a high level data exploration tool for data scientists and machine lea
       linkTitle: 'More about the DebiAI architecture →',
       linkDestination: './meta/architecture'
     },
-   ]" :imageSizeRatio="0.7" />
+   ]" :imageSizeRatio="1" />
 
 ## Scientific publications
 

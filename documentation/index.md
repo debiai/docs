@@ -49,7 +49,6 @@ DebiAI provides data scientists with features to:
 
 <br>
 <br>
-<br>
 
 <FeaturesList :features="[
     {
@@ -91,6 +90,42 @@ DebiAI provides data scientists with features to:
    ]"
 />
 
+DebiAI intervenes during the data exploration stage and the contextual comparison stage of AI project models. It helps provide intelligence on incomplete or biased data and on model performance, thereby accelerating the resolution of feedback loops.
+
+<br>
+
+<div style="text-align: center;">
+    <img class="debiai_activity" id="debiai_activity_h" src="./debiai_activity_h.png" alt="DebiAI activity"/>
+    <img class="debiai_activity" id="debiai_activity_v" src="./debiai_activity_v.png" alt="DebiAI activity"/>
+</div>
+
+<style>
+  .debiai_activity {
+    width: 900px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+
+  #debiai_activity_h {
+    display: block;
+  }
+
+  #debiai_activity_v {
+    width: 400px;
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    #debiai_activity_h {
+      display: none;
+    }
+
+    #debiai_activity_v {
+      display: block;
+    }
+  }
+</style>
+
 ## Data
 
 DebiAI is designed to be used for any kind projects and data, it is particularly useful for projects that involve many contextual data.
@@ -124,6 +159,16 @@ DebiAI is a high level data exploration tool for data scientists and machine lea
 
 <br>
 <br>
+
+<FeaturesList :features="[
+    {
+      title: 'DebiAI Architecture',
+      description: '**Project environment:**\n\n**Project Data:** This is the source of data that the user intends to analyze. It may originate from various sources and formats, such as CSV or JSON.\n**Data-Providers:** These are the services created by the project members to enable DebiAI to fetch data and model results directly from the project\'s sources.\n**Python Scripts and** DebiAI Python Module: Using the DebiAI Python module, users can adapt their existing scripts and workflows to create selections and insert data and model\'s results into DebiAI.\n**Algo-Providers:** These services are used to provide the specific algorithms required by projects. Once an algorithm is provided to DebiAI, it can be called from the analysis dashboard with the project\'s data.\n\n**Application environment:**\n\n**Backend and API:** This is a Python-powered backend that provides an API and serves the Web dashboard.\n**DebiAI Web Dashboard:** This is the user interface of DebiAI, developed using VueJs. It provides users with an interactive platform to manage and view their data, and is hosted and served by the DebiAI backend.\n**Data storage:** This data store supports the DebiAI backend by retaining projects created by the Python module and some specific dashboard elements.',
+      imageLink: './debiai_architecture.png',
+      linkTitle: 'More about the DebiAI architecture →',
+      linkDestination: './meta/architecture'
+    },
+   ]" :imageSizeRatio="1" />
 
 ## Scientific publications
 

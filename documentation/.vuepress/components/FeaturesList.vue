@@ -6,7 +6,7 @@
       class="feature"
       :class="{ odd: index % 2 === 0, even: index % 2 !== 0 }"
     >
-      <div class="feature-image">
+      <div class="feature-image" :style="{ flex: imageSizeRatio }">
         <img
           :src="feature.imageLink"
           alt=""
@@ -15,7 +15,7 @@
       </div>
       <div class="feature-text">
         <h2 :id="feature.title">{{ feature.title }}</h2>
-        <p>{{ feature.description }}</p>
+        <p v-html="formatDescription(feature.description)"></p>
         <a :href="feature.linkDestination">{{ feature.linkTitle }}</a>
       </div>
     </div>
@@ -29,6 +29,17 @@ export default {
     features: {
       type: Array,
       required: true,
+    },
+    imageSizeRatio: {
+      type: Number,
+      default: 1.5,
+    },
+  },
+  methods: {
+    formatDescription(description) {
+      return description
+        .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+        .replace("\n", "<br>");
     },
   },
 };
@@ -61,10 +72,14 @@ export default {
     .feature-text {
       flex: 1;
       padding: 0 2rem;
+
+      p {
+        white-space: pre-line;
+      }
     }
 
     .feature-image {
-      flex: 1.5;
+      // flex: 1.5; Flex is set by prop
 
       img {
         max-width: none !important;

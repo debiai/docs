@@ -51,6 +51,17 @@ DebiAI provides data scientists with features to:
 <br>
 <br>
 
+## Activity
+
+![DebiAI activity diagram](./debiai_activity-diagram.png)
+
+
+The stages of an AI project and the role of DebiAI. This diagram illustrates a comprehensive machine learning pipeline from problem specification to production deployment. DebiAI intervenes during the data exploration stage and the contextual comparison stage of AI project models. It helps provide intelligence on incomplete or biased data and on model performance, thereby accelerating the resolution of feedback loops.
+
+<br>
+<br>
+
+
 <FeaturesList :features="[
     {
       title: 'Bias detection',
@@ -121,6 +132,37 @@ One of them is the [Valeo - WoodScape](tutorials/woodscapeTutorial/README.md#woo
 DebiAI is a high level data exploration tool for data scientists and machine learning experts. It is designed to be easily integrated in your project workflow.
 
 [Get started](introduction/gettingStarted/README.md#getting-started)
+
+<br>
+<br>
+
+## Architecture
+
+![DebiAI architecture](./debiai_architecture.png)
+
+The architecture of DebiAI is bifurcated into two main environments:
+
+<br>
+
+### The project environment:
+
+Project Data: This is the source of data that the user intends to analyze. It may originate from various sources and formats, such as CSV or JSON.
+
+- Data-Providers: These are the services created by the project members to enable DebiAI to fetch data and model results directly from the project's sources. Creating a Data-provider allows DebiAI to always fetch up-to-date data with no duplication. A Web Data-Provider can be developed using any programming language, access data from any type of database, and be hosted on any server. The only stipulation is that it should implement and expose a specific REST API according to a defined contract. Users can add as many Data-Providers as they require.
+
+- Python Scripts and DebiAI Python Module: Using the DebiAI Python module, users can adapt their existing scripts and workflows to create selections and insert data and model's results into DebiAI. Using the DebiAI Python module is a simpler alternative to creating a Data-provider, but it requires data to be duplicated and the module to be called at each project data update.
+
+- Algo-Providers: These services are used to provide the specific algorithms required by projects. Once an algorithm is provided to DebiAI, it can be called from the analysis dashboard with the project's data. The algorithm's results are then displayed and can be used for analysis and filtering purposes like any other data. An Algo-Provider can be developed using any programming language, expose any algorithms and be hosted on any server. The only stipulation is that it should implement and expose a specific REST API according to a defined contract. Users can add as many Algo-Providers as they require.
+
+<br>
+
+### DebiAI application environment:
+
+- Backend and API: This is a Python-powered backend that provides an API and serves the Web dashboard. This API is employed by the dashboard for data retrieval and by the Python module for data insertion. Additionally, it manages communications with the Web Data-providers, processes computational requests made by the dashboard and calls the Algo-Providers selected from the dashboard.
+
+- DebiAI Web Dashboard: This is the user interface of DebiAI, developed using VueJs. It provides users with an interactive platform to manage and view their data, and is hosted and served by the DebiAI backend. DebiAI uses different tools to display plots, the main being the [PlotlyJs]( https://plotly.com/chart-studio-help/citations/) library.
+
+- Data storage: DebiAI uses a folder-based data store that contains data in a JSON format. This data store supports the DebiAI backend by retaining projects created by the Python module and some specific dashboard elements, including layout configurations for project dashboards.
 
 <br>
 <br>

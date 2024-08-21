@@ -17,6 +17,7 @@
     "matomo",
     "mnist",
     "numpy",
+    "Plotly",
     "rgba",
     "setuptools",
     "systemx",

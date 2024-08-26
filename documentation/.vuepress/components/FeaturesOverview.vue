@@ -46,6 +46,7 @@ export default {
   position: relative;
   width: 100vw;
   left: calc(-50vw + 50%);
+  background-color: #fff;
 
   .feature {
     padding: 10px 30px;

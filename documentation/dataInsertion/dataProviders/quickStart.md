@@ -92,7 +92,7 @@ You can see some examples in our DebiAI [`docker-compose-build.yml`](https://git
 
 ### Configuration file
 
-You can also edit the [`debiai/backend/config/config.ini`](https://github.com/debiai/debiai/blob/main/backend/config/config.ini) file :
+You can also edit the [`debiai/debiaiServer/config/config.ini`](https://github.com/debiai/debiai/blob/main/debiaiServer/config/config.ini) file :
 
 ```ini
 [DATA_PROVIDERS]

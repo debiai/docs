@@ -105,13 +105,13 @@ You can add the `-d` flag to run the container in the background.
 
 If you want DebiAI to run on a different port, set the `-p` flag to `-p <MyPort>:3000`.
 
-Using a volume to store the data is also possible. If you want to set a volume to DebiAI, set the `-v` flag to `-v <MyVolume>:/backend/data/`, `<MyVolume>` being the absolute path of the empty folder to store your data in.
+Using a volume to store the data is also possible. If you want to set a volume to DebiAI, set the `-v` flag to `-v <MyVolume>:/debiai_data/`, `<MyVolume>` being the absolute path of the empty folder to store your data in.
 
 For example:
 
 ```bash
 mkdir /tmp/debiai
-docker run -p 3000:3000 -v /tmp/debiai:/backend/data/ debiai/app
+docker run -p 3000:3000 -v /tmp/debiai:/debiai_data/ debiai/app
 ```
 
 You can also provide additional environment variables to tell DebiAI if you have some data-providers (see [Data providers](../../../dataInsertion/dataProviders/README.md) for more information).
@@ -134,7 +134,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - ./debiai_data:/backend/data
+      - ./debiai_data:/debiai_data/
 ```
 
 How to start DebiAI with Docker-compose :
@@ -255,7 +255,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-      - ./DEBIAI_data:/backend/data
+      - ./DEBIAI_data:/debiai_data/
 ```
 
 If you want to change the volume folder path, create a folder where you want and replace "./debiai_data" by the path of your folder. Make sure there is nothing not related to DebiAI in the folder because it might be removed.

@@ -25,7 +25,7 @@ You can define the export method in the [config file](#config-file), the [enviro
 ::: warning
 This option is best suited for a development environment. 
 :::
-You can define the export method in the [`config.ini`](https://github.com/debiai/debiai/blob/main/backend/config/config.ini) file in the backend folder. The following example shows how to define the export method in the `config.ini` file:
+You can define the export method in the [`config.ini`](https://github.com/debiai/debiai/blob/main/debiaiServer/config/config.ini) file in the `debiaiServer` backend folder. The following example shows how to define the export method in the `config.ini` file:
 
 This is the sections of the `config.ini` file where you can define the export method:
 

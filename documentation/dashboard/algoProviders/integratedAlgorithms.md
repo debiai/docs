@@ -2,7 +2,7 @@
 
 DebiAI comes with a set of integrated algorithms that you can use right away. If you want to add your own algorithms, check the [Custom algorithms documentation](./README.md).
 
-If you want to check the the code of the integrated algorithms, you can find it [here](https://github.com/debiai/debiai/tree/main/backend/modules/algoProviders/integratedAlgoProvider/algorithms).
+If you want to check the the code of the integrated algorithms, you can find it [here](https://github.com/debiai/debiai/tree/main/debiaiServer/modules/algoProviders/integratedAlgoProvider/algorithms).
 
 If you are interested in a specific algorithm, [let us know](https://github.com/debiai/debiai/issues).
 

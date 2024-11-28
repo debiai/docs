@@ -27,11 +27,11 @@ from debiai import debiai
 import pandas as pd
 import numpy as np
 
-DEBIAI_BACKEND_URL = "http://localhost:3000/"
+DEBIAI_URL = "http://localhost:3000/"
 DEBIAI_PROJECT_NAME = "Hello DebiAI"
 
 # Initialization
-my_debiai = debiai.Debiai(DEBIAI_BACKEND_URL)
+my_debiai = debiai.Debiai(DEBIAI_URL)
 
 # Creating a project
 debiai_project = my_debiai.create_project(DEBIAI_PROJECT_NAME)
@@ -41,7 +41,7 @@ A project named "Hello DebiAI" is now created.
 
 ![img](./helloDebiai/HelloDebiAI_1.png)
 
-If your DebiAI instance is not running locally, you select a specific instance by changing DEBIAI_BACKEND_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
+If your DebiAI instance is not running locally, you select a specific instance by changing DEBIAI_URL. To create a project with an other name, change DEBIAI_PROJECT_NAME.
 
 If the project already exists, you can get the project with:
 

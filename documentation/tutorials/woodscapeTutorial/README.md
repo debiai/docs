@@ -11,6 +11,10 @@ The aim of this tutorial is to showcase the capabilities of DebiAI and its plus 
     <a href="https://demo.debiai.fr/" target="_blank">So you can use DebiAI along with this tutorial</a>
 </p>
 
+<p style="text-align:center">
+    We also made <a href="https://github.com/debiai/use-cases/blob/main/woodscape/README.md" target="_blank">a course</a> to help you get started on how to setup DebiAI<br>and the WoodScape dataset.
+</p>
+
 The [WoodScape](https://woodscape.valeo.com/woodscape/) dataset is a public dataset containing more than _100K images_ of urban scenes captured using fish-eye cameras for automotive driving tasks. The images are provided by 4 different cameras with different angles of view (front, rear, middle right and middle left) with 360° coverage and have annotations for a diverse set of computer vision tasks.
 <br>
 In this case study, we used a subset of the dataset divided into three sets -train, validation and test-, and we focused on the 2D bounding boxes detection task with five classes: _vehicle, person, bicycle, traffic light and traffic sign._

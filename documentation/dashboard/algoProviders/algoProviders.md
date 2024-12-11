@@ -1,4 +1,3 @@
-
 # Creating an Algo-provider
 
 An algo provider is a service that you have to create that can respond to the algorithms requests of DebiAI. This service can be made in **any language**, can use **any kind algorithms** and can be hosted on **any platform** as long at the DebiAI algo-provider's API is respected.
@@ -7,6 +6,8 @@ DebiAI will interact with your algo provider in two ways:
 
 - For getting the list of available algorithms
 - For running an algorithm and getting the results
+
+The [algo-provider Python module](https://github.com/debiai/easy-algo-provider) starts a Fast API server that provides a REST API to interact with DebiAI. This is the easiest way to create an algo provider for DebiAI.
 
 ## The API
 
@@ -42,4 +43,3 @@ You will need to provide the URL of your algo provider. This URL should be the r
 Once you have added your algo provider, you will be able to use the algorithms it provides in the Algorithms tab of the analysis dashboard:
 
 ![add](./algo_providers_menu_3.png)
-

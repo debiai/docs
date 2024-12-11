@@ -83,12 +83,14 @@ As you can see, the input and output of the algorithm are described. This descri
 
 To learn more about the algorithms descriptions, you can read the [Algorithm description documentation](https://github.com/debiai/algo-provider-python-template/blob/main/algo-api/README.md).
 
-### Algorithms implementation
+### Add your own algorithm
 
 You can add your own algorithms to DebiAI in two ways:
 
-- [Creating an Algo-provider](./algoProviders.md). An algo-provider is a simple Web service that provides one or more algorithms. You can create your own algo-provider with any programming language, host it and provide the URL to DebiAI.
+- [Algo-provider Python module](https://github.com/debiai/easy-algo-provider). This is the easiest way to add your own algorithms to DebiAI. You just have to define a Python function that implements your algorithm and the library will take care of the rest.
 
-- [Inserting Python code in the DebiAI backend](./implementInBackend.md). You can insert Python code directly in the DebiAI backend. This is useful if you want to use an algorithm that you have created in Python, but you don't want to host it yourself.
+- [Creating an Algo-provider service](./algoProviders.md). An algo-provider is a simple Web service that provides one or more algorithms. You can create your own algo-provider with any programming language, host it and provide the URL to DebiAI.
+
+- [Inserting Python code in DebiAI](./implementInBackend.md). You can insert Python code directly in the DebiAI backend. This is useful if you want to use an algorithm that you have created in Python, but you don't want to host it yourself.
 
 We are currently working on a way to add algorithms directly from the dashboard, [let us know](https://github.com/debiai/debiai/issues) if you are interested in this or any other feature.

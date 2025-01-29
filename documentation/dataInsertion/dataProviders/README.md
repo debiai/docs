@@ -1,50 +1,50 @@
-# Data providers
+# Data Providers
 
-Making a data provider is the most efficient way to make your project data accessible to DebiAI.
+Creating a **Data Provider** is the most efficient way to make your project data accessible to DebiAI.
 
-A data provider is a service that you create that can respond to the data requests of DebiAI. This service can be made in **any language**, can use **any kind of databases** and can be hosted on **any platform** as long at the DebiAI data-provider's API is respected. So unlike the [Debiai Python module](../pythonModule/README.md), your project data won't be duplicated in DebiAI and **DebiAI will always analyze the latest data**.
+A **Data Provider** is a service that responds to DebiAI's data requests. It can be implemented in **any language**, use **any database**, and be hosted on **any platform**, as long as it follows the **DebiAI Data Provider API**.
 
-### How does it work?
+Unlike the [DebiAI Python module](../pythonModule/README.md), this method **does not duplicate data** in DebiAI, ensuring that DebiAI always analyzes the latest version of your data.
 
-DebiAI will ask your data provider to return the data that it needs to display the dashboard:
+## How It Works
 
-- Available Project lists
-- Available data IDs
-- Project data
-- Available models and results
-- Data selections (optional)
+DebiAI queries your Data Provider to retrieve information for the dashboard:
 
-DebiAI will also be able to send the data selections made by the user.
+- **Project lists:** available projects
+- **Data IDs:** available samples
+- **Project data:** actual data used for analysis
+- **Model results:** available models and outputs (optional)
+- **Data selections:** user-defined data selections (optional)
 
-### Pros and cons
+Additionally, DebiAI can send data selections made by the user back to the provider:
 
-- **Pros**:
-  - DebiAI will always analyze the latest data
-  - Your data will not be duplicated in DebiAI
-  - You can use any languages and databases
-  - You can host your data provider on any platform
-  - Better for long term projects
-- **Cons**:
-  - You need to create a data provider (you can start with our [data provider templates](./quickStart.md#creation-of-a-data-provider))
-  - You need to respect the DebiAI data-provider's API (we made it as simple as possible)
+- **Project deletion**
+- **Model deletion**
+- **Selection creation and deletion**
 
-### The API
+## Pros & Cons
 
-The Data-providers API as been described with OpenAPI 3.0.
+✅ **Pros**:
 
-- [Data-providers API Swagger documentation](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/debiai/data-provider-nodejs-template/main/data-provider-API.yaml)
-- [Data-providers API yaml file](https://github.com/debiai/data-provider-nodejs-template/blob/main/data-provider-API.yaml).
+- **Always up to date** – DebiAI always analyzes the latest data.
+- **No data duplication** – Saves storage space.
+- **Flexibility** – Works with any programming language and database.
+- **Platform-independent** – Can be hosted anywhere.
+- **Ideal for middle to long-term projects**.
 
-### Speed
+⚠️ **Cons**:
 
-The speed at which your data loads into DebiAI depends on how quickly your data provider can provide them. So it depends on the size of the data and the speed of your database.
+- Requires an initial **custom implementation**, but it's a one-time setup. To simplify implementation, you can use the [DebiAI Data Provider Python module](https://github.com/debiai/easy-data-provider).
 
-The quicker your data provider is, the quicker your data will be available in DebiAI.
+## Performance Considerations
 
-### Getting started
+The **speed of data loading** into DebiAI depends on how quickly your Data Provider responds. This is influenced by:
 
-To create your first data provider, read our [Quick start](quickStart/README.md).
+- **Data size** – Larger datasets take longer to load.
+- **Database performance** – A fast database speeds up response times.
 
-::: warning Limitations
-- The interface between data-providers and DebiAI is not yet stable, so the API is likely to change in the future.
-:::
+Optimizing your Data Provider ensures **faster** data retrieval in DebiAI.
+
+## Getting Started
+
+To create your first Data Provider, check out our [Quick Start Guide](quickStart/README.md).

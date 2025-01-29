@@ -226,14 +226,3 @@ Now, both the data and the 2 models are ready to be analyzed with the Debiai das
 Note that the DebiAI Python module is in Alpha version, and is not yet stable, feel free to report any issue or suggestion.
 
 #### The next step is to [analyze your data with the DebiAI dashboard](../../dashboard/README.md).
-
-## Disabling the DebiAI module Data Provider
-
-If you are using a [WEB Pata Provider](../dataProviders/) and you want to make make DebiAI read only, you may want to disable the DebiAI python module Data Provider.
-
-If you want to disable the DebiAI module, you can do it by adding the environment variable `DEBIAI_PYTHON_MODULE_DATA_PROVIDER_ENABLED` to `False` when starting DebiAI, or edit the `config.ini` file:
-
-```ini
-[PYTHON_MODULE_DATA_PROVIDER]
-enabled = False
-```

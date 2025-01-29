@@ -93,6 +93,11 @@ export default {
       }
     }
 
+    h3 {
+      font-size: 1rem;
+      text-align: center;
+    }
+
     img {
       width: 35px;
       height: 35px;

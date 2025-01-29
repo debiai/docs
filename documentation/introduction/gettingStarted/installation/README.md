@@ -5,67 +5,55 @@ DebiAI offers several installation methods:
 <LinkableChoices :choices="[
     {
         title: 'Pip',
-        description: 'Install Debiai-gui python package with pip',
-        imageLink: '../../../install/python.svg',
+        description: 'Install DebiAI with pip',
+        imageLink: '/install/python.svg',
         elementIdDestination: 'debiai-gui-python-package',
         tag: 'Recommended'
     },
     {
         title: 'Docker',
-        description: 'Install the project with Docker or Docker Compose',
-        imageLink: '../../../install/docker.svg',
+        description: 'Install DebiAI with Docker or Docker Compose',
+        imageLink: '/install/docker.svg',
         elementIdDestination: 'official-docker-image',
     },
     {
         title: 'Build from source',
-        description: 'Build the project from source',
-        imageLink: '../../../install/source.svg',
+        description: 'Build DebiAI docker images from source',
+        imageLink: '/install/source.svg',
         elementIdDestination: 'build-image-from-source'
     },
     {
         title: 'Development',
-        description: 'DebiAI development setup guide',
-        imageLink: '../../../install/build.svg',
+        description: 'Run DebiAI locally',
+        imageLink: '/install/build.svg',
         linkDestination: './development',
     },
-    // Add more installation methods here
   ]"
 />
 
 ## Debiai-gui python package
 
-### Installation
-
-**Requirements :**
+### Requirements:
 
 - [Python](https://www.python.org/downloads/)
 
-Optional : create a virtual python environment:
-
-```
-python -m venv debiaivenv
-```
-
-Activate the virtual python environment created, on Unix and macOS:
+### Virtual environment (optional)
 
 ```bash
+python -m venv debiaivenv
+
+# Activate the virtual python environment created:
+# On Unix and macOS:
 source debiaivenv/bin/activate
-```
-
-Activate the virtual python environment created, on Windows PowerShell:
-
-```
+# On Windows PowerShell:
 debiaivenv\Scripts\Activate
-```
-
-Activate the virtual python environment created, on Windows terminal:
-
-```
+# On Windows terminal:
 debiaivenv\Scripts\activate
 ```
 
+### Installation
 
-Install the python package with pip:
+Install the `debiai-gui` python package with pip:
 
 ```bash
 pip install debiai-gui
@@ -79,7 +67,18 @@ The following command will launch the debiai web application:
 debiai-gui start
 ```
 
-Debiai will be available on [http://localhost:3000/](http://localhost:3000/)
+DebiAI needs a place to store the data, on startup it will ask you to provide a path to a folder where it can create a folder.
+
+Debiai will then be available on [http://localhost:3000/](http://localhost:3000/)
+
+**Parameters**
+```bash
+# Start DebiAI on a different port:
+debiai-gui start --port 4000
+
+# Display help:
+debiai-gui --help
+```
 
 ## Official Docker image
 

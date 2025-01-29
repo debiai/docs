@@ -1,81 +1,127 @@
-# Quick start
+# Data Providers Quick Start
 
-## Creation of a data provider
+## Creating a DebiAI Data Provider
 
-To help you with the creation of data-providers, we have created some quick start templates. At the moment the templates are available for the following languages:
+There are multiple ways to create a DebiAI Data Provider:
 
-- Node.js : [https://github.com/debiai/data-provider-nodejs-template](https://github.com/debiai/data-provider-nodejs-template)
+<LinkableChoices :choices="[
+    {
+        title: 'Python module',
+        description: 'Create a Data Provider from a single Python file',
+        imageLink: '/install/python.svg',
+        elementIdDestination: '_1-debiai-data-provider-python-module-recommended',
+        tag: 'Recommended'
+    },
+    {
+        title: 'Service templates',
+        description: 'Generate a Data Provider using a pre-built template',
+        imageLink: '/install/template.svg',
+        elementIdDestination: '_2-data-provider-templates'
+    },
+    {
+        title: 'Custom implementation',
+        description: 'Build a Data Provider from scratch',
+        imageLink: '/install/build.svg',
+        elementIdDestination: '_3-custom-data-provider-implementation'
+    }
+  ]"
+/>
 
-If you think that we should add a template for another language, [please let us know](https://github.com/debiai/data-provider-nodejs-template/issues/new).
+### 1. DebiAI Data Provider Python Module (Recommended)
 
-::: tip Starting from scratch
-You can create your own data-provider as long as the [API](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/debiai/data-provider-nodejs-template/main/data-provider-API.yaml) is respected.
+The simplest way to create a Data Provider is by using the [DebiAI Data Provider Python module](https://github.com/debiai/easy-data-provider). This module allows you to define access methods and event handlers within a single Python class.
+
+### 2. Data Provider Templates
+
+To streamline Data Provider creation, we offer **quick-start templates**. Currently, templates are available for:
+
+- **Node.js**: [GitHub Repository](https://github.com/debiai/data-provider-nodejs-template)
+
+Want support for another language? [Let us know](https://github.com/debiai/data-provider-nodejs-template/issues/new).
+
+### 3. Custom Data Provider Implementation
+
+You can build your own Data Provider as long as it follows the [DebiAI Data Provider API](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/debiai/data-provider-nodejs-template/main/data-provider-API.yaml).
+
+## Connecting a Data Provider to DebiAI
+
+After creating your Data Provider, you must configure DebiAI to access it:
+
+<LinkableChoices :choices="[
+    {
+        title: 'From the dashboard',
+        description: 'Easiest method',
+        imageLink: '/install/screen.svg',
+        elementIdDestination: '_1-from-the-dashboard'
+    },
+    {
+        title: 'Environment variables',
+        description: 'Best for Docker deployments',
+        imageLink: '/install/world.svg',
+        elementIdDestination: '_2-environment-variables'
+    },
+    {
+        title: 'Configuration file',
+        description: 'For development setups',
+        imageLink: '/install/build.svg',
+        elementIdDestination: '_3-configuration-file'
+    }
+  ]"
+/>
+
+::: warning  
+**DebiAI must be able to access your Data Provider.**
+
+- If running locally, use `localhost` as the URL.
+- If hosted externally, use the **public IP address**.
+- When using **Docker**, you may need to use the public IP or `--network host` to access a provider deployed on `localhost`.  
+  More details: [Docker documentation](https://docs.docker.com/network/host/).  
+  :::
+
+---
+
+### 1. Connecting via the Dashboard
+
+You can add a Data Provider through the **DebiAI dashboard**:
+
+1. Click **Manage Data Providers** on the home page.
+2. Click **New Data Provider**.
+3. Fill in the following details:
+   - **Data Provider Name**: A unique name for identification.
+   - **Data Provider URL**: The endpoint where DebiAI can access the provider.
+4. Click **Save**. If the provider is accessible and API-compliant, DebiAI will list the projects in the dashboard.
+
+![Add Data Provider](./data-provider-manager-data-provider-added.png)
+
+::: warning  
+**Dashboard-added providers are not persistent.** Restarting DebiAI will remove them. Use **environment variables** or a **configuration file** for persistence.  
 :::
 
-## Giving DebiAI access to a data provider
+---
 
-Once you have created and deployed your data provider, you need to tell DebiAI where to find it.
+### 2. Connecting via Environment Variables
 
-You can do this in three ways:
+For deployments, you can define environment variables to specify provider URLs.
 
-- [From the dashboard](#from-the-dashboard)
-- [With the environment variables (recommended)](#environment-variables)
-- [With the configuration file](#configuration-file)
-
-::: warning
-DebiAI needs to be able to access your data provider.
-
-If your data provider is deployed on the same machine as DebiAI, you can use `localhost` as the URL of your data provider, if not, you need to use the public IP address of your data provider.
-
-If you are using docker, you may need to use the public IP address of your data-provider or use the `--network host` option to reach a data-provider deployed on localhost.
-More information on the [docker documentation](https://docs.docker.com/network/host/).
-:::
-
-### From the dashboard
-
-If you are using the DebiAI dashboard, you can add your data provider from the home page. First, click on the `Manage data providers` button on top of the page, the following panel will appear:
-
-![Add data provider](./data-provider-manager.png)
-
-The `Python module Data Provider` is the default data provider that is used when you are using the [Debiai Python module](../pythonModule/README.md), you can [disable it](../pythonModule/quickStart.md#disabling-the-debiai-module-data-provider) if you don't need it.
-
-To add a new **WEB data provider**, click on the `New data provider` button:
-
-![Add data provider](./data-provider-manager-new-data-provider.png)
-
-Then fill the form with the following information:
-
-- **Data provider name**: The name of your data provider. This name will be used to identify your data provider in DebiAI.
-- **Data provider URL**: The URL of your data provider. This URL will be used by DebiAI to access your data provider.
-
-Once you have filled the form, click on the `save` button. If the data provider is accessible and is conform with the API, DebiAI will display the projects in the dashboard like any other projects.
-
-![Add data provider](./data-provider-manager-data-provider-added.png)
-
-::: warning
-Restarting DebiAI will erase the data providers you have added from the dashboard. If you want to keep them, you will need to use the [environment variables](#environment-variables) or the [configuration file](#configuration-file).
-:::
-
-### Environment variables
-
-If you are deploying DebiAI, you can set the environment variables `DEBIAI_WEB_DATA_PROVIDER_<my-data-provider-name>=<data-provider-url>` to tell DebiAI where to find your data-provider.
+#### Example:
 
 ```bash
-# Creation of the environment variables
-export DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai
-export DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
+export DEBIAI_WEB_DATA_PROVIDER_MyDataProvider1=http://localhost:3000/debiai
+export DEBIAI_WEB_DATA_PROVIDER_MyDataProvider2=http://localhost:3010/
 ```
 
+With Docker:
+
 ```bash
-# Example of use with docker run
 docker run -p 3000:3000 \
-    -e DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai \
-    -e DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/ \
+    -e DEBIAI_WEB_DATA_PROVIDER_MyDataProvider1=http://localhost:3000/debiai \
+    -e DEBIAI_WEB_DATA_PROVIDER_MyDataProvider2=http://localhost:3010/ \
     debiai/app
 ```
 
+With Docker Compose:
+
 ```yaml
-# Or with docker-compose
 version: "3.8"
 services:
   debiai:
@@ -83,27 +129,27 @@ services:
     ports:
       - "3000:3000"
     environment:
-      # Data providers (DEBIAI_WEB_DATA_PROVIDER_<name>=<url>)
-      - DEBIAI_WEB_DATA_PROVIDER_My-data-provider1=http://localhost:3000/debiai\
-      - DEBIAI_WEB_DATA_PROVIDER_My-data-provider2=http://localhost:3010/
+      - DEBIAI_WEB_DATA_PROVIDER_MyDataProvider1=http://localhost:3000/debiai
+      - DEBIAI_WEB_DATA_PROVIDER_MyDataProvider2=http://localhost:3010/
 ```
 
-You can see some examples in our DebiAI [`docker-compose-build.yml`](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.
+For a full list fo environment variables, check the [docker-compose-build.yml](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.
 
-### Configuration file
+### 3. Connecting via Configuration File
 
-You can also edit the [`debiai/debiaiServer/config/config.ini`](https://github.com/debiai/debiai/blob/main/debiaiServer/config/config.ini) file :
+You can also configure providers in config.ini:
+Example `(debiai/debiaiServer/config/config.ini)`:
 
 ```ini
 [DATA_PROVIDERS]
-# List all the data providers you want to use
-My-data-provider1 = http://localhost:3000/debiai/
-My-data-provider2 = http://localhost:3010/
+MyDataProvider1 = http://localhost:3000/debiai/
+MyDataProvider2 = http://localhost:3010/
 ```
 
-You will then need to restart DebiAI if you are in development mode or to build a new docker image. Our [`Docker-compose-build`](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file can help you with that.
+After editing, restart DebiAI (or rebuild the Docker image if using containers).
 
-The environment variables take precedence over the configuration file.
+::: tip Priority Order:
+Environment variables override the configuration file settings.
+:::
 
-If the data-provider is accessible and is conform with the API, DebiAI will display the projects in the dashboard like any other projects.
-
+If the provider is accessible and follows the API, DebiAI will list the projects in the dashboard.

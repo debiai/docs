@@ -52,19 +52,19 @@ After creating your Data Provider, you must configure DebiAI to access it:
         title: 'From the dashboard',
         description: 'Easiest method',
         imageLink: '/install/screen.svg',
-        elementIdDestination: '_1-from-the-dashboard'
+        elementIdDestination: '_1-connecting-via-the-dashboard'
     },
     {
         title: 'Environment variables',
         description: 'Best for Docker deployments',
         imageLink: '/install/world.svg',
-        elementIdDestination: '_2-environment-variables'
+        elementIdDestination: '_2-connecting-via-environment-variables'
     },
     {
         title: 'Configuration file',
         description: 'For development setups',
         imageLink: '/install/build.svg',
-        elementIdDestination: '_3-configuration-file'
+        elementIdDestination: '_3-connecting-via-configuration-file'
     }
   ]"
 />

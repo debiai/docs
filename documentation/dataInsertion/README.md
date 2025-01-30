@@ -39,9 +39,11 @@ The data you want to analyze in DebiAI must follow a specific format.
 
 ## Methods for Inserting Data into DebiAI
 
-There are currently two ways to insert data into DebiAI:
+The [DebiAI's architecture](../meta/architecture.md) supports two main ways to insert data:
 
-<img src="/debiai_architecture.png" alt="DebiAI architecture" width="400"/>
+<div style="text-align: center;">
+  <img src="/debiai_architecture.png" alt="DebiAI architecture" width="400"/>
+</div>
 
 <LinkableChoices :choices="[
     {

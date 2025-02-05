@@ -39,6 +39,10 @@ We offer different ways to create an Algo-provider:
   ]"
 />
 
+## Add your Algo-provider to DebiAI
+
+Once you have created your Algo-provider, you can add it to DebiAI by providing the URL of your provider. [Learn more on how to add Algo-providers to DebiAI.](./addingAlgoProviders.md#adding-algo-providers-to-debiai)
+
 ## Algorithms description
 
 You will need to describe your algorithm in a Json format and then create the implementation of your algorithm. After that, DebiAI will be able to understand your algorithm and run it.

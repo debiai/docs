@@ -9,29 +9,29 @@ There are multiple ways to create a DebiAI Data Provider:
         title: 'Python module',
         description: 'Create a Data Provider from a single Python file',
         imageLink: '/install/python.svg',
-        elementIdDestination: '_1-debiai-data-provider-python-module-recommended',
+        elementIdDestination: 'debiai-data-provider-python-module-recommended',
         tag: 'Recommended'
     },
     {
         title: 'Service templates',
         description: 'Generate a Data Provider using a pre-built template',
         imageLink: '/install/template.svg',
-        elementIdDestination: '_2-data-provider-templates'
+        elementIdDestination: 'data-provider-templates'
     },
     {
         title: 'Custom implementation',
         description: 'Build a Data Provider from scratch',
         imageLink: '/install/build.svg',
-        elementIdDestination: '_3-custom-data-provider-implementation'
+        elementIdDestination: 'custom-data-provider-implementation'
     }
   ]"
 />
 
-### 1. DebiAI Data Provider Python Module (Recommended)
+### DebiAI Data Provider Python Module (Recommended)
 
 The simplest way to create a Data Provider is by using the [DebiAI Data Provider Python module](https://github.com/debiai/easy-data-provider). This module allows you to define access methods and event handlers within a single Python class.
 
-### 2. Data Provider Templates
+### Data Provider Templates
 
 To streamline Data Provider creation, we offer **quick-start templates**. Currently, templates are available for:
 
@@ -39,7 +39,7 @@ To streamline Data Provider creation, we offer **quick-start templates**. Curren
 
 Want support for another language? [Let us know](https://github.com/debiai/data-provider-nodejs-template/issues/new).
 
-### 3. Custom Data Provider Implementation
+### Custom Data Provider Implementation
 
 You can build your own Data Provider as long as it follows the [DebiAI Data Provider API](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/debiai/data-provider-nodejs-template/main/data-provider-API.yaml).
 
@@ -49,38 +49,45 @@ After creating your Data Provider, you must configure DebiAI to access it:
 
 <LinkableChoices :choices="[
     {
-        title: 'From the dashboard',
-        description: 'Easiest method',
-        imageLink: '/install/screen.svg',
-        elementIdDestination: '_1-connecting-via-the-dashboard'
+        title: 'With debiai-gui',
+        description: 'If using the cli provided by our python module',
+        imageLink: '/install/terminal.svg',
+        elementIdDestination: 'with-debiai-gui'
     },
     {
-        title: 'Environment variables',
+        title: 'From the dashboard',
+        description: 'Easiest method, but not persistent',
+        imageLink: '/install/screen.svg',
+        elementIdDestination: 'connecting-via-the-dashboard'
+    },
+    {
+        title: 'Env. variables',
         description: 'Best for Docker deployments',
         imageLink: '/install/world.svg',
-        elementIdDestination: '_2-connecting-via-environment-variables'
+        elementIdDestination: 'connecting-via-environment-variables'
     },
     {
         title: 'Configuration file',
         description: 'For development setups',
         imageLink: '/install/build.svg',
-        elementIdDestination: '_3-connecting-via-configuration-file'
+        elementIdDestination: 'connecting-via-configuration-file'
     }
   ]"
 />
 
-::: warning  
-**DebiAI must be able to access your Data Provider.**
-
-- If running locally, use `localhost` as the URL.
-- If hosted externally, use the **public IP address**.
-- When using **Docker**, you may need to use the public IP or `--network host` to access a provider deployed on `localhost`.  
-  More details: [Docker documentation](https://docs.docker.com/network/host/).  
-  :::
-
 ---
 
-### 1. Connecting via the Dashboard
+### With DebiAI-gui
+
+If you are using the [DebiAI-gui Python package](../../introduction/gettingStarted/installation/README.md#debiai-gui-python-package) to run DebiAI, you can add Data-providers directly as parameters:
+
+```bash
+debiai-gui start -dp http://localhost:4000 http://localhost:8000
+```
+
+DebiAI will automatically connect to the specified Data Providers.
+
+### Connecting via the Dashboard
 
 You can add a Data Provider through the **DebiAI dashboard**:
 
@@ -97,9 +104,7 @@ You can add a Data Provider through the **DebiAI dashboard**:
 **Dashboard-added providers are not persistent.** Restarting DebiAI will remove them. Use **environment variables** or a **configuration file** for persistence.  
 :::
 
----
-
-### 2. Connecting via Environment Variables
+### Connecting via Environment Variables
 
 For deployments, you can define environment variables to specify provider URLs.
 
@@ -133,9 +138,9 @@ services:
       - DEBIAI_WEB_DATA_PROVIDER_MyDataProvider2=http://localhost:3010/
 ```
 
-For a full list fo environment variables, check the [docker-compose-build.yml](https://github.com/debiai/debiai/blob/main/docker-compose-build.yml) file.
+For a full list fo environment variables, check the [config.env](https://github.com/debiai/DebiAI/blob/main/debiaiServer/config/config.env) file.
 
-### 3. Connecting via Configuration File
+### Connecting via Configuration File
 
 You can also configure providers in config.ini:
 Example `(debiai/debiaiServer/config/config.ini)`:
@@ -148,8 +153,20 @@ MyDataProvider2 = http://localhost:3010/
 
 After editing, restart DebiAI (or rebuild the Docker image if using containers).
 
-::: tip Priority Order:
-Environment variables override the configuration file settings.
-:::
+::: tip Configuration priority order:
+
+1. DebiAI-gui python module parameters
+2. Environment variables
+3. Configuration file settings.
+   :::
 
 If the provider is accessible and follows the API, DebiAI will list the projects in the dashboard.
+
+::: warning  
+**DebiAI must be able to access your Data Provider.**
+
+- If running locally, use `localhost` as the URL.
+- If hosted externally, use the **public IP address**.
+- When using **Docker**, you may need to use the public IP or `--network host` to access a provider deployed on `localhost`.  
+   More details: [Docker documentation](https://docs.docker.com/network/host/).  
+  :::

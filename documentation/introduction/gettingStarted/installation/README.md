@@ -71,13 +71,20 @@ DebiAI needs a place to store the data, on startup it will ask you to provide a 
 
 Debiai will then be available on [http://localhost:3000/](http://localhost:3000/)
 
-**Parameters**
+### Parameters
 ```bash
+# Specify the the configuration folder path:
+debiai-gui start --data-folder debiai-data
+
 # Start DebiAI on a different port:
 debiai-gui start --port 4000
 
+# Prevent the web browser from opening automatically:
+debiai-gui start --no-browser
+
 # Display help:
 debiai-gui --help
+debiai-gui start --help
 ```
 
 ## Official Docker image

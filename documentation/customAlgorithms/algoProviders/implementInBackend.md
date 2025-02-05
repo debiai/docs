@@ -1,6 +1,6 @@
-# Algorithm in the backend
+# Modify DebiAI to add your own algorithms
 
-You can insert Python code directly in the DebiAI backend. This is useful if you want to use an algorithm that you have created in Python, but you don't want to host it yourself.
+You can insert Python code directly in the DebiAI backend. This is useful if you want to use an algorithm that you have created in Python, but you don't want to host it yourself, or if you want to contribute to the list of integrated algorithms of DebiAI.
 
 DebiAI will run your Python code when you will run the algorithm from the dashboard. Your python code must respect the a format that is described [here](https://github.com/debiai/algo-provider-python-template/blob/main/algo-api/README.md#response)
 

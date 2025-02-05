@@ -94,6 +94,35 @@ module.exports = {
         ],
       },
 
+      // Custom algorithms
+      {
+        title: "Custom algorithms",
+        path: "/customAlgorithms/",
+        collapsable: false,
+        initialOpenGroupIndex: -1,
+        children: [
+          {
+            title: "How to use algorithms",
+            path: "/customAlgorithms/howToUseAlgorithms.md",
+          },
+          {
+            title: "Integrated algorithms",
+            path: "/customAlgorithms/integratedAlgorithms.md",
+          },
+          {
+            title: "Algo-providers",
+            path: "/customAlgorithms/algoProviders/",
+            children: [
+              "/customAlgorithms/algoProviders/easyAlgoProvider.md",
+              "/customAlgorithms/algoProviders/algoProviderTemplates.md",
+              "/customAlgorithms/algoProviders/customImplementation.md",
+              "/customAlgorithms/algoProviders/implementInBackend.md",
+              "/customAlgorithms/algoProviders/addingAlgoProviders.md",
+            ],
+          },
+        ],
+      },
+
       // Dashboard
       {
         title: "Dashboard",
@@ -129,16 +158,6 @@ module.exports = {
             title: "Saving layouts",
             path: "/dashboard/layouts/",
             collapsable: true,
-          },
-          {
-            title: "Custom algorithms",
-            path: "/dashboard/algoProviders/",
-            collapsable: true,
-            children: [
-              "/dashboard/algoProviders/algoProviders.md",
-              "/dashboard/algoProviders/implementInBackend.md",
-              "/dashboard/algoProviders/integratedAlgorithms.md",
-            ],
           },
           {
             title: "Data export",

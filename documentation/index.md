@@ -174,6 +174,7 @@ DebiAI is a high level data exploration tool for data scientists and machine lea
 
 - ICAS 2024 [DebiAI: Open-Source Toolkit for Data Analysis, Visualization and Evaluation in Machine Learning](https://hal.science/hal-04446930).
   - [Best paper award](https://www.iaria.org/conferences2024/AwardsICAS24.html)! 🏆
+-  ICAS 2024 Extended [Meet DebiAI: A Versatile Open-Source Tool for Streamlined Data Analysis, Visualization, and ML Model Evaluation](https://hal.science/hal-04886162)
 
 <br>
 <br>

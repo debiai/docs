@@ -177,6 +177,14 @@ module.exports = {
         ],
       },
 
+      // Exploration
+      {
+        title: "Exploration mode",
+        path: "/exploration/",
+        collapsable: false,
+        initialOpenGroupIndex: -1,
+      },
+
       // Tutorials
       {
         title: "Tutorials",

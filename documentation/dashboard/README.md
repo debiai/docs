@@ -112,3 +112,7 @@ Besides the widgets, the dashboard has several features that allow you to intera
 - [Exporting data](./dataExport/). You can export your data to other tools for annotation or further analysis purposes.
 
 - [Exporting analysis results](./analysisExport/). Once you have finished your analysis, you can generate a report with the results.
+
+## Exploration mode
+
+If your project contains a large amount of data, you can use the [exploration mode](../exploration/README.md) to compute metrics and statistics on the data server-side. This will allow you to explore the data without loading it all in the dashboard, helping you to navigate through large datasets.

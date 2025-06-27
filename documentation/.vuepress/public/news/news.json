@@ -1,0 +1,21 @@
+[
+  {
+    "imageLink": "/news/images/exploration.png",
+    "title": {
+      "en": "Introducing DebiAI Exploration Update"
+    },
+    "tags": {
+      "en": ["Update", "Exploration Mode", "Scaling up"]
+    },
+    "description": {
+      "en": "DebiAI now supports the exploration of large datasets with the new Exploration Mode. This feature allows users to navigate through extensive data collections, making it easier to find relevant information and insights."
+    },
+    "date": "2025-06-27",
+    "linkTitle": {
+      "en": "Tutorial →"
+    },
+    "linkDestination": {
+      "en": "/exploration"
+    }
+  }
+]
